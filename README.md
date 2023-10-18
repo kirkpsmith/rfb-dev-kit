@@ -16,13 +16,13 @@ Designed in FreeCAD 0.21.1 with the fasteners and A2plus workbenches.
 - Maximize off-the-shelf part availability (ie. 50x50x0.8 mm copper plate current collectors, available on-demand from Aliexpress or other suppliers)
 
 ## TODO
-[ ] decide on pump/tubing and connection methods for BOM
-[ ] (as needed) add ridges in printed parts to enhance sealing
-[ ] add functionality to easily modify design files for differing thicknesses of current collector and graphite gaskets
-[ ] decide on blocking gaskets and add them to assembly
-[ ] mark a first release and implement a [changelog](https://keepachangelog.com/en/1.1.0/)
-[ ] consolidate part naming for cell body/flow frame/spacer
-[ ] remove 4mm cell body version once 0.8mm current collectors arrive and are tested
+- [ ] decide on pump/tubing and connection methods for BOM
+- [ ] (as needed) add ridges in printed parts to enhance sealing
+- [ ] add functionality to easily modify design files for differing thicknesses of current collector and graphite gaskets
+- [ ] decide on blocking gaskets and add them to assembly
+- [ ] mark a first release and implement a [changelog](https://keepachangelog.com/en/1.1.0/)
+- [ ] consolidate part naming for cell body/flow frame/spacer
+- [ ] remove 4mm cell body version once 0.8mm current collectors arrive and are tested
 
 ## References/Inspiration
 - White, R. E. Electrochemical Cell Design; Springer US: Boston, MA, 1984.
