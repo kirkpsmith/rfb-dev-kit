@@ -24,7 +24,8 @@ Designed in FreeCAD 0.21.1 with the fasteners and A2plus workbenches.
 - [ ] consolidate part naming for cell body/flow frame/spacer
 - [ ] remove 4mm cell body version once 0.8mm current collectors arrive and are tested
 
-## References/Inspiration
+## References/Inspiration/Collaborators/Conspirators (in no particular order)
+- [FAIR-Battery project](https://github.com/SanliFaez/FAIR-Battery) (collaborators)
 - White, R. E. Electrochemical Cell Design; Springer US: Boston, MA, 1984.
 - O’Connor, H.; Bailey, J. J.; Istrate, O. M.; Klusener, P. A. A.; Watson, R.; Glover, S.; Iacoviello, F.; Brett, D. J. L.; Shearing, P. R.; Nockemann, P. An Open-Source Platform for 3D-Printed Redox Flow Battery Test Cells. Sustainable Energy Fuels 2022, 6 (6), 1529–1540. https://doi.org/10.1039/D1SE01851E.
 - Arenas, L. F.; Walsh, F. C.; León, C. P. de. 3D-Printing of Redox Flow Batteries for Energy Storage: A Rapid Prototype Laboratory Cell. ECS J. Solid State Sci. Technol. 2015, 4 (4), P3080. https://doi.org/10.1149/2.0141504jss.
