@@ -2,8 +2,7 @@
 
 ![FreeCAD view of assembled cell](image.png)
 
-Initial repo for a benchtop flow battery development kit, possibly applicable to other electrochemical systems with flow.
-
+A benchtop flow battery development kit, extendable to other electrochemical systems with flow.
 Designed in FreeCAD 0.21.1 with the fasteners and A2plus workbenches.
 
 ## Features
