@@ -21,7 +21,6 @@ Designed in FreeCAD 0.21.1 with the fasteners and A2plus workbenches.
 - [ ] decide on blocking gaskets and add them to assembly
 - [ ] mark a first release and implement a [changelog](https://keepachangelog.com/en/1.1.0/)
 - [ ] consolidate part naming for cell body/flow frame/spacer
-- [ ] remove 4mm cell body version once 0.8mm current collectors arrive and are tested
 - [ ] add a contributors section from https://github.com/all-contributors/all-contributors
 - [ ] get this thing a DOI with Zenodo or something
 
