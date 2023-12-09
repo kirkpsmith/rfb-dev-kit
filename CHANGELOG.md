@@ -10,8 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Separate folders for 1 cm2 and 16 cm2 cell components
-- Cura profile for ABS parts based off O’Connor et al.
-- exports folder with .3mf files for 3d-printing of cell body and flow frame (called spacer for now)
+- Cura project with
+- exports folder with .3mf files for 3d-printing of cell body and flow field, .svg file for gasket cutting (manually, or with laser/vinyl cutter)
 - Test file `hole_tester.FCStd` and associated .3mf export file for testing diameters for threaded holes (to account for post-print shrinkage)
 
 ### Fixed
