@@ -1,9 +1,12 @@
+<script src="https://opencollective.com/fbrc/banner.js"></script>
 # RFB-dev-kit
 
 ![FreeCAD view of assembled cell](image.png)
 
 A benchtop flow battery development kit, extendable to other electrochemical systems with flow.
 Designed in FreeCAD 0.21.1 with the fasteners workbench.
+
+Developed by the [Flow Battery Research Collective](https://opencollective.com/fbrc).
 
 ## Features
 - Geometric cell area from 1 cm² to 10 cm²
@@ -30,6 +33,3 @@ Designed in FreeCAD 0.21.1 with the fasteners workbench.
 - https://codeberg.org/LibreWater/Acraea-Prototype
 - https://github.com/opulo-inc/lumenpnp/tree/main
 - https://openflexure.org/
- 
-
-
