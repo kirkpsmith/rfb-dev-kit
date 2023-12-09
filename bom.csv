@@ -1,10 +1,10 @@
 Part Name,Note,Quantity,Academic Supplier,Academic Price (EUR),Individual Source,Individual Price,Optional
-Cell Body,3D-printed from ABS,2,exports folder,,,,
-Flow Frame,3D-printed from ABS,2,exports folder,,,,
+Cell Body,3D-printed from polypropylene,2,exports folder,,,,
+Flow Frame,3D-printed from polypropylene,2,exports folder,,,,
 Current Collector,"50x50x0.8mm copper plate (brass, bronze, aluminum may also work)",2,Machine shop,,https://www.aliexpress.com/item/1005004374432193.html,€ 1.23,
 Graphite plate/foil,"Using graphite foil/grafoil gasket material now, may later be able to secure actual industry bipolar plate material such as PV15",2,https://www.fishersci.nl/shop/products/graphite-foil-0-13mm-0-005in-thick-99-8-metals-basis-thermo-scientific/11364728#,€ 103.00,,,
 Gasket,"Using silicone thermal gap pad for now, later may try PTFE film or other materials",4,https://nl.rs-online.com/web/p/thermal-pads/1745698,€ 31.69,,,
-Membrane (Daramic 175),Hand-cut from larger sheet,1,On request,,Substitute for matte photo paper instead,,
+Membrane (Daramic 175),exports folder (hand/laser/vinyl cut),1,On request,,Substitute for matte photo paper instead,,
 Porous Carbon Electrode (Graphite Felt),"Using 1/8 inch graphite felt for now, no idea if the Fisher link is the right thickness, can get 2-3mm thick graphite felt off aliexpress for about 100x less cost (FYI: graphite felt is NOT the same as carbon felt)",2,https://www.fishersci.fr/shop/products/graphite-felt-99-9-metal-basis-thermo-scientific/11396938#?keyword=graphite%20felt,€ 126.00,https://www.aliexpress.com/item/1005002688651513.html,€ 2.80,
 Pump,"Still deciding on this, Mouser peristaltic pumps may do for now",2,https://eu.mouser.com/ProductDetail/Adafruit/3910?qs=sGAEpiMZZMu%252BmKbOcEVhFfAP7xIR0SjxZlYRhrrQcCuPcKGBaOmggg%3D%3D,€ 23.20,,,
 Tubing,could come with the mouser peristaltic pumps,,,,,,
