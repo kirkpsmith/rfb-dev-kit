@@ -1,13 +1,10 @@
-# Build the 1 cm² flow battery test cell
+# Start here
 
-This is a great place to start making your documentation!
+If you're starting from scratch, you need to [fabricate](fabrication.md) and source everything needed for testing this flow battery test cell.
 
-You should link to a couple of pages:
+If you already have all the required components and materials, you can directly [assemble](assembly.md) your cell, prepare the [electrolyte](electrolyte.md), and then begin [testing](testing.md).
 
-* [.](testpage1.md){step}
-* [.](testpage2.md){step}
-
-## Bill of Materials
-Download this as a [csv file](index_BOM.csv).
-
-{{BOM}}
+1. [.](fabrication.md){step}
+* [.](assembly.md){step}
+* [.](electrolyte.md){step}
+* [.](testing.md){step}

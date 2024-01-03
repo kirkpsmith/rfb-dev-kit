@@ -1,5 +1,10 @@
 Affiliation: Flow Battery Research Collective
 Authors:
-- Kirk Pollard Smith
-- Daniel Fernandez Pinto
+  - Kirk Pollard Smith
+  - Daniel Fernandez Pinto
+ExternalDirs:
+  exports: "../exports"
+HoverColor: '#555555'
 License: CERN-OHL-S-2.0
+PrimaryColor: '#f1502f'
+SecondaryColor: '#cccccc'
