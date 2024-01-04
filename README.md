@@ -19,7 +19,6 @@ Developed by the [Flow Battery Research Collective](https://opencollective.com/f
 - Manufacturable by multiple methods, e.g. FDM/SLA/SLS printing, conventional subtractive machining, etc.
 
 ## TODO
-- [ ] decide on pump/tubing and connection methods for BOM
 - [ ] (as needed) add ridges in printed parts to enhance sealing
 - [ ] mark a first release and implement a [changelog](https://keepachangelog.com/en/1.1.0/)
 - [ ] add a contributors section from https://github.com/all-contributors/all-contributors
