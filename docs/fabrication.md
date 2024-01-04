@@ -5,6 +5,8 @@
 ## Print parts  {pagestep}
 
 Using a [FDM 3D printer](3D_printer.md){qty:1, cat:tool} loaded with at least 200 g of [polypropylene filament](PP_filament.md){qty: 200 g}, print two [cell bodies with barbed fittings]{output, qty:2} and two [flow frames](../exports/Flow Frame.3mf).
+![](../exports/Cell Body with Barbed Fittings.stl)
+![](../exports/Flow Frame.stl)
 
 >i **Struggling to print watertight, dimensionally accurate polypropylene parts?**
 >i 
@@ -42,4 +44,5 @@ This will produce two [cell bodies]{output, qty:2} and two [flow frames]{output,
 ## Cut alignment pins {pagestep}
 Using a [tubing cutter]{qty:1, cat:tool, Note:"Anything capable of producing a clean, square cut on plastic tubing withing deforming the tube"}, cut two pieces of [1/8" outside diameter hard plastic tubing]{qty: 10 cm, Note: "1/8 inch OD PTFE tubing works well"} into 5 cm lengths.
 
-This will produce two [alignment pins]{output, qty:2}, which should fit smooth
+This will produce two [alignment pins]{output, qty:2}, which should fit smoothly in to the alignment pin holes in the cell bodies.
+
