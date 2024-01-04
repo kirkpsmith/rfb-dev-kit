@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Flow Battery Development Kit</title>
+    <title>Start here</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
@@ -10,14 +10,32 @@
 <link rel="icon" type="image/png" href="./static/Logo/favicon-16x16.png" sizes="16x16" />
 
     <link href="./static/style.css" rel="stylesheet">
-                    
+                  <style>
+    .nav-list a.navhome, .sub-nav-list a.navhome{
+      background-color: #f1502f !important;
+    }
+    .gallery-thumb img:hover {
+      border: 4px solid #f1502f;
+    }
+  </style>
+<style>
+  .nav-list a.active, .sub-nav-list a.active {
+    background-color: #cccccc !important;
+  }
+</style>
+<style>
+  .nav-list a:hover:not(.active), .sub-nav-list a:hover:not(.active) {
+    background-color: #555555 !important;
+  }
+</style>
+    
 </head>
 <body>
 <header class="site-header">
     <div class="wrapper header-wrapper" >
         <div class=header-text>
    
-    <h1 class="site-title">Flow Battery Development Kit</h1>
+    <h1 class="site-title">Start here</h1>
    
     <p class="author">by Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="affiliation">Flow Battery Research Collective</p>
@@ -37,17 +55,27 @@
                 <ul class="nav-list">
                 <li>
     <a class="navhome" href="./">
-        Flow Battery Development Kit
+        Start here
     </a>
 </li>
-<li class="active">
-    <a class="active" href="./testpage1.html">
-        Test Page 1
+<li class="not-active">
+    <a class="not-active" href="./fabrication.html">
+        Fabricating cell components
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./testpage2.html">
-        Test Page 2
+    <a class="not-active" href="./assembly.html">
+        Assembling the flow cell from components
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./electrolyte.html">
+        Preparing the electrolyte
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./testing.html">
+        Operating and testing the cell
     </a>
     </li>
 
@@ -55,7 +83,7 @@
             </nav>
         </div>
         <div class="wrapper">
-    <h1 id="test-page-1">Test Page 1</h1>
+    <h1 id="fabricating-the-kit-components">Fabricating the kit components</h1>
 <div class="pagebom">
 <h3 id="part">Parts</h3>
 <ul>
@@ -67,18 +95,17 @@
 <li>1 <a Class="bom" href="Parts/Screwdriver_Philips_No2.html">No. 2 Phillips screwdriver</a> </li>
 </ul>
 </div>
-<h2 class="page-step" id="put-screws-into-the-widget">Step 1: Put screws into the widget</h2>
+<h2 class="page-step" id="print-and-post-process-the-cell-bodies-and-flow-frames">Step 1: Print and post-process the cell bodies and flow frames</h2>
 <ul>
 <li>Get a <a href="Parts/Screwdriver_Philips_No2.html">No. 2 Phillips screwdriver</a> ready</li>
 <li>Take three <a href="Parts/M4x10PanSteel.html">M4x10 screws</a> and screw them into the <a href="widget.html">widget</a></li>
 </ul>
-<h2 class="page-step" id="put-more-screws-into-the-widget">Step 2: Put more screws into the widget</h2>
+<h2 class="page-step" id="cut-the-gaskets">Step 2: Cut the gaskets</h2>
 <ul>
 <li>Find the <a href="Parts/Screwdriver_Philips_No2.html">screwdriver</a> again</li>
 <li>Take two more <a href="Parts/M4x10PanSteel.html">M4x10 screws</a> and screw them into the same widget</li>
 </ul>
-<hr />
-<p><a href="index_BOM.html">Previous page</a> | <a href="testpage2.html">Next page</a></p>
+<h2 id="cut-the-membranes-graphite-felt-and-porous-electrodes">Cut the membranes, graphite felt, and porous electrodes</h2>
     </div>
 </div>
 <footer class="site-footer">
@@ -88,7 +115,7 @@
     <span class="info">Documentation powered by GitBuilding</span>
 </a>
     <p class="author">©2024 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
-    <p class="license">Flow Battery Development Kit is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+    <p class="license">Start here is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
 </footer></body>
