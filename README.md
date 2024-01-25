@@ -5,11 +5,12 @@
 A benchtop flow battery development kit, extendable to other electrochemical systems with flow.
 Designed in FreeCAD 0.21.2.
 
+Developed by the [Flow Battery Research Collective](https://opencollective.com/fbrc).
+
 ## Documentation
 
 Draft documentation, which includes the BOM, is available [here](https://kirkpsmith.codeberg.page/rfb-dev-kit/). This is the contents of the `docs` repository subfolder rendered as a static website.
 
-Developed by the [Flow Battery Research Collective](https://opencollective.com/fbrc).
 
 ## Features
 - Geometric cell area from 1 cm² to 10 cm²
