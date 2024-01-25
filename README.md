@@ -7,7 +7,7 @@ Designed in FreeCAD 0.21.2.
 
 ## Documentation
 
-Draft documentation, which includes the BOM, is available [here](https://kirkpsmith.codeberg.page/rfb-dev-kit/).
+Draft documentation, which includes the BOM, is available [here](https://kirkpsmith.codeberg.page/rfb-dev-kit/). This is the contents of the `docs` repository subfolder rendered as a static website.
 
 Developed by the [Flow Battery Research Collective](https://opencollective.com/fbrc).
 
@@ -19,6 +19,11 @@ Developed by the [Flow Battery Research Collective](https://opencollective.com/f
 - Flow-through porous carbon electrodes of variable thickness
 - Maximize off-the-shelf component and material availability
 - Manufacturable by multiple methods, e.g. FDM/SLA/SLS printing, conventional subtractive machining, etc.
+
+## Repository Structure
+To make this device, follow the link to documentation above.
+
+This repository has the main FreeCAD files in the root directory, files for manufacturing in the `exports` folder, and documentation in the `docs` folder (using Markdown based on [gitbuilding](https://gitbuilding.io/))
 
 ## TODO
 - [ ] (as needed) add ridges in printed parts to enhance sealing
