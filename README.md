@@ -5,6 +5,8 @@
 A benchtop flow battery development kit, extendable to other electrochemical systems with flow.
 Designed in FreeCAD 0.21.2.
 
+Draft documentation, including the BOM, is available [here](https://kirkpsmith.codeberg.page/rfb-dev-kit/).
+
 Developed by the [Flow Battery Research Collective](https://opencollective.com/fbrc).
 
 ## Features
