@@ -10,7 +10,8 @@
 <link rel="icon" type="image/png" href="./static/Logo/favicon-16x16.png" sizes="16x16" />
 
     <link href="./static/style.css" rel="stylesheet">
-                  <style>
+                <script type="text/javascript" src="./static/3d-viewer.js"></script>
+          <style>
     .nav-list a.navhome, .sub-nav-list a.navhome{
       background-color: #8ff0a4 !important;
     }
@@ -88,6 +89,7 @@
 <h3 id="part">Parts</h3>
 <ul>
 <li>10 cm of <a Class="missing" href="missing">1/8" outside diameter hard plastic tubing</a>    - 1/8 inch OD PTFE tubing works well</li>
+<<<<<<< HEAD:_site/index_BOM.html
 <li>200 g of <a Class="bom" href="3D_printing_feedstock.html">3D printing feedstock</a> </li>
 <li>2 <a Class="bom" href="current_collectors.html">current collectors</a> </li>
 <li>2 <a Class="bom" href="pumps.html">diaphragm pumps</a> </li>
@@ -95,6 +97,10 @@
 <li>Some <a Class="bom" href="grafoil.html">grafoil</a> </li>
 <li>1 <a Class="missing" href="missing">membrane</a> </li>
 <li>1 meter of <a Class="bom" href="tubing.html">silicone tubing</a> </li>
+=======
+<li>160 cm² of <a Class="bom" href="gaskets.html">gasket sheet</a>    - Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough</li>
+<li>200 g of <a Class="bom" href="PP_filament.html">polypropylene filament</a> </li>
+>>>>>>> 6100c2a52e8fa5b542337e01bfa2c2b4c02b73b9:fabrication.html
 </ul>
 <h3 id="tool">Tools</h3>
 <ul>
@@ -106,6 +112,59 @@
 <li>1 <a Class="missing" href="missing">vinyl cutter machine</a> </li>
 <li>1 <a Class="missing" href="missing">vise</a> </li>
 </ul>
+<<<<<<< HEAD:_site/index_BOM.html
+=======
+</div>
+<h2 class="page-step" id="print-parts">Step 1: Print parts</h2>
+<p>Using a <a href="3D_printer.html">FDM 3D printer</a> loaded with at least 200 g of <a href="PP_filament.html">polypropylene filament</a>, print two <a name="output__cell-bodies-with-barbed-fittings"></a>cell bodies with barbed fittings and two <a href="../exports/Flow Frame.3mf">flow frames</a>.</p>
+<noscript><a href="exports/Cell Body with Barbed Fittings.stl"></a></noscript>
+<p><gb3d-viewer src="exports/Cell Body with Barbed Fittings.stl"></gb3d-viewer></p>
+<noscript><a href="exports/Flow Frame.stl"></a></noscript>
+<p><gb3d-viewer src="exports/Flow Frame.stl"></gb3d-viewer></p>
+<div class="info-block">
+<p><strong>Struggling to print watertight, dimensionally accurate polypropylene parts?</strong></p>
+<p>You can also fabricate these parts by milling them from a larger sheet of polypropylene</p>
+</div>
+<h2 class="page-step" id="post-process-printed-parts">Step 2: Post-process printed parts</h2>
+<ol>
+<li>Remove brim, raft, support material from print.</li>
+<li>Sand down, with fine-grit <a Class="missing" href="missing">sandpaper</a>:<blockquote>
+<ol>
+<li>The sealing faces of each cell body</li>
+<li>Both faces of each flow frame</li>
+</ol>
+</blockquote>
+</li>
+<li>For each cell body, secure it in a <a Class="missing" href="missing">vise</a> and drill out the alignment pin holes of the cell bodies to their final diameter with a <a Class="missing" href="missing">drill</a> and an <a Class="missing" href="missing">1/8" drill bit</a></li>
+</ol>
+<div class="caution-block">
+<p><strong>Caution</strong></p>
+<p>Depending on the dimensional accuracy of your printed parts, you may need to additionally drill out the electrolyte inlet/outlet holes to the correct diameter with an appropriately sized drill bit</p>
+</div>
+<p>This will produce two <a name="output__cell-bodies"></a>cell bodies and two <a name="output__flow-frames"></a>flow frames.</p>
+<h2 class="page-step" id="cut-gaskets">Step 3: Cut gaskets</h2>
+<div class="info-block">
+<p><strong>Note:</strong></p>
+<p>Cutting the gaskets is most easily done with a vinyl cutter machine, but can also be done manually with a steady hand, utility blade, and appropriately sized punches.</p>
+</div>
+<ol>
+<li>Using a <a Class="missing" href="missing">vinyl cutter machine</a>, cut a sheet of <a href="gaskets.html">gasket material</a> to make:<blockquote>
+<ul>
+<li>one <a href="../exports/Pass-Through Gasket.svg">pass-through gasket</a></li>
+</ul>
+<p><img alt="" src="exports/Pass-Through Gasket.svg" title="" /></p>
+<ul>
+<li>three <a href="../exports/Blocking Gasket.svg">blocking gaskets</a></li>
+</ul>
+<p><img alt="" src="exports/Blocking Gasket.svg" title="" /></p>
+</blockquote>
+</li>
+</ol>
+<p>This will produce one <a name="output__pass-through-gasket"></a>pass-through gasket and three <a name="output__blocking-gaskets"></a>blocking gaskets.</p>
+<h2 class="page-step" id="cut-alignment-pins">Step 4: Cut alignment pins</h2>
+<p>Using a <a Class="missing" href="missing">tubing cutter</a>, cut two pieces of <a Class="missing" href="missing">1/8" outside diameter hard plastic tubing</a> into 5 cm lengths.</p>
+<p>This will produce two <a name="output__alignment-pins"></a>alignment pins, which should fit smoothly in to the alignment pin holes in the cell bodies.</p>
+>>>>>>> 6100c2a52e8fa5b542337e01bfa2c2b4c02b73b9:fabrication.html
 <hr />
 <p><a href="index.html">Previous page</a> | <a href="fabrication.html">Next page</a></p>
     </div>
