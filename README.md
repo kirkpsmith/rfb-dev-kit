@@ -1,21 +1,19 @@
-<script src="https://opencollective.com/fbrc/banner.js"></script>
 # RFB-dev-kit
 
 ![FreeCAD view of assembled cell](image.png)
 
 A benchtop flow battery development kit, extendable to other electrochemical systems with flow.
-Designed in FreeCAD 0.21.1 with the fasteners workbench.
+Designed in FreeCAD 0.21.2.
 
 Developed by the [Flow Battery Research Collective](https://opencollective.com/fbrc).
 
 ## Features
 - Geometric cell area from 1 cm² to 10 cm²
-- Flow-through electrodes as standard
 
 ## Design Choices
 - Minimize machining of metal and graphitic materials
 - Flow-through porous carbon electrodes of variable thickness
-- Maximize off-the-shelf part availability
+- Maximize off-the-shelf component and material availability
 - Manufacturable by multiple methods, e.g. FDM/SLA/SLS printing, conventional subtractive machining, etc.
 
 ## TODO

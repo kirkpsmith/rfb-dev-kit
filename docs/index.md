@@ -1,4 +1,9 @@
-# Start here
+# Building an Open-Source Hardware Flow Battery Development Kit
+
+{{BOM}}
+
+This bill of materials can be found [here]{BOM}.
+
 
 If you're starting from scratch, you need to [fabricate](fabrication.md) and source everything needed for testing this flow battery test cell.
 

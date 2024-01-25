@@ -3,8 +3,8 @@ Authors:
   - Kirk Pollard Smith
   - Daniel Fernandez Pinto
 ExternalDirs:
-  exports: "../exports"
+  exports: ../exports
 HoverColor: '#555555'
 License: CERN-OHL-S-2.0
-PrimaryColor: '#f1502f'
+PrimaryColor: '#8ff0a4'
 SecondaryColor: '#cccccc'
