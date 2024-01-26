@@ -3,14 +3,19 @@ Name in documentation	Category	Qty	Full Name	Notes	Supplier 1	Part No	Link	Suppl
 1/8" outside diameter hard plastic tubing	part	10 cm		1/8 inch OD PTFE tubing works well						
 3D printer	tool	1								
 3D printing feedstock	part	200 g								
-current collectors	part	2			AliExpress	Link	https://www.aliexpress.com/item/1005004374432193.html			
-diaphragm pumps	part	2	Diaphragm pumps		McMasterCarr	Use this link	https://www.aliexpress.com/item/1005002886964746.html			
+Arduino UNO R3	part	1		or similar microcontroller that can output two independent 5V PWM signals						
+current collectors	part	2			AliExpress	Use this link	https://www.aliexpress.com/item/1005004374432193.html			
+diaphragm pumps	part	2	Diaphragm pumps		AliExpress	Use this link	https://www.aliexpress.com/item/1005002886964746.html			
 drill	tool	1		A hand drill or rotary tool (with steady hands) works, but a drill press is preferable						
 gasket sheet	part	160 cm²	Gasket material	Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough	Amazon	Link	https://www.amazon.fr/dp/B09HZ52B8H			
-grafoil	part	Some			AliExpress	N/A	https://www.aliexpress.com/item/1005005662210405.html	RS Components	268-6953	https://uk.rs-online.com/web/p/gasket-sheets/2686953
+grafoil	part	Some			AliExpress	Use this link	https://www.aliexpress.com/item/1005005662210405.html	RS Components	268-6953	https://uk.rs-online.com/web/p/gasket-sheets/2686953
+jumper wires	part	some								
 membrane	part	1								
+motor drivers	part	2	Motor drivers for pumps		AliExpress	Use this link	https://www.aliexpress.com/item/33012645746.html			
+PC	tool	1		Must be able to flash firmware to microcontroller and connect over USB serial to microcontroller and potentiostat						
+potentiostat	tool	1	Potentiostat		PCBWay	Use this link	https://www.pcbway.com/project/shareproject/MyStat_Potentiostat_9df57df2.html			
 sandpaper	tool	1 sheet								
-silicone tubing	part	1 meter								
+silicone tubing	part	2 meter	Silicone tubing 		AliExpress	Use this link	https://www.aliexpress.com/item/1005002185082384.html			
 tubing cutter	tool	1		Anything capable of producing a clean, square cut on plastic tubing withing deforming the tube						
 vinyl cutter machine	tool	1								
 vise	tool	1								

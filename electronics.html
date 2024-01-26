@@ -63,6 +63,11 @@
         Fabricating cell components
     </a>
     </li>
+<li class="active">
+    <a class="active" href="./electronics.html">
+        Preparing the power electronics
+    </a>
+    </li>
 <li class="not-active">
     <a class="not-active" href="./assembly.html">
         Assembling the flow cell from components
@@ -83,44 +88,36 @@
             </nav>
         </div>
         <div class="wrapper">
-    <h1 id="widget">Widget</h1>
-<p>This is an example page for a part that needs more information than can be provided
-in a part library. You can also add links and images into this page.</p>
+    <h1 id="preparing-the-power-electronics">Preparing the power electronics</h1>
+<div class="pagebom">
+<h3 id="part">Parts</h3>
+<ul>
+<li>1 <a Class="bom" href="pump_controller.html">Arduino UNO R3</a>    - or similar microcontroller that can output two independent 5V PWM signals</li>
+<li>some <a Class="missing" href="missing">jumper wires</a> </li>
+<li>2 <a Class="bom" href="drivers.html">motor drivers</a> </li>
+</ul>
+<h3 id="tool">Tools</h3>
+<ul>
+<li>1 <a Class="missing" href="missing">PC</a>    - Must be able to flash firmware to microcontroller and connect over USB serial to microcontroller and potentiostat</li>
+<li>1 <a Class="bom" href="pstat.html">potentiostat</a> </li>
+</ul>
+</div>
+<p>one <a href="pstat.html">potentiostat</a></p>
+<p>two <a href="drivers.html">motor drivers</a></p>
+<p>one <a href="pump_controller.html">Arduino UNO R3</a></p>
+<p>one <a Class="missing" href="missing">PC</a></p>
+<p>some <a Class="missing" href="missing">jumper wires</a></p>
+<h2 class="page-step" id="flash-firmware-to-microcontroller">Step 1: Flash firmware to microcontroller</h2>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It works with other common languages&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 class="page-step" id="wire-up-pump-controller">Step 2: Wire up pump controller</h2>
+<p>TODO</p>
+<h2 id="connect-microcontroller-to-pc">Connect microcontroller to PC</h2>
 <hr />
-<h2 id="specifications">Specifications</h2>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td>Quality</td>
-<td>Fantastic</td>
-</tr>
-</tbody>
-</table>
-<h2 id="suppliers">Suppliers</h2>
-<table>
-<thead>
-<tr>
-<th>Supplier</th>
-<th>Part Number</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Widget Shop</td>
-<td><a href="https://dictionary.cambridge.org/dictionary/english/widget" target="_blank">Widget1</a></td>
-</tr>
-</tbody>
-</table>
+<p><a href="fabrication.html">Previous page</a> | <a href="assembly.html">Next page</a></p>
     </div>
 </div>
 <footer class="site-footer">
