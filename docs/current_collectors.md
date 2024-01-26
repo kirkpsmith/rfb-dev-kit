@@ -5,7 +5,7 @@ PartData:
 
     Suppliers:
          AliExpress:
-            PartNo: Link
+            PartNo: Use this link
             Link: 'https://www.aliexpress.com/item/1005004374432193.html'
 
 ---

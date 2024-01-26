@@ -85,3 +85,7 @@ Cut one piece of separator membrane material into a 20 mm x 20 mm square
 ## Cut grafoil sheets {pagestep}
 
 Cut [grafoil](grafoil.md){qty: 100 cm²} into two 5 cm by 5 cm squares.
+
+## Cut silicone tubing
+
+Cut [silicone tubing](tubing.md){qty: 1 meter} into 6 15 centimeter pieces.
