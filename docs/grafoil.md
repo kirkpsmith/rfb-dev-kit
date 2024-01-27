@@ -1,7 +1,7 @@
 ---
 PartData:
     Specs:
-        Thickness: Max 0.1 mm
+        Thickness: TODO
     Suppliers:
          AliExpress:
             PartNo: Use this link

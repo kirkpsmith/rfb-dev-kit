@@ -2,7 +2,9 @@
 PartData:
     Specs:
         Material: Silicone
-        Thickness: 0.5 mm
+        Inner Diameter: 3 mm
+        Outer Diameter: 5 mm
+
     Suppliers:
         AliExpress:
             PartNo: Use this link
@@ -10,7 +12,6 @@ PartData:
 ---
 
 # Silicone tubing 
-
 
 ![](images/Screenshot_20240126_004829.png)
 
