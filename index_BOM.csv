@@ -29,7 +29,7 @@ stir bar	tool	1
 stir plate	tool	1								
 tubing cutter	tool	1		Anything capable of producing a clean, square cut on plastic tubing withing deforming the tube						
 vial	tool	2								
-vinyl cutter machine	tool	1								
+vinyl cutter machine	tool	1		or laser cutter or hand tools						
 vise	tool	1								
 weighing spatula	tool	1								
 zinc chloride	chemical	5 grams								
