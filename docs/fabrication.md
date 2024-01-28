@@ -53,14 +53,11 @@ This will produce one [cell body with four barbed fittings]{output, qty:1}, one 
 >i
 >i Cutting the gaskets is most easily done with a vinyl cutter machine, but can also be done manually with a steady hand, utility blade, and appropriately sized punches.
 
-1. Using a [vinyl cutter machine]{qty: 1, cat:tool}, cut a sheet of [gasket material][gasket sheet](gaskets.md){qty: 160 cm², note: "Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough" } to make:
->* one [pass-through gasket](../exports/Pass-Through Gasket.svg)
->
-> ![](../exports/Pass-Through Gasket.svg)
->
->* three [blocking gaskets](../exports/Blocking Gasket.svg)
->
-> ![](../exports/Blocking Gasket.svg)
+1. Using a [vinyl cutter machine]{qty: 1, cat:tool, Note: or laser cutter or hand tools}, download the gasket file (as [svg](../exports/all_gaskets.svg), [dxf](../exports/all_gaskets.dxf), or [pdf](../exports/all_gaskets_A4.pdf)) and cut a sheet of [gasket material][gasket sheet](gaskets.md){qty: 160 cm², note: "Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough" } to make the following four gaskets:
+
+![pass-through gasket](../exports/all_gaskets_A4.pdf)
+
+
 
  This will produce one [pass-through gasket]{output, qty: 1} and three [blocking gaskets]{output, qty: 3}.
 

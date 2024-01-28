@@ -1,3 +1,4 @@
 ## removing freecad autosaves
 *.FCStd?
-*FCBak
+*.FCBak
+*.nc
