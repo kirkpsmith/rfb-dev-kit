@@ -3,4 +3,4 @@
 # Ignore the directory that GitBuilding will build markdown to
 _build/
 # Ignore the directory that GitBuilding will HTML markdown to
-#_site/
+_site/
