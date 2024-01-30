@@ -77,7 +77,7 @@ Cut two carbon electrodes into 10 mm x 10 mm square
 
 TODO
 
-Cut one piece of separator membrane material into a 20 mm x 20 mm square
+Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into three rectangles
 
 ## Cut grafoil sheets {pagestep}
 
