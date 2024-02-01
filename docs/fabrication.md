@@ -20,7 +20,7 @@ Details:
 ## Print rigid cell components  {pagestep}
 
 Using a [3D printer](3D_printer.md){qty:1, cat:tool} loaded with chemically compatible polypropylen filament/epoxy resin [3D printing feedstock](3D_printing_feedstock.md){qty: 200 g}, print one [cell body with four barbed fittings](../exports/Cell Body with Four Barbed Fittings.3mf), one [backing plate](../exports/Backing Plate.3mf) and two [flow frames](../exports/Flow Frame.3mf) (links are to .3mf files).
-![](../exports/Cell Body with Four Barbed Fittings.stl)
+![](../exports/Cell Body with Two Barbed Fittings.stl)
 ![](../exports/Backing Plate.stl)
 ![](../exports/Flow Frame.stl)
 
