@@ -19,10 +19,10 @@ Details:
 
 ## Print rigid cell components  {pagestep}
 
-Using a [3D printer](3D_printer.md){qty:1, cat:tool} loaded with chemically compatible polypropylen filament/epoxy resin [3D printing feedstock](3D_printing_feedstock.md){qty: 200 g}, print one [cell body with four barbed fittings](../exports/Cell Body with Four Barbed Fittings.3mf), one [backing plate](../exports/Backing Plate.3mf) and two [flow frames](../exports/Flow Frame.3mf) (links are to .3mf files).
-![](../exports/Cell Body with Two Barbed Fittings.stl)
-![](../exports/Backing Plate.stl)
-![](../exports/Flow Frame.stl)
+Using a [3D printer](3D_printer.md){qty:1, cat:tool} loaded with chemically compatible polypropylen filament/epoxy resin [3D printing feedstock](3D_printing_feedstock.md){qty: 200 g}, print one [cell body with four barbed fittings](../CAD/exports/Cell Body with Four Barbed Fittings.3mf), one [backing plate](../CAD/exports/Backing Plate.3mf) and two [flow frames](../CAD/exports/Flow Frame.3mf) (links are to .3mf files).
+![](../CAD/exports/Cell Body with Four Barbed Fittings.stl)
+![](../CAD/exports/Backing Plate.stl)
+![](../CAD/exports/Flow Frame.stl)
 
 >i **Prefer conventional machining?**
 >i 
@@ -53,9 +53,9 @@ This will produce one [cell body with four barbed fittings]{output, qty:1}, one 
 >i
 >i Cutting the gaskets is most easily done with a vinyl cutter machine, but can also be done manually with a steady hand, utility blade, and appropriately sized punches.
 
-1. Using a [vinyl cutter machine]{qty: 1, cat:tool, Note: or laser cutter or hand tools}, download the gasket file (as [svg](../exports/all_gaskets.svg), [dxf](../exports/all_gaskets.dxf), or [pdf](../exports/all_gaskets_A4.pdf)) and cut a sheet of [gasket material][gasket sheet](gaskets.md){qty: 160 cm², note: "Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough" } to make the following four gaskets:
+1. Using a [vinyl cutter machine]{qty: 1, cat:tool, Note: or laser cutter or hand tools}, download the gasket file (as [svg](../CAD/exports/all_gaskets.svg), [dxf](../CAD/exports/all_gaskets.dxf), or [pdf](../CAD/exports/all_gaskets_A4.pdf)) and cut a sheet of [gasket material][gasket sheet](gaskets.md){qty: 160 cm², note: "Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough" } to make the following four gaskets:
 
-![pass-through gasket](../exports/all_gaskets_A4.pdf)
+![pass-through gasket](../CAD/exports/all_gaskets_A4.pdf)
 
 
 
@@ -64,7 +64,7 @@ This will produce one [cell body with four barbed fittings]{output, qty:1}, one 
 ## Cut alignment pins {pagestep}
 Using a [tubing cutter]{qty:1, cat:tool, Note:"Anything capable of producing a clean, square cut on plastic tubing withing deforming the tube"}, cut two pieces of [1/8" outside diameter hard plastic tubing]{qty: 10 cm, Note: "1/8 inch OD PTFE tubing works well"} into 5 cm lengths.
 
-![](../exports/Alignment Pins.stl)
+![](../CAD/exports/Alignment Pins.stl)
 
 This will produce two [alignment pins]{output, qty:2}, which should fit smoothly in to the alignment pin holes in the cell bodies.
 
