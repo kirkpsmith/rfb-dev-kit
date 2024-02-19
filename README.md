@@ -24,7 +24,7 @@ Draft documentation, which includes the BOM, is available [here](https://kirkpsm
 ## Repository Structure
 To make this device, follow the link to documentation above.
 
-This repository has the main FreeCAD files in the root directory, files for manufacturing in the `exports` folder, and documentation in the `docs` folder (using Markdown based on [gitbuilding](https://gitbuilding.io/))
+This repository has the main FreeCAD files in the `CAD` directory, files for manufacturing in the `exports` subfolder of the `CAD` folder, and documentation in the `docs` folder (using Markdown based on [gitbuilding](https://gitbuilding.io/))
 
 ## TODO
 - [ ] (as needed) add ridges in printed parts to enhance sealing
