@@ -17,11 +17,12 @@ Details:
 
 {{BOM}}
 
+## Fabricate
+
 ## Print rigid cell components  {pagestep}
 
-Using a [3D printer](3D_printer.md){qty:1, cat:tool} loaded with chemically compatible polypropylen filament/epoxy resin [3D printing feedstock](3D_printing_feedstock.md){qty: 200 g}, print one [cell body with four barbed fittings](../CAD/exports/Cell Body with Four Barbed Fittings.3mf), one [backing plate](../CAD/exports/Backing Plate.3mf) and two [flow frames](../CAD/exports/Flow Frame.3mf) (links are to .3mf files).
-![](../CAD/exports/Cell Body with Four Barbed Fittings.stl)
-![](../CAD/exports/Backing Plate.stl)
+Using a [3D printer](3D_printer.md){qty:1, cat:tool} loaded with chemically compatible polypropylen filament/epoxy resin [3D printing feedstock](3D_printing_feedstock.md){qty: 200 g}, print two [reservoirs](../CAD/exports/Reservoir.3mf) and two [flow frames](../CAD/exports/Flow Frame.3mf) (links are to .3mf files).
+![](../CAD/exports/Reservoir.stl)
 ![](../CAD/exports/Flow Frame.stl)
 
 >i **Prefer conventional machining?**
