@@ -3,10 +3,6 @@ PartData:
     Specs:
         Material: Matte Photo Paper
         Weight:  230 g/m²
-
-
-
-
     Suppliers:
         Amazon:
             PartNo: Use this link

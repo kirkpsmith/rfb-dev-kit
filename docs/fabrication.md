@@ -10,7 +10,6 @@ Details:
 
 ---
 <!-- There should be only one Header per page. You do not need to use all the keys -->
-
 # Fabricating cell components
 ## Bill of Materials
 
@@ -62,18 +61,11 @@ This will produce one [cell body with four barbed fittings]{output, qty:1}, one 
 
  This will produce one [pass-through gasket]{output, qty: 1} and three [blocking gaskets]{output, qty: 3}.
 
-## Cut alignment pins {pagestep}
-Using a [tubing cutter]{qty:1, cat:tool, Note:"Anything capable of producing a clean, square cut on plastic tubing withing deforming the tube"}, cut two pieces of [1/8" outside diameter hard plastic tubing]{qty: 10 cm, Note: "1/8 inch OD PTFE tubing works well"} into 5 cm lengths.
-
-![](../CAD/exports/Alignment Pins.stl)
-
-This will produce two [alignment pins]{output, qty:2}, which should fit smoothly in to the alignment pin holes in the cell bodies.
-
 ## Cut porous carbon electrodes {pagestep}
 
 TODO
 
-Cut two carbon electrodes into 10 mm x 10 mm square
+Cut two conductive felt electrodes into 10 mm x 10 mm square from a sheet of conductive felt[conductive felt](conductive_felt.md){qty: 10 cm²,cat: part}
 ## Cut separator membrane {pagestep}
 
 TODO
@@ -84,6 +76,6 @@ Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into three re
 
 Cut [grafoil](grafoil.md){qty: 100 cm²} into two 5 cm by 5 cm squares.
 
-## Cut silicone tubing
+## Cut tubing
 
-Cut [silicone tubing](tubing.md){qty: 1 meter} into 6 15 centimeter pieces.
+Cut [tubing](tubing.md){qty: 1 meter} into 6 15 centimeter pieces.

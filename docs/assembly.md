@@ -15,13 +15,13 @@ two [pass-through gaskets](fromstep){qty: 2} and two [blocking gaskets](fromstep
 
 three [cut membranes]{qty: 3}
 
-four [M6 x 50 mm bolts](m6bolts.md){qty: 4}
+four [M6 x 60 mm hex socket cap bolts]{qty: 4}
 
-four [M6 nuts](m6nuts.md){qty: 4}
+four [M6 nuts]{qty: 4}
 
 [5mm hex key]{qty: 1,cat: tool}
 
-[10 mm wrench]{qty: 1, cat: tool, Note: Adjustable or box end}
+[10 mm socket and wrench]{qty: 1, cat: tool, Note: Adjustable or box end}
 
 [torque wrench]{qty: 1, cat: tool, Note: to accept 5 mm allen key or 10 mm hex socket}
 
