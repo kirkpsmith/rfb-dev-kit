@@ -1,6 +1,7 @@
 # RFB-dev-kit
 
-![FreeCAD view of assembled cell](image.png)
+![View of assembled cell in jig](CAD/exports/front.png)
+![View of electronics in jig](CAD/exports/back.png)
 
 A benchtop flow battery development kit, extendable to other electrochemical systems with flow.
 Designed in FreeCAD 0.21.2.
