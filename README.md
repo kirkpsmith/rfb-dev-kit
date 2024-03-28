@@ -17,7 +17,7 @@ Developed by the [Flow Battery Research Collective](https://opencollective.com/f
 
 ## Documentation
 
-Draft documentation, which includes the BOM, is available [here](https://kirkpsmith.codeberg.page/rfb-dev-kit/). This is the contents of the `docs` repository subfolder rendered as a static website.
+Draft documentation, which includes the BOM, is available [here](https://fbrc.codeberg.page/rfb-dev-kit/). This is the contents of the `docs` repository subfolder rendered as a static website, using [GitBuilding](https://gitbuilding.io/).
 
 
 ## Features
