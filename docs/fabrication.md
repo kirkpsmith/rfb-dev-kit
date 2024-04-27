@@ -1,6 +1,6 @@
 ---
 Details:
-    Thumbnail: images/<Your Image>.jpg
+    Thumbnail: images/printing.png
     Time: Hours
     Difficulty: Hard
     Skills:
@@ -16,11 +16,24 @@ Details:
 
 {{BOM}}
 
-## Fabricate
+## Fabricate cell bodies
+
+These are preferably milled from solid polypropylene with a [3-axis mill]{qty: 1, cat: tool}
+
+![](../CAD/exports/Cell Body with Two Flat-Bottom Ports.pdf)
+
+This makes two [cell bodies]{output, qty: 2}
+
+
+>i **If you don't have access to a mill** 
+>i
+>i You can try to FDM (in polypropylene) or resin print (in epoxy-based resin) this file, with built-in barbs:
+>i ![](../CAD/exports/Cell Body with Two Barbed Fittings.stl)
+
 
 ## Print rigid cell components  {pagestep}
 
-Using a [3D printer](3D_printer.md){qty:1, cat:tool} loaded with chemically compatible polypropylen filament/epoxy resin [3D printing feedstock](3D_printing_feedstock.md){qty: 200 g}, print two [reservoirs](../CAD/exports/Reservoir.3mf) and two [flow frames](../CAD/exports/Flow Frame.3mf) (links are to .3mf files).
+Using a [3D printer]{qty:1, cat:tool} loaded with chemically compatible polypropylen filament/epoxy resin [3D printing feedstock]{qty: 200 g}, print two [reservoirs](../CAD/exports/Reservoir.3mf) and two [flow frames](../CAD/exports/Flow Frame.3mf) (links are to .3mf files).
 ![](../CAD/exports/Reservoir.stl)
 ![](../CAD/exports/Flow Frame.stl)
 
@@ -53,13 +66,13 @@ This will produce one [cell body with four barbed fittings]{output, qty:1}, one 
 >i
 >i Cutting the gaskets is most easily done with a vinyl cutter machine, but can also be done manually with a steady hand, utility blade, and appropriately sized punches.
 
-1. Using a [vinyl cutter machine]{qty: 1, cat:tool, Note: or laser cutter or hand tools}, download the gasket file (as [svg](../CAD/exports/all_gaskets.svg), [dxf](../CAD/exports/all_gaskets.dxf), or [pdf](../CAD/exports/all_gaskets_A4.pdf)) and cut a sheet of [gasket material][gasket sheet](gaskets.md){qty: 160 cm², note: "Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough" } to make the following four gaskets:
+1. Using a [vinyl cutter machine]{qty: 1, cat:tool, Note: or laser cutter or hand tools}, download the gasket file (as [svg](../CAD/exports/1 sqcm gaskets.svg), [dxf](../CAD/exports/1 sqcm gaskets.dxf), or [pdf](../CAD/exports/1 sqcm gaskets.pdf)) and cut a sheet of [gasket material][gasket sheet](gaskets.md){qty: 160 cm², note: "Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough" } to make the following four gaskets:
 
-![pass-through gasket](../CAD/exports/all_gaskets_A4.pdf)
+![pass-through gasket](../CAD/exports/1 sqcm gaskets.pdf)
 
 
 
- This will produce one [pass-through gasket]{output, qty: 1} and three [blocking gaskets]{output, qty: 3}.
+ This will produce two [pass-through gaskets]{output, qty: 2} and two [blocking gaskets]{output, qty: 2}.
 
 ## Cut porous carbon electrodes {pagestep}
 
@@ -72,10 +85,20 @@ TODO
 
 Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into three rectangles
 
-## Cut grafoil sheets {pagestep}
+[cut membranes]{output, qty: 3}
 
-Cut [grafoil](grafoil.md){qty: 100 cm²} into two 5 cm by 5 cm squares.
+## Cut grafoil current collectors {pagestep}
+
+Cut [grafoil](grafoil.md){qty: 100 cm²} into two 5 cm by 5 cm squares to make [grafoil current collectors]{output, qty: 2}.
+
+## Cut copper current collectors {pagestep}
+
+Cut [copper sheet](copper.md){qty: 100 cm²} into two 5 cm by 5 cm squares to make [copper current collectors]{output, qty: 2}.
+
+>!! **Warning to prevent leakage** 
+>!!
+>!! Make sure at least one orientation of the copper squares fits *exactly* the machined square recess in the cell bodies 
 
 ## Cut tubing
 
-Cut [tubing](tubing.md){qty: 1 meter} into 6 15 centimeter pieces.
+Cut [tubing](tubing.md){qty: 1 meter} into 6 15 centimeter lengths to make [cut tubing pieces]{output, qty: 6}

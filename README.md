@@ -1,6 +1,6 @@
 # RFB-dev-kit
 
-![Exploded view of cell](CAD/exports/exploded.png)
+![Exploded view of cell](CAD/exports/exploded.webp)
 Exploded view of cell
 
 ![View of assembled cell in jig](CAD/exports/front.png)
