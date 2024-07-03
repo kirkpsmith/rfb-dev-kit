@@ -9,28 +9,27 @@
 <link rel="icon" type="image/png" href="./static/Logo/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="./static/Logo/favicon-16x16.png" sizes="16x16" />
 
-    <link href="./static/style.css" rel="stylesheet">
+    <link href="./static/base-style.css" rel="stylesheet">
+    <link href="./static/site-style.css" rel="stylesheet">
                 <script type="text/javascript" src="./static/3d-viewer.js"></script>
-          <style>
-    .nav-list a.navhome, .sub-nav-list a.navhome{
-      background-color: #8ff0a4 !important;
-    }
-    .gallery-thumb img:hover {
-      border: 4px solid #8ff0a4;
-    }
-  </style>
-<style>
-  .nav-list a.active, .sub-nav-list a.active {
-    background-color: #cccccc !important;
+        <style>
+  :root {
+    --primary-color: #8ff0a4;
   }
 </style>
 <style>
-  .nav-list a:hover:not(.active), .sub-nav-list a:hover:not(.active) {
-    background-color: #555555 !important;
+  :root {
+    --secondary-color: #cccccc;
   }
+</style>
+<style>
+  :root {
+    --hover-color: #555555;
+}
 </style>
     
-</head>
+        <script type="text/javascript" src="./static/search.js" defer=""></script>
+    </head>
 <body>
 <header class="site-header">
     <div class="wrapper header-wrapper" >
@@ -59,6 +58,39 @@
         Building an Open-Source Hardware Flow Battery Development Kit
     </a>
 </li>
+<li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
+  <input
+    type="text"
+    placeholder="Search..."
+    v-on:input="search($event.target.value)"
+    v-on:keypress="handleKeyPress"
+    v-on:keyup.esc="$event.target.blur()"
+    v-on:focus="handleFocus"
+    v-on:blur="handleBlur"
+    :value="searchTerm" />
+    <div class="search-results" v-if="focused && searchTerm.length > 0">
+        <div v-if="searchResults.length > 0">Results:</div>
+        <div v-if="searchResults.length === 0">No results.</div>
+        <template v-for="(result, index) in searchResults">
+            <li>
+                <a class="search-result" :href="`./${result.path}.html`">
+               <span v-for="crumb in result.breadCrumbs.slice(0, -1)">
+                ${crumb + ' > '}
+                </span>
+               ${result.title || result.breadCrumbs[result.breadCrumbs.length - 1]}
+                <p>
+                    <span v-for="node in result.highlightChars" :class="node.mark ? 'highlight' : ''" >${node.chars}</span>
+                </p>
+                </a>
+            </li>
+        </template>
+    </div>
+</li>
+<li class="not-active">
+    <a class="not-active" href="./index_BOM.html">
+        Bill of Materials
+    </a>
+    </li>
 <li class="active">
     <a class="active" href="./fabrication.html">
         Fabricating cell components
@@ -70,8 +102,13 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./assembly.html">
+    <a class="not-active" href="./cell_assembly.html">
         Assembling the flow cell from components
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./jig_assembly.html">
+        Assembling the jig with electronics and flow cell
     </a>
     </li>
 <li class="not-active">
@@ -90,12 +127,11 @@
         </div>
         <div class="wrapper">
     <!-- There should be only one Header per page. You do not need to use all the keys -->
-
 <h1 id="fabricating-cell-components">Fabricating cell components</h1>
 <p><div class=details-header>
     <div class=details-thumb-outer>
         <div class=details-thumb>
-            <img alt="page thumbnail" src="images/&lt;Your Image&gt;.jpg" title="" />
+            <img alt="page thumbnail" src="images/printing.png" title="" />
         </div>
     </div>
 <div class=other-details>
@@ -117,32 +153,41 @@
 </div></p>
 <h2 id="bill-of-materials">Bill of Materials</h2>
 <div class="pagebom">
-<h3 id="part">Parts</h3>
+<h3 id="parts">Parts</h3>
 <ul>
-<li>10 cm of <a Class="missing" href="missing">1/8" outside diameter hard plastic tubing</a>    - 1/8 inch OD PTFE tubing works well</li>
-<li>200 g of <a Class="bom" href="3D_printing_feedstock.html">3D printing feedstock</a> </li>
+<li>200 g of <a Class="missing" href="missing">3D printing feedstock</a> </li>
+<li>10 cm² of <a Class="bom" href="conductive_felt.html">conductive felt</a> </li>
+<li>100 cm² of <a Class="bom" href="copper.html">copper sheet</a> </li>
 <li>160 cm² of <a Class="bom" href="gaskets.html">gasket sheet</a>    - Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough</li>
 <li>100 cm² of <a Class="bom" href="grafoil.html">grafoil</a> </li>
 <li>A4 sheet <a Class="bom" href="separator_sheet.html">separator sheet</a> </li>
-<li>1 meter of <a Class="bom" href="tubing.html">silicone tubing</a> </li>
+<li>1 meter of <a Class="bom" href="tubing.html">tubing</a> </li>
 </ul>
-<h3 id="tool">Tools</h3>
+<h3 id="tools">Tools</h3>
 <ul>
 <li>1 <a Class="missing" href="missing">1/8" drill bit</a> </li>
-<li>1 <a Class="bom" href="3D_printer.html">3D printer</a> </li>
+<li>1 <a Class="missing" href="missing">3-axis mill</a> </li>
+<li>1 <a Class="missing" href="missing">3D printer</a> </li>
 <li>1 <a Class="missing" href="missing">drill</a>    - A hand drill or rotary tool (with steady hands) works, but a drill press is preferable</li>
 <li>1 sheet of <a Class="missing" href="missing">sandpaper</a> </li>
-<li>1 <a Class="missing" href="missing">tubing cutter</a>    - Anything capable of producing a clean, square cut on plastic tubing withing deforming the tube</li>
 <li>1 <a Class="missing" href="missing">vinyl cutter machine</a>    - or laser cutter or hand tools</li>
 <li>1 <a Class="missing" href="missing">vise</a> </li>
 </ul>
 </div>
-<h2 class="page-step" id="print-rigid-cell-components">Step 1: Print rigid cell components</h2>
-<p>Using a <a href="3D_printer.html">3D printer</a> loaded with chemically compatible polypropylen filament/epoxy resin <a href="3D_printing_feedstock.html">3D printing feedstock</a>, print one <a href="../exports/Cell Body with Four Barbed Fittings.3mf">cell body with four barbed fittings</a>, one <a href="../exports/Backing Plate.3mf">backing plate</a> and two <a href="../exports/Flow Frame.3mf">flow frames</a> (links are to .3mf files).</p>
+<h2 id="fabricate-cell-bodies">Fabricate cell bodies</h2>
+<p>These are preferably milled from solid polypropylene with a <a Class="missing" href="missing">3-axis mill</a></p>
+<p><embed src="exports/Cell Body with Two Flat-Bottom Ports.pdf" type="application/pdf" width="100%" height="600px" /></p>
+<p>This makes two <a name="output__cell-bodies"></a>cell bodies</p>
+<div class="info-block">
+<p><strong>If you don't have access to a mill</strong> </p>
+<p>You can try to FDM (in polypropylene) or resin print (in epoxy-based resin) this file, with built-in barbs:</p>
 <noscript><a href="exports/Cell Body with Two Barbed Fittings.stl"></a></noscript>
 <p><gb3d-viewer src="exports/Cell Body with Two Barbed Fittings.stl"></gb3d-viewer></p>
-<noscript><a href="exports/Backing Plate.stl"></a></noscript>
-<p><gb3d-viewer src="exports/Backing Plate.stl"></gb3d-viewer></p>
+</div>
+<h2 class="page-step" id="print-rigid-cell-components">Step 1: Print rigid cell components</h2>
+<p>Using a <a Class="missing" href="missing">3D printer</a> loaded with chemically compatible polypropylen filament/epoxy resin <a Class="missing" href="missing">3D printing feedstock</a>, print two <a href="exports/Reservoir.3mf" title="">reservoirs</a> and two <a href="../CAD/exports/Flow Frame.3mf">flow frames</a> (links are to .3mf files).</p>
+<noscript><a href="exports/Reservoir.stl"></a></noscript>
+<p><gb3d-viewer src="exports/Reservoir.stl"></gb3d-viewer></p>
 <noscript><a href="exports/Flow Frame.stl"></a></noscript>
 <p><gb3d-viewer src="exports/Flow Frame.stl"></gb3d-viewer></p>
 <div class="info-block">
@@ -151,18 +196,16 @@
 </div>
 <h2 class="page-step" id="post-process-printed-parts">Step 2: Post-process printed parts</h2>
 <ol>
-<li>Remove brim, raft, support material from print (depending on printing method)</li>
-<li>Sand down, with fine-grit <a Class="missing" href="missing">sandpaper</a>:<blockquote>
+<li>Remove brim, raft, support material from print (depending on printing method)
+* Sand down, with fine-grit <a Class="missing" href="missing">sandpaper</a>:<blockquote>
 <ol>
 <li>The sealing faces of each cell body
-<img alt="" src="images/cell_body.png" title="" /></li>
-<li>Both faces of each flow frame
-<img alt="" src="images/flow_frame.png" title="" /></li>
+<img alt="" src="images/cell_body.png" title="" />
+* Both faces of each flow frame
+<img alt="" src="images/flow_frame.png" title="" />
+* Secure each cell body and flow frame in a <a Class="missing" href="missing">vise</a> and drill out the alignment pin holes to their final diameter with a <a Class="missing" href="missing">drill</a> and an <a Class="missing" href="missing">1/8" drill bit</a>
+<img alt="" src="images/cell_body_alignment_pins.png" title="" /></li>
 </ol>
-</blockquote>
-</li>
-<li>Secure each cell body and flow frame in a <a Class="missing" href="missing">vise</a> and drill out the alignment pin holes to their final diameter with a <a Class="missing" href="missing">drill</a> and an <a Class="missing" href="missing">1/8" drill bit</a><blockquote>
-<p><img alt="" src="images/cell_body_alignment_pins.png" title="" /></p>
 <p><img alt="" src="images/flow_frame_alignment_pins.png" title="" /></p>
 </blockquote>
 </li>
@@ -178,25 +221,28 @@
 <p>Cutting the gaskets is most easily done with a vinyl cutter machine, but can also be done manually with a steady hand, utility blade, and appropriately sized punches.</p>
 </div>
 <ol>
-<li>Using a <a Class="missing" href="missing">vinyl cutter machine</a>, download the gasket file (as <a href="exports/all_gaskets.svg" title="">svg</a>, <a href="exports/all_gaskets.dxf" title="">dxf</a>, or <a href="exports/all_gaskets_A4.pdf" title="">pdf</a>) and cut a sheet of <a href="gaskets.html">gasket material</a> to make the following four gaskets:</li>
+<li>Using a <a Class="missing" href="missing">vinyl cutter machine</a>, download the gasket file (as <a href="../CAD/exports/1 sqcm gaskets.svg">svg</a>, <a href="../CAD/exports/1 sqcm gaskets.dxf">dxf</a>, or <a href="../CAD/exports/1 sqcm gaskets.pdf">pdf</a>) and cut a sheet of <a href="gaskets.html">gasket material</a> to make the following four gaskets:</li>
 </ol>
-<p><embed src="exports/all_gaskets_A4.pdf" type="application/pdf" width="100%" height="600px" /></p>
-<p>This will produce one <a name="output__pass-through-gasket"></a>pass-through gasket and three <a name="output__blocking-gaskets"></a>blocking gaskets.</p>
-<h2 class="page-step" id="cut-alignment-pins">Step 4: Cut alignment pins</h2>
-<p>Using a <a Class="missing" href="missing">tubing cutter</a>, cut two pieces of <a Class="missing" href="missing">1/8" outside diameter hard plastic tubing</a> into 5 cm lengths.</p>
-<noscript><a href="exports/Alignment Pins.stl"></a></noscript>
-<p><gb3d-viewer src="exports/Alignment Pins.stl"></gb3d-viewer></p>
-<p>This will produce two <a name="output__alignment-pins"></a>alignment pins, which should fit smoothly in to the alignment pin holes in the cell bodies.</p>
-<h2 class="page-step" id="cut-porous-carbon-electrodes">Step 5: Cut porous carbon electrodes</h2>
+<p><embed src="exports/1 sqcm gaskets.pdf" type="application/pdf" width="100%" height="600px" /></p>
+<p>This will produce two <a name="output__pass-through-gaskets"></a>pass-through gaskets and two <a name="output__blocking-gaskets"></a>blocking gaskets.</p>
+<h2 class="page-step" id="cut-porous-carbon-electrodes">Step 4: Cut porous carbon electrodes</h2>
 <p>TODO</p>
-<p>Cut two carbon electrodes into 10 mm x 10 mm square</p>
-<h2 class="page-step" id="cut-separator-membrane">Step 6: Cut separator membrane</h2>
+<p>Cut two conductive felt electrodes into 10 mm x 10 mm square from a sheet of conductive felt<a href="conductive_felt.html">conductive felt</a></p>
+<h2 class="page-step" id="cut-separator-membrane">Step 5: Cut separator membrane</h2>
 <p>TODO</p>
 <p>Cut <a href="separator_sheet.html">separator sheet</a> into three rectangles</p>
-<h2 class="page-step" id="cut-grafoil-sheets">Step 7: Cut grafoil sheets</h2>
-<p>Cut <a href="grafoil.html">grafoil</a> into two 5 cm by 5 cm squares.</p>
-<h2 id="cut-silicone-tubing">Cut silicone tubing</h2>
-<p>Cut <a href="tubing.html">silicone tubing</a> into 6 15 centimeter pieces.</p>
+<p><a name="output__cut-membranes"></a>cut membranes</p>
+<h2 class="page-step" id="cut-grafoil-current-collectors">Step 6: Cut grafoil current collectors</h2>
+<p>Cut <a href="grafoil.html">grafoil</a> into two 5 cm by 5 cm squares to make <a name="output__grafoil-current-collectors"></a>grafoil current collectors.</p>
+<h2 class="page-step" id="cut-copper-current-collectors">Step 7: Cut copper current collectors</h2>
+<p>Cut <a href="copper.html">copper sheet</a> into two 5 cm by 5 cm squares to make <a name="output__copper-current-collectors"></a>copper current collectors.</p>
+<div class="warning-block">
+<p><strong>Warning to prevent leakage</strong> </p>
+<p>Make sure at least one orientation of the copper squares fits <em>exactly</em> the machined square recess in the cell bodies </p>
+</div>
+<h2 id="cut-tubing">Cut tubing</h2>
+<p>Cut <a href="tubing.html">tubing</a> into 6 15 centimeter lengths to make <a name="output__cut-tubing-pieces"></a>cut tubing pieces</p>
+<!-- GitBuilding Nav -->
 <hr />
 <p><a href="index_BOM.html">Previous page</a> | <a href="electronics.html">Next page</a></p>
     </div>
@@ -205,7 +251,7 @@
     <div class="wrapper">
         <a target="_blank" rel="noopener noreferrer" href="https://gitbuilding.io">
     <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
-    <span class="info">Documentation powered by GitBuilding</span>
+    <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
     <p class="author">©2024 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="license">Building an Open-Source Hardware Flow Battery Development Kit is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>

@@ -9,27 +9,26 @@
 <link rel="icon" type="image/png" href="./static/Logo/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="./static/Logo/favicon-16x16.png" sizes="16x16" />
 
-    <link href="./static/style.css" rel="stylesheet">
-                  <style>
-    .nav-list a.navhome, .sub-nav-list a.navhome{
-      background-color: #8ff0a4 !important;
-    }
-    .gallery-thumb img:hover {
-      border: 4px solid #8ff0a4;
-    }
-  </style>
-<style>
-  .nav-list a.active, .sub-nav-list a.active {
-    background-color: #cccccc !important;
+    <link href="./static/base-style.css" rel="stylesheet">
+    <link href="./static/site-style.css" rel="stylesheet">
+                <style>
+  :root {
+    --primary-color: #8ff0a4;
   }
 </style>
 <style>
-  .nav-list a:hover:not(.active), .sub-nav-list a:hover:not(.active) {
-    background-color: #555555 !important;
+  :root {
+    --secondary-color: #cccccc;
   }
+</style>
+<style>
+  :root {
+    --hover-color: #555555;
+}
 </style>
     
-</head>
+        <script type="text/javascript" src="./static/search.js" defer=""></script>
+    </head>
 <body>
 <header class="site-header">
     <div class="wrapper header-wrapper" >
@@ -58,6 +57,39 @@
         Building an Open-Source Hardware Flow Battery Development Kit
     </a>
 </li>
+<li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
+  <input
+    type="text"
+    placeholder="Search..."
+    v-on:input="search($event.target.value)"
+    v-on:keypress="handleKeyPress"
+    v-on:keyup.esc="$event.target.blur()"
+    v-on:focus="handleFocus"
+    v-on:blur="handleBlur"
+    :value="searchTerm" />
+    <div class="search-results" v-if="focused && searchTerm.length > 0">
+        <div v-if="searchResults.length > 0">Results:</div>
+        <div v-if="searchResults.length === 0">No results.</div>
+        <template v-for="(result, index) in searchResults">
+            <li>
+                <a class="search-result" :href="`./${result.path}.html`">
+               <span v-for="crumb in result.breadCrumbs.slice(0, -1)">
+                ${crumb + ' > '}
+                </span>
+               ${result.title || result.breadCrumbs[result.breadCrumbs.length - 1]}
+                <p>
+                    <span v-for="node in result.highlightChars" :class="node.mark ? 'highlight' : ''" >${node.chars}</span>
+                </p>
+                </a>
+            </li>
+        </template>
+    </div>
+</li>
+<li class="not-active">
+    <a class="not-active" href="./index_BOM.html">
+        Bill of Materials
+    </a>
+    </li>
 <li class="not-active">
     <a class="not-active" href="./fabrication.html">
         Fabricating cell components
@@ -69,8 +101,13 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./assembly.html">
+    <a class="not-active" href="./cell_assembly.html">
         Assembling the flow cell from components
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./jig_assembly.html">
+        Assembling the jig with electronics and flow cell
     </a>
     </li>
 <li class="active">
@@ -91,7 +128,7 @@
     <h1 id="preparing-the-electrolyte">Preparing the electrolyte</h1>
 <h2 id="zinc-iodide-chemistry">Zinc-Iodide chemistry</h2>
 <div class="pagebom">
-<h3 id="tool">Tools</h3>
+<h3 id="tools">Tools</h3>
 <ul>
 <li>1 <a Class="missing" href="missing">pair of chemical safety goggles</a> </li>
 <li>1 <a Class="missing" href="missing">pair of nitrile gloves</a> </li>
@@ -101,7 +138,7 @@
 <li>2 <a Class="missing" href="missing">vial</a> </li>
 <li>1 <a Class="missing" href="missing">weighing spatula</a> </li>
 </ul>
-<h3 id="chemical">Chemicals</h3>
+<h3 id="chemicals">Chemicals</h3>
 <ul>
 <li>5 grams of <a Class="missing" href="missing">deionized water</a> </li>
 <li>5 grams of <a Class="missing" href="missing">potassium iodide</a> </li>
@@ -118,15 +155,16 @@
 <p><a Class="missing" href="missing">pair of nitrile gloves</a></p>
 <p><a Class="missing" href="missing">scale</a></p>
 <p><a Class="missing" href="missing">weighing spatula</a></p>
+<!-- GitBuilding Nav -->
 <hr />
-<p><a href="assembly.html">Previous page</a> | <a href="testing.html">Next page</a></p>
+<p><a href="jig_assembly.html">Previous page</a> | <a href="testing.html">Next page</a></p>
     </div>
 </div>
 <footer class="site-footer">
     <div class="wrapper">
         <a target="_blank" rel="noopener noreferrer" href="https://gitbuilding.io">
     <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
-    <span class="info">Documentation powered by GitBuilding</span>
+    <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
     <p class="author">©2024 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="license">Building an Open-Source Hardware Flow Battery Development Kit is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
