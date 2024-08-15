@@ -1,5 +1,17 @@
 # Building an Open-Source Hardware Flow Battery Development Kit
 
+
+>!! **Warning** 
+>!! # THIS DOCUMENTATION IS INCOMPLETE, DO NOT USE
+
+
+>i **Note** 
+>i
+>i This kit is intended for educational and R&D use only, not for actual energy storage applications (that will happen later!)
+
+
+
+
 {{BOM}}
 
 This bill of materials can be found [here]{BOM}.
