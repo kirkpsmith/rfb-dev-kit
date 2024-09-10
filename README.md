@@ -19,7 +19,6 @@ Developed by the [Flow Battery Research Collective](https://opencollective.com/f
 
 Draft documentation, which includes the BOM, is available [here](https://fbrc.codeberg.page/rfb-dev-kit/). This is the contents of the `docs` repository subfolder rendered as a static website, using [GitBuilding](https://gitbuilding.io/).
 
-
 ## Features
 - Geometric cell area from 1 cm² to 10 cm²
 
@@ -33,12 +32,6 @@ Draft documentation, which includes the BOM, is available [here](https://fbrc.co
 To make this device, follow the link to documentation above.
 
 This repository has the main FreeCAD files in the `CAD` directory, files for manufacturing in the `exports` subfolder of the `CAD` folder, and documentation in the `docs` folder (using Markdown based on [gitbuilding](https://gitbuilding.io/))
-
-## TODO
-- [ ] (as needed) add ridges in printed parts to enhance sealing
-- [ ] mark a first release and implement a [changelog](https://keepachangelog.com/en/1.1.0/)
-- [ ] add a contributors section from https://github.com/all-contributors/all-contributors
-- [ ] get this thing a DOI with Zenodo or something
 
 ## References/Inspiration/Collaborators/Conspirators (in no particular order)
 - [FAIR Battery project](https://github.com/SanliFaez/FAIR-Battery) (collaborators)
