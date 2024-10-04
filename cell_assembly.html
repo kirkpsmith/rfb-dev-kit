@@ -13,7 +13,7 @@
     <link href="./static/site-style.css" rel="stylesheet">
                 <style>
   :root {
-    --primary-color: #8ff0a4;
+    --primary-color: #39dbf2;
   }
 </style>
 <style>
@@ -126,6 +126,7 @@
         </div>
         <div class="wrapper">
     <h1 id="assembling-the-flow-cell-from-components">Assembling the flow cell from components</h1>
+<p><img alt="" src="images/cell-assembly/composite_image.jpeg" title="" /></p>
 <p>Ensure you have the following components:</p>
 <div class="pagebom">
 <h3 id="parts">Parts</h3>
@@ -133,7 +134,6 @@
 <li>4 <a Class="bom" href="barbed_fittings.html">barbed fittings</a> </li>
 <li>2 <a Class="bom" href="fabrication.html">blocking gaskets</a> </li>
 <li>2 <a Class="bom" href="fabrication.html">cell bodies</a> </li>
-<li>2 <a Class="bom" href="fabrication.html">copper current collectors</a> </li>
 <li>3 <a Class="bom" href="fabrication.html">cut membranes</a> </li>
 <li>2 <a Class="bom" href="fabrication.html">flow frames</a> </li>
 <li>2 <a Class="bom" href="fabrication.html">grafoil current collectors</a> </li>
@@ -141,6 +141,7 @@
 <li>4 <a Class="missing" href="missing">M6 x 60 mm hex socket cap bolts</a> </li>
 <li>4 <a Class="bom" href="orings.html">o-rings</a> </li>
 <li>2 <a Class="bom" href="fabrication.html">pass-through gaskets</a> </li>
+<li>several cm <a Class="missing" href="missing">polypropylene packing tape</a> </li>
 </ul>
 <h3 id="tools">Tools</h3>
 <ul>
@@ -149,35 +150,69 @@
 <li>1 <a Class="missing" href="missing">torque wrench</a>    - to accept 5 mm allen key or 10 mm hex socket</li>
 </ul>
 </div>
+<p>Here is an overview of assembling an outdated version of the cell:</p>
+<!-- You can drag and drop your images directly here and use this template -->
+
+<div class="gallery-thumb">
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/a.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/b.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/c.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/d.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/e.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/f.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/g.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/h.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/i.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/j.jpg" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/cell-assembly/k.jpg" alt="" />
+</div>
+<div class="gallery-show"><img id="gallery-show0" src="images/cell-assembly/a.jpg" alt=""/></div>
 <h2 class="page-step" id="attach-the-barbed-fittings">Step 1: Attach the barbed fittings</h2>
 <p>Take the two <a href="fabrication.html">cell bodies</a> and place one <a href="orings.html">o-ring</a> at the bottom of each threaded hole.</p>
 <p>Then insert and carefully hand-thread the <a href="barbed_fittings.html">barbed fittings</a> to the bottom of the port.</p>
-<h2 class="page-step" id="insert-the-copper-plates">Step 2: Insert the copper plates</h2>
-<p>Place the two <a href="fabrication.html">copper current collectors</a> into the square machined recesses of the cell bodies. They should fit very snugly. <strong>This aligmnent is crucial to prevent leaks.</strong></p>
+<h2 class="page-step" id="insulate-the-bolts-with-packing-tape">Step 2: Insulate the bolts with packing tape</h2>
+<p>Wrap <a Class="missing" href="missing">polypropylene packing tape</a> around the shafts of the bolts, leaving the final 1 cm of threads exposed. </p>
+<div class="info-block">
+<p><strong>Note</strong> </p>
+<p>This prevents accidental short circuits of the cell from the bolt shafts contacting the grafoil.</p>
+</div>
 <h2 class="page-step" id="insert-the-four-bolts-into-one-cell-body">Step 3: Insert the four bolts into one cell body</h2>
 <p>Take one cell body and insert the four <a Class="missing" href="missing">M6 x 60 mm hex socket cap bolts</a> so that the socket caps are on the same side of the cell as the barbs.</p>
 <h2 class="page-step" id="add-the-first-grafoil-current-collector">Step 4: Add the first grafoil current collector</h2>
 <p>Take this same cell body and place one <a href="fabrication.html">grafoil current collector</a> on top of the copper plate.</p>
 <h2 class="page-step" id="add-the-first-pass-through-gasket">Step 5: Add the first pass-through gasket</h2>
 <p>Place one <a href="fabrication.html">pass-through gasket</a> on top of the assembly, using the bolts to guide the gasket and align it with the fluid holes in the cell body.</p>
-<h2 class="page-step" id="add-the-first-flow-frame">Step 6: Add the first flow frame</h2>
+<div class="help-block">
+<p><strong>Help Block</strong> </p>
+<p>The total combined thickess of the flow frames and (compressed) gaskets is key to achieving the desired results! There are multiple thickness options in the <code>flow-frames</code> folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.</p>
+</div>
 <p>Place one <a href="fabrication.html">flow frame</a> on top of the assembly, using the bolts to guide the flow frame and align it with the fluid holes in the gasket.</p>
-<h2 class="page-step" id="add-the-first-blocking-gasket">Step 7: Add the first blocking gasket</h2>
+<h2 class="page-step" id="add-the-first-blocking-gasket">Step 6: Add the first blocking gasket</h2>
 <p>Place one <a href="fabrication.html">blocking gasket</a> on top of the assembly, using the bolts to guide the gasket and align it with the fluid holes in the flow frame.</p>
-<h2 class="page-step" id="add-the-membranes">Step 8: Add the membranes</h2>
+<h2 class="page-step" id="add-the-membranes">Step 7: Add the membranes</h2>
 <p>Take the three <a href="fabrication.html">cut membranes</a> and add them to the assembly.</p>
-<h2 class="page-step" id="add-the-second-blocking-gasket">Step 9: Add the second blocking gasket</h2>
+<h2 class="page-step" id="add-the-second-blocking-gasket">Step 8: Add the second blocking gasket</h2>
 <p>Place one blocking gasket on top of the assembly, using the bolts to guide the gasket.</p>
-<h2 class="page-step" id="add-the-second-flow-frame">Step 10: Add the second flow frame</h2>
+<h2 class="page-step" id="add-the-second-flow-frame">Step 9: Add the second flow frame</h2>
 <p>Place one flow frame on top of the assembly, using the bolts to guide the flow frame.</p>
-<h2 class="page-step" id="add-the-second-pass-through-gasket">Step 11: Add the second pass-through gasket</h2>
+<h2 class="page-step" id="add-the-second-pass-through-gasket">Step 10: Add the second pass-through gasket</h2>
 <p>Place one pass-through gasket on top of the assembly, using the bolts to guide the gasket and align it with the fluid holes in the flow frame.</p>
-<h2 class="page-step" id="add-the-second-grafoil-current-collector">Step 12: Add the second grafoil current collector</h2>
+<h2 class="page-step" id="add-the-second-grafoil-current-collector">Step 11: Add the second grafoil current collector</h2>
 <p>Place one grafoil current collector on top of the pass-through gasket, so that it will align with the copper current collector of the second cell body in the next step.</p>
-<h2 class="page-step" id="add-the-second-cell-body">Step 13: Add the second cell body</h2>
+<h2 class="page-step" id="add-the-second-cell-body">Step 12: Add the second cell body</h2>
 <p>Place the second cell body (with barbs and copper plate installed) on top of the assembly and ensure all fluid holes are aligned. Hand-tighten four <a Class="missing" href="missing">M6 nuts</a> onto the exposed threads of the bolts in order to lightly compress the cell and hold all the components in place.</p>
-<h2 class="page-step" id="tighten-the-bolts">Step 14: Tighten the bolts</h2>
+<h2 class="page-step" id="tighten-the-bolts">Step 13: Tighten the bolts</h2>
 <p>Progressively tighten the bolts to 5 N⋅m in a <a href="https://www.flangeboltchart.com/torque-patterns/4-bolt-torque-pattern" target="_blank" title="">4-bolt flange pattern</a> using a <a Class="missing" href="missing">torque wrench</a> fitted with a <a Class="missing" href="missing">10 mm socket</a> and a <a Class="missing" href="missing">5mm hex key</a></p>
+<div class="info-block">
+<p><strong>Note</strong> </p>
+<p>Progressively tightening using a flange pattern is important to evenly compressing the cell and ensuring leak-free operation</p>
+</div>
+<h2 id="add-the-barbed-fittings">Add the barbed fittings</h2>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>Do not overtighten the barbed fittings, or else they can shear off inside of the cell body!</p>
+</div>
+<p>Add the o-rings to the bottom of the threaded cell ports. Insert the barbed fittings and thread to finger-tight, then turn with a wrench 90 degrees past finger-tight.</p>
 <hr />
 <p><strong>Now you have an <a name="output__assembled-flow-cell"></a>assembled flow cell!</strong></p>
 <!-- GitBuilding Nav -->
@@ -192,6 +227,7 @@
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
     <p class="author">©2024 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
     <p class="license">Building an Open-Source Hardware Flow Battery Development Kit is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>

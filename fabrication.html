@@ -14,7 +14,7 @@
                 <script type="text/javascript" src="./static/3d-viewer.js"></script>
         <style>
   :root {
-    --primary-color: #8ff0a4;
+    --primary-color: #39dbf2;
   }
 </style>
 <style>
@@ -165,57 +165,36 @@
 </ul>
 <h3 id="tools">Tools</h3>
 <ul>
-<li>1 <a Class="missing" href="missing">1/8" drill bit</a> </li>
 <li>1 <a Class="missing" href="missing">3-axis mill</a> </li>
 <li>1 <a Class="missing" href="missing">3D printer</a> </li>
-<li>1 <a Class="missing" href="missing">drill</a>    - A hand drill or rotary tool (with steady hands) works, but a drill press is preferable</li>
 <li>1 sheet of <a Class="missing" href="missing">sandpaper</a> </li>
 <li>1 <a Class="missing" href="missing">vinyl cutter machine</a>    - or laser cutter or hand tools</li>
-<li>1 <a Class="missing" href="missing">vise</a> </li>
 </ul>
 </div>
-<h2 id="fabricate-cell-bodies">Fabricate cell bodies</h2>
-<p>These are preferably milled from solid polypropylene with a <a Class="missing" href="missing">3-axis mill</a></p>
+<h2 class="page-step" id="fabricate-cell-bodies">Step 1: Fabricate cell bodies</h2>
+<p>These are preferably milled from solid polypropylene with a <a Class="missing" href="missing">3-axis mill</a>. The .STEP file of the below part is found <a href="../CAD/exports/Cell Body with Two Flat-Bottom Ports.step">here</a>, this is exported from the <code>flow_cell.FCStd</code> file.</p>
 <p><embed src="exports/Cell Body with Two Flat-Bottom Ports.pdf" type="application/pdf" width="100%" height="600px" /></p>
 <p>This makes two <a name="output__cell-bodies"></a>cell bodies</p>
-<div class="info-block">
-<p><strong>If you don't have access to a mill</strong> </p>
-<p>You can try to FDM (in polypropylene) or resin print (in epoxy-based resin) this file, with built-in barbs:</p>
-<noscript><a href="exports/Cell Body with Two Barbed Fittings.stl"></a></noscript>
-<p><gb3d-viewer src="exports/Cell Body with Two Barbed Fittings.stl"></gb3d-viewer></p>
-</div>
-<h2 class="page-step" id="print-rigid-cell-components">Step 1: Print rigid cell components</h2>
-<p>Using a <a Class="missing" href="missing">3D printer</a> loaded with chemically compatible polypropylen filament/epoxy resin <a Class="missing" href="missing">3D printing feedstock</a>, print two <a href="exports/Reservoir.3mf" title="">reservoirs</a> and two <a href="../CAD/exports/Flow Frame.3mf">flow frames</a> (links are to .3mf files).</p>
+<h2 class="page-step" id="print-rigid-cell-components">Step 2: Print rigid cell components</h2>
+<p>Using a <a Class="missing" href="missing">3D printer</a> loaded with chemically compatible polypropylene filament <a Class="missing" href="missing">3D printing feedstock</a>, print two <a href="exports/Reservoir.3mf" title="">reservoirs</a> and two <a href="../CAD/exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl">flow frames</a>.</p>
 <noscript><a href="exports/Reservoir.stl"></a></noscript>
 <p><gb3d-viewer src="exports/Reservoir.stl"></gb3d-viewer></p>
-<noscript><a href="exports/Flow Frame.stl"></a></noscript>
-<p><gb3d-viewer src="exports/Flow Frame.stl"></gb3d-viewer></p>
+<noscript><a href="exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl"></a></noscript>
+<p><gb3d-viewer src="exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl"></gb3d-viewer></p>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>The total combined thickess of the flow frames and (compressed) gaskets is important! There are multiple thickness options in the <code>flow-frames</code> folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.</p>
+</div>
 <div class="info-block">
 <p><strong>Prefer conventional machining?</strong></p>
-<p>You can also fabricate these parts by milling them from a larger sheet of polypropylene</p>
+<p>You could also fabricate the flow frames parts by milling/laser cutting them from a sheet of polypropylene.</p>
 </div>
-<h2 class="page-step" id="post-process-printed-parts">Step 2: Post-process printed parts</h2>
-<ol>
-<li>Remove brim, raft, support material from print (depending on printing method)
-* Sand down, with fine-grit <a Class="missing" href="missing">sandpaper</a>:<blockquote>
-<ol>
-<li>The sealing faces of each cell body
-<img alt="" src="images/cell_body.png" title="" />
-* Both faces of each flow frame
-<img alt="" src="images/flow_frame.png" title="" />
-* Secure each cell body and flow frame in a <a Class="missing" href="missing">vise</a> and drill out the alignment pin holes to their final diameter with a <a Class="missing" href="missing">drill</a> and an <a Class="missing" href="missing">1/8" drill bit</a>
-<img alt="" src="images/cell_body_alignment_pins.png" title="" /></li>
-</ol>
-<p><img alt="" src="images/flow_frame_alignment_pins.png" title="" /></p>
-</blockquote>
-</li>
-</ol>
-<div class="caution-block">
-<p><strong>Caution</strong></p>
-<p>Depending on the dimensional accuracy of your printed parts, you may need to additionally drill out the electrolyte inlet/outlet holes to the correct diameter with an appropriately sized drill bit (these inlet/outlet holes are located immediately on either side of the alignment pin holes)</p>
-</div>
-<p>This will produce one <a name="output__cell-body-with-four-barbed-fittings"></a>cell body with four barbed fittings, one <a name="output__backing-plate"></a>backing plate and two <a name="output__flow-frames"></a>flow frames.</p>
-<h2 class="page-step" id="cut-gaskets">Step 3: Cut gaskets</h2>
+<h2 class="page-step" id="post-process-printed-parts">Step 3: Post-process printed parts</h2>
+<p>Remove brim, raft, support material from print (depending on printing method)</p>
+<p>Sand down, with fine-grit <a Class="missing" href="missing">sandpaper</a>, both faces of each flow frame.</p>
+<p><img alt="" src="images/flow_frame.png" title="" /></p>
+<p>This will produce two <a name="output__flow-frames"></a>flow frames and two <a name="output__reservoirs"></a>reservoirs.</p>
+<h2 class="page-step" id="cut-gaskets">Step 4: Cut gaskets</h2>
 <div class="info-block">
 <p><strong>Note:</strong></p>
 <p>Cutting the gaskets is most easily done with a vinyl cutter machine, but can also be done manually with a steady hand, utility blade, and appropriately sized punches.</p>
@@ -225,16 +204,16 @@
 </ol>
 <p><embed src="exports/1 sqcm gaskets.pdf" type="application/pdf" width="100%" height="600px" /></p>
 <p>This will produce two <a name="output__pass-through-gaskets"></a>pass-through gaskets and two <a name="output__blocking-gaskets"></a>blocking gaskets.</p>
-<h2 class="page-step" id="cut-porous-carbon-electrodes">Step 4: Cut porous carbon electrodes</h2>
+<h2 class="page-step" id="cut-porous-carbon-electrodes">Step 5: Cut porous carbon electrodes</h2>
 <p>TODO</p>
 <p>Cut two conductive felt electrodes into 10 mm x 10 mm square from a sheet of conductive felt<a href="conductive_felt.html">conductive felt</a></p>
-<h2 class="page-step" id="cut-separator-membrane">Step 5: Cut separator membrane</h2>
+<h2 class="page-step" id="cut-separator-membrane">Step 6: Cut separator membrane</h2>
 <p>TODO</p>
 <p>Cut <a href="separator_sheet.html">separator sheet</a> into three rectangles</p>
 <p><a name="output__cut-membranes"></a>cut membranes</p>
-<h2 class="page-step" id="cut-grafoil-current-collectors">Step 6: Cut grafoil current collectors</h2>
+<h2 class="page-step" id="cut-grafoil-current-collectors">Step 7: Cut grafoil current collectors</h2>
 <p>Cut <a href="grafoil.html">grafoil</a> into two 5 cm by 5 cm squares to make <a name="output__grafoil-current-collectors"></a>grafoil current collectors.</p>
-<h2 class="page-step" id="cut-copper-current-collectors">Step 7: Cut copper current collectors</h2>
+<h2 class="page-step" id="cut-copper-current-collectors">Step 8: Cut copper current collectors</h2>
 <p>Cut <a href="copper.html">copper sheet</a> into two 5 cm by 5 cm squares to make <a name="output__copper-current-collectors"></a>copper current collectors.</p>
 <div class="warning-block">
 <p><strong>Warning to prevent leakage</strong> </p>
@@ -254,6 +233,7 @@
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
     <p class="author">©2024 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
     <p class="license">Building an Open-Source Hardware Flow Battery Development Kit is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>

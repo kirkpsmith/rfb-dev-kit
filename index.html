@@ -13,7 +13,7 @@
     <link href="./static/site-style.css" rel="stylesheet">
                 <style>
   :root {
-    --primary-color: #8ff0a4;
+    --primary-color: #39dbf2;
   }
 </style>
 <style>
@@ -131,7 +131,7 @@
 </div>
 <div class="info-block">
 <p><strong>Note</strong> </p>
-<p>This kit is intended for educational and R&amp;D use only, not for actual energy storage applications (that will happen later!)</p>
+<p>This kit is intended for educational and R&amp;D use only, not for actual energy storage applications That will happen later, check out our <a href="https://fbrc.dev/about.html#roadmap" target="_blank" title="">roadmap</a> to see when,</p>
 </div>
 <div class="pagebom">
 <h3 id="parts">Parts</h3>
@@ -142,55 +142,70 @@
 <li>4 <a Class="bom" href="barbed_fittings.html">barbed fittings</a> </li>
 <li>10 cm² of <a Class="bom" href="conductive_felt.html">conductive felt</a> </li>
 <li>100 cm² of <a Class="bom" href="copper.html">copper sheet</a> </li>
-<li>2 <a Class="bom" href="pumps.html">diaphragm pumps</a> </li>
 <li>160 cm² of <a Class="bom" href="gaskets.html">gasket sheet</a>    - Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough</li>
 <li>100 cm² of <a Class="bom" href="grafoil.html">grafoil</a> </li>
 <li>1 <a Class="bom" href="drivers.html">L298N motor driver</a> </li>
 <li>4 <a Class="missing" href="missing">M6 nuts</a> </li>
 <li>4 <a Class="missing" href="missing">M6 x 60 mm hex socket cap bolts</a> </li>
 <li>4 <a Class="bom" href="orings.html">o-rings</a> </li>
+<li>2 <a Class="bom" href="pumps.html">peristaltic pumps</a> </li>
+<li>several cm <a Class="missing" href="missing">polypropylene packing tape</a> </li>
 <li>A4 sheet <a Class="bom" href="separator_sheet.html">separator sheet</a> </li>
 <li>1 meter of <a Class="bom" href="tubing.html">tubing</a> </li>
 </ul>
 <h3 id="tools">Tools</h3>
 <ul>
-<li>1 <a Class="missing" href="missing">1/8" drill bit</a> </li>
 <li>1 <a Class="missing" href="missing">10 mm socket</a>    - To fit torque wrench</li>
 <li>1 <a Class="missing" href="missing">3-axis mill</a> </li>
 <li>1 <a Class="missing" href="missing">3D printer</a> </li>
+<li>1 <a Class="missing" href="missing">50 mL beaker</a> </li>
 <li>1 <a Class="missing" href="missing">5mm hex key</a> </li>
-<li>1 <a Class="missing" href="missing">drill</a>    - A hand drill or rotary tool (with steady hands) works, but a drill press is preferable</li>
 <li>1 <a Class="missing" href="missing">pair of chemical safety goggles</a> </li>
 <li>1 <a Class="missing" href="missing">pair of nitrile gloves</a> </li>
 <li>1 <a Class="missing" href="missing">PC</a>    - Must be able to flash firmware to microcontroller and connect over USB serial to microcontroller and potentiostat</li>
-<li>1 <a Class="bom" href="pstat.html">potentiostat</a> </li>
+<li>1 <a Class="bom" href="pstat.html">potentiostat</a>    - preferably the MYSTAT</li>
 <li>1 sheet of <a Class="missing" href="missing">sandpaper</a> </li>
 <li>1 <a Class="missing" href="missing">scale</a> </li>
 <li>1 <a Class="missing" href="missing">stir bar</a> </li>
 <li>1 <a Class="missing" href="missing">stir plate</a> </li>
 <li>1 <a Class="missing" href="missing">torque wrench</a>    - to accept 5 mm allen key or 10 mm hex socket</li>
-<li>2 <a Class="missing" href="missing">vial</a> </li>
+<li>1 <a Class="missing" href="missing">vial</a>    - min. 20 mL</li>
 <li>1 <a Class="missing" href="missing">vinyl cutter machine</a>    - or laser cutter or hand tools</li>
-<li>1 <a Class="missing" href="missing">vise</a> </li>
 <li>1 <a Class="missing" href="missing">weighing spatula</a> </li>
 </ul>
 <h3 id="chemicals">Chemicals</h3>
 <ul>
-<li>5 grams of <a Class="missing" href="missing">deionized water</a> </li>
-<li>5 grams of <a Class="missing" href="missing">potassium iodide</a> </li>
-<li>5 grams of <a Class="missing" href="missing">zinc chloride</a> </li>
+<li>10.0 grams of <a Class="missing" href="missing">8% vinegar/acetic acid</a> </li>
+<li>3.0 grams of <a Class="missing" href="missing">potassium acetate</a> </li>
+<li>6.6 grams of <a Class="missing" href="missing">potassium iodide</a> </li>
+<li>2.8 grams of <a Class="missing" href="missing">zinc chloride</a> </li>
 </ul>
 </div>
 <p>This bill of materials can be found <a href="index_BOM.html">here</a> (<a href="index_BOM.html"><img alt="HTML" class="smallicon" src="static/Icons/html.png" title="HTML Bill of Materials" /></a>, <a href="index_BOM.csv"><img alt="CSV" class="smallicon" src="static/Icons/csv.png" title="CSV Bill of Materials" /></a>).</p>
-<p>If you're starting from scratch, you need to <a href="fabrication.html" title="">fabricate</a> and source everything needed for testing this flow battery test cell.</p>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>If you're starting from scratch, you need to <a href="fabrication.html" title="">fabricate</a> and source everything needed for using this flow battery test cell.</p>
+</div>
 <p>If you already have all the required components and materials, you can directly <a href="electronics.html" title="">prepare the power electronics</a>, <a href="cell_assembly.html" title="">assemble the cell</a>, <a href="jig_assembly.html" title="">assemble the jig</a>, prepare the <a href="electrolyte.html" title="">electrolyte</a>, and then begin <a href="testing.html" title="">testing</a>.</p>
 <ol>
-<li><a href="fabrication.html" title="">Fabricating cell components</a>
-* <a href="electronics.html" title="">Preparing the power electronics</a>
-* <a href="cell_assembly.html" title="">Assembling the flow cell from components</a>
-* <a href="jig_assembly.html" title="">Assembling the jig with electronics and flow cell</a>
-* <a href="electrolyte.html" title="">Preparing the electrolyte</a>
-* <a href="testing.html" title="">Operating and testing the cell</a></li>
+<li>
+<p><a href="fabrication.html" title="">Fabricating cell components</a></p>
+</li>
+<li>
+<p><a href="electronics.html" title="">Preparing the power electronics</a></p>
+</li>
+<li>
+<p><a href="cell_assembly.html" title="">Assembling the flow cell from components</a></p>
+</li>
+<li>
+<p><a href="jig_assembly.html" title="">Assembling the jig with electronics and flow cell</a></p>
+</li>
+<li>
+<p><a href="electrolyte.html" title="">Preparing the electrolyte</a></p>
+</li>
+<li>
+<p><a href="testing.html" title="">Operating and testing the cell</a></p>
+</li>
 </ol>
 <!-- GitBuilding Nav -->
 <hr />
@@ -204,6 +219,7 @@
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
     <p class="author">©2024 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
     <p class="license">Building an Open-Source Hardware Flow Battery Development Kit is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
