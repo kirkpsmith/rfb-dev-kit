@@ -11,13 +11,13 @@ View of electronics in jig
 
 --------------------------------------------------------------------------------
 A benchtop flow battery development kit, extendable to other electrochemical systems with flow.
-Designed in FreeCAD 0.21.2.
+Designed in [FreeCAD](https://www.freecad.org/).
 
 Developed by the [Flow Battery Research Collective](https://opencollective.com/fbrc).
 
 ## Documentation
 
-Draft documentation, which includes the BOM, is available [here](https://fbrc.codeberg.page/rfb-dev-kit/). This is the contents of the `docs` repository subfolder rendered as a static website, using [GitBuilding](https://gitbuilding.io/).
+Documentation, which includes the BOM, is available [here](https://fbrc.codeberg.page/rfb-dev-kit/). This is the contents of the `docs` subfolder of this repository rendered as a static website, using [GitBuilding](https://gitbuilding.io/).
 
 ## Features
 - Geometric cell area from 1 cm² to 10 cm²
@@ -29,9 +29,13 @@ Draft documentation, which includes the BOM, is available [here](https://fbrc.co
 - Manufacturable by multiple methods, e.g. FDM/SLA/SLS printing, conventional subtractive machining, etc.
 
 ## Repository Structure
-To make this device, follow the link to documentation above.
 
-This repository has the main FreeCAD files in the `CAD` directory, files for manufacturing in the `exports` subfolder of the `CAD` folder, and documentation in the `docs` folder (using Markdown based on [gitbuilding](https://gitbuilding.io/))
+- `CAD` directory: FreeCAD design files
+    - `exports` directory: files for manufacturing cell components
+    - `imports` directory: files imported by FreeCAD for creating assembly
+- `docs` directory: documentation written with [GitBuilding](https://gitbuilding.io/)
+- `firmware` directory: code for pump speed controllers based on Arduino Uno R3
+
 
 ## References/Inspiration/Collaborators/Conspirators (in no particular order)
 - [FAIR Battery project](https://github.com/SanliFaez/FAIR-Battery) (collaborators)
