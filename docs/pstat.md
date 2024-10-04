@@ -10,3 +10,5 @@ PartData:
 # Potentiostat
 
 The MYSTAT potentiostat, link is to PCBWay project.
+
+Control software can be found [here](https://codeberg.org/FBRC/mystat/src/branch/master/python).

@@ -11,54 +11,45 @@ Details:
 ---
 <!-- There should be only one Header per page. You do not need to use all the keys -->
 # Fabricating cell components
-## Bill of Materials
 
+## Bill of Materials
 
 {{BOM}}
 
-## Fabricate cell bodies
+## Fabricate cell bodies {pagestep}
 
-These are preferably milled from solid polypropylene with a [3-axis mill]{qty: 1, cat: tool}
+These are preferably milled from solid polypropylene with a [3-axis mill]{qty: 1, cat: tool}. The .STEP file of the below part is found [here](../CAD/exports/Cell Body with Two Flat-Bottom Ports.step), this is exported from the `flow_cell.FCStd` file.
 
 ![](../CAD/exports/Cell Body with Two Flat-Bottom Ports.pdf)
 
 This makes two [cell bodies]{output, qty: 2}
 
-
->i **If you don't have access to a mill** 
->i
->i You can try to FDM (in polypropylene) or resin print (in epoxy-based resin) this file, with built-in barbs:
->i ![](../CAD/exports/Cell Body with Two Barbed Fittings.stl)
-
-
 ## Print rigid cell components  {pagestep}
 
-Using a [3D printer]{qty:1, cat:tool} loaded with chemically compatible polypropylen filament/epoxy resin [3D printing feedstock]{qty: 200 g}, print two [reservoirs](../CAD/exports/Reservoir.3mf) and two [flow frames](../CAD/exports/Flow Frame.3mf) (links are to .3mf files).
+Using a [3D printer]{qty:1, cat:tool} loaded with chemically compatible polypropylene filament [3D printing feedstock]{qty: 200 g}, print two [reservoirs](../CAD/exports/Reservoir.3mf) and two [flow frames](../CAD/exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl).
 ![](../CAD/exports/Reservoir.stl)
-![](../CAD/exports/Flow Frame.stl)
+![](../CAD/exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl)
+
+
+>!! **Warning** 
+>!!
+>!! The total combined thickess of the flow frames and (compressed) gaskets is important! There are multiple thickness options in the `flow-frames` folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.
+
 
 >i **Prefer conventional machining?**
 >i 
->i You can also fabricate these parts by milling them from a larger sheet of polypropylene
+>i You could also fabricate the flow frames parts by milling/laser cutting them from a sheet of polypropylene.
 
 ## Post-process printed parts  {pagestep}
-1. Remove brim, raft, support material from print (depending on printing method)
-* Sand down, with fine-grit [sandpaper]{qty:1 sheet, cat:tool}:
-> 1. The sealing faces of each cell body
-> ![](images/cell_body.png)
-> * Both faces of each flow frame
-> ![](images/flow_frame.png)
-* Secure each cell body and flow frame in a [vise]{qty: 1, cat:tool} and drill out the alignment pin holes to their final diameter with a [drill]{qty: 1, cat:tool, note:"A hand drill or rotary tool (with steady hands) works, but a drill press is preferable"} and an [1/8" drill bit]{qty: 1, cat: tool}
-> ![](images/cell_body_alignment_pins.png)
-> 
-> ![](images/flow_frame_alignment_pins.png)
->! **Caution**
->! 
->! Depending on the dimensional accuracy of your printed parts, you may need to additionally drill out the electrolyte inlet/outlet holes to the correct diameter with an appropriately sized drill bit (these inlet/outlet holes are located immediately on either side of the alignment pin holes)
+Remove brim, raft, support material from print (depending on printing method)
+
+Sand down, with fine-grit [sandpaper]{qty:1 sheet, cat:tool}, both faces of each flow frame.
+
+![](images/flow_frame.png)
 
 
 
-This will produce one [cell body with four barbed fittings]{output, qty:1}, one [backing plate]{output, qty:1} and two [flow frames]{output, qty: 2}.
+This will produce two [flow frames]{output, qty: 2} and two [reservoirs]{output, qty: 2}.
 
 ## Cut gaskets {pagestep}
 

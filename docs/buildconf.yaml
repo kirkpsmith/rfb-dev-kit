@@ -11,5 +11,7 @@ ExternalDirs:
 Fussy: true
 HoverColor: '#555555'
 License: CERN-OHL-S-2.0
-PrimaryColor: '#8ff0a4'
+PrimaryColor: '#39dbf2'
 SecondaryColor: '#cccccc'
+Email: info@fbrc.dev
+IncludeSearch: true

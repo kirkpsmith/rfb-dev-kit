@@ -1,27 +1,38 @@
 # Preparing the electrolyte
-## Zinc-Iodide chemistry
 
+
+>! **Caution** 
+>!
+>! From this point onwards, chemical safety risks are present. **You** are responsible for your own safety! Use proper PPE and do not perform anything you are not comfortable with. These instructions are presented as-is with no guarantee of your safety or assumed liability. 
 
 {{BOM}}
 
+## Put on your personal protective equipment (PPE) {pagestep}
+
+Put on a [pair of chemical safety goggles]{qty: 1,cat: tool}, a [pair of nitrile gloves]{qty: 1,cat: tool}, wear close-toed shoes, and wear long pants/trousers! A lab coat is even better.
+
+## Weigh out the chemicals {pagestep}
 
 
-[zinc chloride]{qty: 5 grams,cat: chemical}
+In a [50 mL beaker]{qty: 1,cat: tool}, using a [scale]{qty: 1,cat: tool} and [weighing spatula]{qty: 1,cat: tool}, weigh out the following chemicals according to their quantities listed above:
 
-[potassium iodide]{qty: 5 grams,cat: chemical}
+* [zinc chloride]{qty: 2.8 grams,cat: chemical}
+* [potassium iodide]{qty: 6.6 grams,cat: chemical}
+* [potassium acetate]{qty: 3.0 grams,cat: chemical}
+* [8% vinegar/acetic acid]{qty: 10.0 grams,cat: chemical}
 
-[deionized water]{qty: 5 grams,cat: chemical}
+## Mix the electrolyte {pagestep}
 
-[vial]{qty: 2,cat: tool}
+Add a [stir bar]{qty: 1,cat: tool} to the beaker and place it on a [stir plate]{qty: 1,cat: tool}. Mix at room temperature until all salts are dissolved.
 
-[stir bar]{qty: 1,cat: tool}
+## Store the electrolyte in an air-tight container {pagestep}
 
-[stir plate]{qty: 1,cat: tool}
+>!! **Warning** 
+>!!
+>!! Aqueous iodide is oxidized in solution by dissolved oxygen, turning the solution yellow/brown.
 
-[pair of chemical safety goggles]{qty: 1,cat: tool}
+Transfer and store prepared electrolytes in a sealed [vial]{qty: 1,cat: tool, note: min. 20 mL} to minimize exposure to ambient air.
 
-[pair of nitrile gloves]{qty: 1,cat: tool}
 
-[scale]{qty: 1,cat: tool}
 
-[weighing spatula]{qty: 1,cat: tool}
+

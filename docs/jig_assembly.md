@@ -5,7 +5,7 @@ Ensure you have the following components:
 
 ## Add pumps to jig {pagestep}
 
-Insert the two [diaphragm pumps](pumps.md){qty:2} into their holders in the jig
+Insert the two [peristaltic pumps](pumps.md){qty:2} into their holders in the jig
 
 ## Add electronics to jig {pagestep}
 

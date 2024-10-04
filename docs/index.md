@@ -7,8 +7,7 @@
 
 >i **Note** 
 >i
->i This kit is intended for educational and R&D use only, not for actual energy storage applications (that will happen later!)
-
+>i This kit is intended for educational and R&D use only, not for actual energy storage applications That will happen later, check out our [roadmap](https://fbrc.dev/about.html#roadmap) to see when,
 
 
 
@@ -17,13 +16,21 @@
 This bill of materials can be found [here]{BOM}.
 
 
-If you're starting from scratch, you need to [fabricate](fabrication.md) and source everything needed for testing this flow battery test cell.
+
+>!! **Warning** 
+>!!
+>!! If you're starting from scratch, you need to [fabricate](fabrication.md) and source everything needed for using this flow battery test cell.
 
 If you already have all the required components and materials, you can directly [prepare the power electronics](electronics.md), [assemble the cell](cell_assembly.md), [assemble the jig](jig_assembly.md), prepare the [electrolyte](electrolyte.md), and then begin [testing](testing.md).
 
 1. [.](fabrication.md){step}
-* [.](electronics.md){step}
-* [.](cell_assembly.md){step}
-* [.](jig_assembly.md){step}
-* [.](electrolyte.md){step}
-* [.](testing.md){step}
+
+2.  [.](electronics.md){step}
+
+3. [.](cell_assembly.md){step}
+
+4. [.](jig_assembly.md){step}
+
+5. [.](electrolyte.md){step}
+
+6. [.](testing.md){step}
