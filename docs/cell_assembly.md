@@ -1,6 +1,15 @@
+---
+Details:
+    Thumbnail: images/cell-assembly/k.jpg
+    Time: Tens of minutes
+    Skills:
+      - Mechanical assembly
+      - Using a torque wrench properly
+---
+<!-- There should be only one Header per page. You do not need to use all the keys -->
 # Assembling the flow cell from components
 
-![](images/cell-assembly/composite_image.jpeg)
+![](images/cell-assembly/_composite_image.jpeg)
 
 Ensure you have the following components:
 {{BOM}}

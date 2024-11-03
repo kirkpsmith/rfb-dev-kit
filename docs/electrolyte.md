@@ -1,3 +1,10 @@
+---
+Details:
+    Thumbnail: images/cell-assembly/k.jpg
+    Time: Tens of minutes
+    Skills:
+      - General chemistry laboratory skills
+---
 # Preparing the electrolyte
 
 
@@ -32,6 +39,7 @@ Add a [stir bar]{qty: 1,cat: tool} to the beaker and place it on a [stir plate]{
 >!! Aqueous iodide is oxidized in solution by dissolved oxygen, turning the solution yellow/brown.
 
 Transfer and store prepared electrolytes in a sealed [vial]{qty: 1,cat: tool, note: min. 20 mL} to minimize exposure to ambient air.
+
 
 
 

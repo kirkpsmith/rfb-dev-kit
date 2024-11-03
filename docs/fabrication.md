@@ -2,7 +2,6 @@
 Details:
     Thumbnail: images/printing.png
     Time: Hours
-    Difficulty: Hard
     Skills:
       - 3D printing or milling
       - Drilling
@@ -22,19 +21,17 @@ These are preferably milled from solid polypropylene with a [3-axis mill]{qty: 1
 
 ![](../CAD/exports/Cell Body with Two Flat-Bottom Ports.pdf)
 
-This makes two [cell bodies]{output, qty: 2}
+This makes two [cell bodies]{output, qty: 2}.
 
 ## Print rigid cell components  {pagestep}
 
-Using a [3D printer]{qty:1, cat:tool} loaded with chemically compatible polypropylene filament [3D printing feedstock]{qty: 200 g}, print two [reservoirs](../CAD/exports/Reservoir.3mf) and two [flow frames](../CAD/exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl).
+Using a [3D printer]{qty:1, cat:tool} loaded with chemically compatible polypropylene filament [3D printing feedstock]{qty: 200 g}, print two [reservoirs]{output, qty: 2} and two [flow frames]{output, qty: 2}.
 ![](../CAD/exports/Reservoir.stl)
 ![](../CAD/exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl)
-
 
 >!! **Warning** 
 >!!
 >!! The total combined thickess of the flow frames and (compressed) gaskets is important! There are multiple thickness options in the `flow-frames` folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.
-
 
 >i **Prefer conventional machining?**
 >i 
@@ -47,9 +44,7 @@ Sand down, with fine-grit [sandpaper]{qty:1 sheet, cat:tool}, both faces of each
 
 ![](images/flow_frame.png)
 
-
-
-This will produce two [flow frames]{output, qty: 2} and two [reservoirs]{output, qty: 2}.
+This makes two [flow frames]{output, qty: 2} and two [reservoirs]{output, qty: 2}.
 
 ## Cut gaskets {pagestep}
 
@@ -61,30 +56,39 @@ This will produce two [flow frames]{output, qty: 2} and two [reservoirs]{output,
 
 ![pass-through gasket](../CAD/exports/1 sqcm gaskets.pdf)
 
+ This makes two [pass-through gaskets]{output, qty: 2} and two [blocking gaskets]{output, qty: 2}.
 
+## Cut porous electrodes {pagestep}
 
- This will produce two [pass-through gaskets]{output, qty: 2} and two [blocking gaskets]{output, qty: 2}.
+Cut two conductive graphite felt electrodes to fit inside the flow frames using scissors or a [utility knife]{qty: 1, cat:tool}. Our current standard test uses 2 cm² geometric area cells, so cut two squares each with a side length of 14.1 mm from a larger piece of [conductive felt](conductive_felt.md){qty: 4 cm², cat: part}.
 
-## Cut porous carbon electrodes {pagestep}
+![](images/electrodes.jpeg)
 
-TODO
+This makes two [cut electrodes]{output, qty: 2}.
 
-Cut two conductive felt electrodes into 10 mm x 10 mm square from a sheet of conductive felt[conductive felt](conductive_felt.md){qty: 10 cm²,cat: part}
 ## Cut separator membrane {pagestep}
 
-TODO
+Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into four 3 cm x 3 cm squares
 
-Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into three rectangles
+![](images/separators.jpeg)
 
-[cut membranes]{output, qty: 3}
+This produces four [cut membranes]{output, qty: 4}
 
 ## Cut grafoil current collectors {pagestep}
 
-Cut [grafoil](grafoil.md){qty: 100 cm²} into two 5 cm by 5 cm squares to make [grafoil current collectors]{output, qty: 2}.
+Using a precut gasket as a guide, cut [grafoil](grafoil.md){qty: 100 cm²} into the following shape to make [grafoil current collectors]{output, qty: 2}.
+
+![](images/grafoil-template.jpeg)
+
+![](images/cut-grafoil.jpeg)
+
+
 
 ## Cut copper current collectors {pagestep}
 
-Cut [copper sheet](copper.md){qty: 100 cm²} into two 5 cm by 5 cm squares to make [copper current collectors]{output, qty: 2}.
+Cut [copper sheet](copper.md){qty: 50 cm²} into two 5 cm by 5 cm squares to make [copper current collectors]{output, qty: 2}.
+
+![](images/cut-copper-plates.jpeg)
 
 >!! **Warning to prevent leakage** 
 >!!
