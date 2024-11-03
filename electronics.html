@@ -111,6 +111,11 @@
     </a>
     </li>
 <li class="not-active">
+    <a class="not-active" href="./leak_test.html">
+        Leak testing the cell
+    </a>
+    </li>
+<li class="not-active">
     <a class="not-active" href="./electrolyte.html">
         Preparing the electrolyte
     </a>
@@ -120,12 +125,45 @@
         Operating and testing the cell
     </a>
     </li>
+<li class="not-active">
+    <a class="not-active" href="./cleanup.html">
+        Stopping and disassembling the cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./analysis.html">
+        Analyzing and storing the experimental data
+    </a>
+    </li>
 
                 </ul>
             </nav>
         </div>
         <div class="wrapper">
-    <h1 id="preparing-the-power-electronics">Preparing the power electronics</h1>
+    <!-- There should be only one Header per page. You do not need to use all the keys -->
+<h1 id="preparing-the-power-electronics">Preparing the power electronics</h1>
+<p><div class=details-header>
+    <div class=details-thumb-outer>
+        <div class=details-thumb>
+            <img alt="page thumbnail" src="images/test.jpg" title="" />
+        </div>
+    </div>
+<div class=other-details>
+    <div class=detail>
+        <b>Difficulty:</b> Easy
+    </div>
+    <div class=detail>
+        <b>Time required:</b> Tens of minutes
+    </div>
+    <div class=detail>
+        <b>Skills required:</b>
+        <ul>
+                    <li>Electronics breadboarding</li>
+                    <li>Flashing firmware to an Arduino</li>
+                </ul>
+    </div>
+</div>
+</div></p>
 <div class="pagebom">
 <h3 id="parts">Parts</h3>
 <ul>
@@ -140,174 +178,19 @@
 </ul>
 </div>
 <h2 id="system-overview">System overview</h2>
-<p>A <a Class="missing" href="missing">PC</a> communicates with both a charging/discharging device (typically a <a href="pstat.html">potentiostat</a>}) as well as an <a Class="missing" href="missing">Arduino UNO R3</a>. These documents assume the use of a MYSTAT potentiostat and it's <a href="https://codeberg.org/FBRC/mystat/" target="_blank" title="">modified control software</a>.</p>
+<p>A <a Class="missing" href="missing">PC</a> communicates with both a charging/discharging device (typically a <a href="pstat.html">potentiostat</a>) as well as an <a Class="missing" href="missing">Arduino UNO R3</a>. These documents assume the use of a MYSTAT potentiostat and it's <a href="https://codeberg.org/FBRC/mystat/" target="_blank" title="">modified control software</a>.</p>
 <p>The Arduino is connected to an <a href="drivers.html">L298N motor driver</a>, which is powered by a <a Class="missing" href="missing">24 V DC power source</a>. This is a simple dual H-bridge motor driver that allows the Arduino to control the speeds of the peristaltic pumps using pulse width modulation (PWM). There is no speed feedback; we only tell the motors which direction to turn and whether they run at 100% maximum speed, 0% speed (off), or anything in between. To know the speed (in rpm) or flowrate (in mL/min) of the peristaltic pumps, a separate measurement is required (like dispensing water into a graduated cylinder).</p>
 <p>We use the open-source MYSTAT (with our own modifications to the control software), but any equivalent potentiostat or battery cycler will do. Our pump control system is based on the MYSTAT software, though, and can be used without the MYSTAT present.</p>
 <p>With this hardware configuration, the MYSTAT software then allows for entire control of this electrochemical system: the applied currents and voltages as well as the speeds of the electrolyte pumps.</p>
 <h2 class="page-step" id="flash-firmware-to-microcontroller">Step 1: Flash firmware to microcontroller</h2>
 <p>Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is <a href="https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino" target="_blank" title="">here</a></p>
-<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;elapsedMillis.h&gt;</span>
-<span class="cp">#define LED_BUILTIN 17</span>
-
-<span class="c1">// WHITE WIRES, SPEED CONTROL</span>
-
-<span class="cp">#define PIN_1P_PWM 10</span>
-<span class="cp">#define PIN_1N_PWM 5</span>
-<span class="cp">#define In1 9</span>
-<span class="cp">#define In2 8</span>
-<span class="cp">#define In3 7</span>
-<span class="cp">#define In4 6</span>
-
-<span class="c1">// INPUT PUMP SPEED/DUTY CYCLE, 0-255 is 0-100%, PUMPS MINIMUM SPEED STARTS FROM ~3.8 - 7.6 %</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">speed1P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">speed1N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="c1">// OUTPUT PUMP SPEED</span>
-
-<span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">rpm1P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">rpm1N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="c1">//PUMP COUNTERS</span>
-
-<span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">count1P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">count1N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="k">const</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">buffSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">inputBuffer</span><span class="p">[</span><span class="n">buffSize</span><span class="p">];</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">startMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;&lt;&#39;</span><span class="p">;</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">endMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;&gt;&#39;</span><span class="p">;</span>
-<span class="n">byte</span><span class="w"> </span><span class="n">bytesRecvd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="n">boolean</span><span class="w"> </span><span class="n">readInProgress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="n">boolean</span><span class="w"> </span><span class="n">newDataFromPC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">messageFromPC</span><span class="p">[</span><span class="n">buffSize</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">cmd</span><span class="p">;</span>
-<span class="n">String</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
-
-<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">updateInterval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="c1">// serial update time period (ms)</span>
-<span class="n">elapsedMillis</span><span class="w"> </span><span class="n">updateTimer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="kt">bool</span><span class="w"> </span><span class="n">ledState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LOW</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="n">set1P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">160</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">set1N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">160</span><span class="p">;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">parseData</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strtok</span><span class="p">(</span><span class="n">inputBuffer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
-<span class="w">  </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="sc">&#39;,&#39;</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">recieveFromPC</span><span class="p">()</span>
-<span class="p">{</span>
-
-<span class="w">  </span><span class="c1">// receive data from PC and save it into inputBuffer</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">  </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
-<span class="w">    </span><span class="c1">// the order of these IF clauses is significant</span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">endMarker</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="n">readInProgress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">      </span><span class="n">newDataFromPC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">      </span><span class="n">inputBuffer</span><span class="p">[</span><span class="n">bytesRecvd</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">      </span><span class="n">parseData</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">readInProgress</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="n">inputBuffer</span><span class="p">[</span><span class="n">bytesRecvd</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="w">      </span><span class="n">bytesRecvd</span><span class="o">++</span><span class="p">;</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bytesRecvd</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">buffSize</span><span class="p">)</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="n">bytesRecvd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffSize</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">startMarker</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="n">bytesRecvd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">      </span><span class="n">readInProgress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">ISR_1P</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">count1P</span><span class="o">++</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">ISR_1N</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">count1N</span><span class="o">++</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">ledState</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_1P_PWM</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">PIN_1N_PWM</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">In1</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">In2</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">In3</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">In4</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">In1</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">In2</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">In3</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">In4</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-
-<span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">PIN_1P_PWM</span><span class="p">,</span><span class="w"> </span><span class="n">set1P</span><span class="p">);</span>
-<span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">PIN_1N_PWM</span><span class="p">,</span><span class="w"> </span><span class="n">set1N</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">controlPumps</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newDataFromPC</span><span class="p">)</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">:</span>
-<span class="w">      </span><span class="n">set1P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val</span><span class="p">.</span><span class="n">toInt</span><span class="p">();</span>
-<span class="w">      </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">PIN_1P_PWM</span><span class="p">,</span><span class="w"> </span><span class="n">set1P</span><span class="p">);</span>
-<span class="w">      </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;b&#39;</span><span class="p">:</span>
-<span class="w">      </span><span class="n">set1N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val</span><span class="p">.</span><span class="n">toInt</span><span class="p">();</span>
-<span class="w">      </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">PIN_1N_PWM</span><span class="p">,</span><span class="w"> </span><span class="n">set1N</span><span class="p">);</span>
-<span class="w">      </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;c&#39;</span><span class="p">:</span>
-<span class="w">      </span><span class="n">set1N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val</span><span class="p">.</span><span class="n">toInt</span><span class="p">();</span>
-<span class="w">      </span><span class="n">set1P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val</span><span class="p">.</span><span class="n">toInt</span><span class="p">();</span>
-<span class="w">      </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">PIN_1N_PWM</span>
-<span class="w">      </span><span class="p">,</span><span class="w"> </span><span class="n">set1N</span><span class="p">);</span>
-<span class="w">      </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">PIN_1P_PWM</span><span class="p">,</span><span class="w"> </span><span class="n">set1P</span><span class="p">);</span>
-<span class="w">      </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">recieveFromPC</span><span class="p">();</span>
-<span class="w">  </span><span class="n">controlPumps</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div>
-
 <h2 class="page-step" id="remove-on-board-jumpers-from-motor-driver">Step 2: Remove on-board jumpers from motor driver</h2>
-<p><strong>Remove</strong> the three on-board jumpers (hig hlighted in pink) from the motor driver board:</p>
+<p><strong>Remove</strong> the three on-board jumpers (highlighted in pink) from the motor driver board:</p>
 <p><img alt="" src="images/Screenshot_20240703_221706.png" title="" /></p>
 <h2 class="page-step" id="connect-cables-between-arduino-motor-driver-and-power-supply">Step 3: Connect cables between Arduino, motor driver, and power supply</h2>
 <p>Connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) <strong>and</strong> a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
 <img alt="" src="images/test.jpg" title="" /></p>
+<p>This makes the <a name="output__motor-control-electronics"></a>motor control electronics</p>
 <h2 id="connect-microcontroller-to-pc">Connect microcontroller to PC</h2>
 <p>TODO</p>
 <!-- GitBuilding Nav -->

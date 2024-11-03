@@ -111,6 +111,11 @@
     </a>
     </li>
 <li class="not-active">
+    <a class="not-active" href="./leak_test.html">
+        Leak testing the cell
+    </a>
+    </li>
+<li class="not-active">
     <a class="not-active" href="./electrolyte.html">
         Preparing the electrolyte
     </a>
@@ -120,6 +125,16 @@
         Operating and testing the cell
     </a>
     </li>
+<li class="not-active">
+    <a class="not-active" href="./cleanup.html">
+        Stopping and disassembling the cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./analysis.html">
+        Analyzing and storing the experimental data
+    </a>
+    </li>
 
                 </ul>
             </nav>
@@ -127,11 +142,11 @@
         <div class="wrapper">
     <div class="warning-block">
 <p><strong>Warning</strong> </p>
-<h1 id="this-documentation-is-incomplete-do-not-use">THIS DOCUMENTATION IS INCOMPLETE, DO NOT USE</h1>
+<h1 id="this-documentation-is-incomplete">THIS DOCUMENTATION IS INCOMPLETE</h1>
 </div>
 <div class="info-block">
 <p><strong>Note</strong> </p>
-<p>This kit is intended for educational and R&amp;D use only, not for actual energy storage applications That will happen later, check out our <a href="https://fbrc.dev/about.html#roadmap" target="_blank" title="">roadmap</a> to see when,</p>
+<p>This kit is intended for educational and R&amp;D use only, not for actual energy storage applications. That will happen later, check out our <a href="https://fbrc.dev/about.html#roadmap" target="_blank" title="">roadmap</a> to see when.</p>
 </div>
 <div class="pagebom">
 <h3 id="parts">Parts</h3>
@@ -140,8 +155,8 @@
 <li>200 g of <a Class="missing" href="missing">3D printing feedstock</a> </li>
 <li>1 <a Class="missing" href="missing">Arduino UNO R3</a>    - or equivalent microcontroller that can output two independent 5V PWM signals and connect to PC over USB serial</li>
 <li>4 <a Class="bom" href="barbed_fittings.html">barbed fittings</a> </li>
-<li>10 cm² of <a Class="bom" href="conductive_felt.html">conductive felt</a> </li>
-<li>100 cm² of <a Class="bom" href="copper.html">copper sheet</a> </li>
+<li>4 cm² of <a Class="bom" href="conductive_felt.html">conductive felt</a> </li>
+<li>50 cm² of <a Class="bom" href="copper.html">copper sheet</a> </li>
 <li>160 cm² of <a Class="bom" href="gaskets.html">gasket sheet</a>    - Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough</li>
 <li>100 cm² of <a Class="bom" href="grafoil.html">grafoil</a> </li>
 <li>1 <a Class="bom" href="drivers.html">L298N motor driver</a> </li>
@@ -159,6 +174,7 @@
 <li>1 <a Class="missing" href="missing">3-axis mill</a> </li>
 <li>1 <a Class="missing" href="missing">3D printer</a> </li>
 <li>1 <a Class="missing" href="missing">50 mL beaker</a> </li>
+<li>2 <a Class="missing" href="missing">50 mL beakers</a>    - or drip tray/other container to hold 10 mL of water</li>
 <li>1 <a Class="missing" href="missing">5mm hex key</a> </li>
 <li>1 <a Class="missing" href="missing">pair of chemical safety goggles</a> </li>
 <li>1 <a Class="missing" href="missing">pair of nitrile gloves</a> </li>
@@ -169,6 +185,7 @@
 <li>1 <a Class="missing" href="missing">stir bar</a> </li>
 <li>1 <a Class="missing" href="missing">stir plate</a> </li>
 <li>1 <a Class="missing" href="missing">torque wrench</a>    - to accept 5 mm allen key or 10 mm hex socket</li>
+<li>1 <a Class="missing" href="missing">utility knife</a> </li>
 <li>1 <a Class="missing" href="missing">vial</a>    - min. 20 mL</li>
 <li>1 <a Class="missing" href="missing">vinyl cutter machine</a>    - or laser cutter or hand tools</li>
 <li>1 <a Class="missing" href="missing">weighing spatula</a> </li>
@@ -176,6 +193,7 @@
 <h3 id="chemicals">Chemicals</h3>
 <ul>
 <li>10.0 grams of <a Class="missing" href="missing">8% vinegar/acetic acid</a> </li>
+<li>10 mL of <a Class="missing" href="missing">deionized water</a> </li>
 <li>3.0 grams of <a Class="missing" href="missing">potassium acetate</a> </li>
 <li>6.6 grams of <a Class="missing" href="missing">potassium iodide</a> </li>
 <li>2.8 grams of <a Class="missing" href="missing">zinc chloride</a> </li>
@@ -186,7 +204,7 @@
 <p><strong>Warning</strong> </p>
 <p>If you're starting from scratch, you need to <a href="fabrication.html" title="">fabricate</a> and source everything needed for using this flow battery test cell.</p>
 </div>
-<p>If you already have all the required components and materials, you can directly <a href="electronics.html" title="">prepare the power electronics</a>, <a href="cell_assembly.html" title="">assemble the cell</a>, <a href="jig_assembly.html" title="">assemble the jig</a>, prepare the <a href="electrolyte.html" title="">electrolyte</a>, and then begin <a href="testing.html" title="">testing</a>.</p>
+<p>If you already have all the required components and materials, you can directly <a href="electronics.html" title="">prepare the power electronics</a>, <a href="cell_assembly.html" title="">assemble the cell</a>, <a href="jig_assembly.html" title="">assemble the jig</a>, prepare the <a href="electrolyte.html" title="">electrolyte</a>, and then begin <a href="testing.html" title="">testing</a>. After an experiment, you should <a href="cleanup.html" title="">clean up</a> your setup and <a href="analysis.html" title="">analyze</a> the data you obtained.</p>
 <ol>
 <li>
 <p><a href="fabrication.html" title="">Fabricating cell components</a></p>
@@ -201,10 +219,19 @@
 <p><a href="jig_assembly.html" title="">Assembling the jig with electronics and flow cell</a></p>
 </li>
 <li>
+<p><a href="leak_test.html" title="">Leak testing the cell</a></p>
+</li>
+<li>
 <p><a href="electrolyte.html" title="">Preparing the electrolyte</a></p>
 </li>
 <li>
 <p><a href="testing.html" title="">Operating and testing the cell</a></p>
+</li>
+<li>
+<p><a href="cleanup.html" title="">Stopping and disassembling the cell</a></p>
+</li>
+<li>
+<p><a href="analysis.html" title="">Analyzing and storing the experimental data</a></p>
 </li>
 </ol>
 <!-- GitBuilding Nav -->

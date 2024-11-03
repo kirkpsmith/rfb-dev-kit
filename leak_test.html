@@ -110,8 +110,8 @@
         Assembling the jig with electronics and flow cell
     </a>
     </li>
-<li class="not-active">
-    <a class="not-active" href="./leak_test.html">
+<li class="active">
+    <a class="active" href="./leak_test.html">
         Leak testing the cell
     </a>
     </li>
@@ -140,48 +140,68 @@
             </nav>
         </div>
         <div class="wrapper">
-    <h2 id="grafoil-sheet">Grafoil sheet</h2>
-<p>Grafoil sheet is compressed graphite commonly used in industry as high-temperature gasket material. It is affordable and similar enough for our purpose here to bipolar plate material, which is much harder to source.</p>
-<p><img alt="" src="images/grafoil_aliexpress.png" title="" /></p>
+    <!-- There should be only one Header per page. You do not need to use all the keys -->
+<h1 id="leak-testing-the-cell">Leak testing the cell</h1>
+<p><div class=details-header>
+    <div class=details-thumb-outer>
+        <div class=details-thumb>
+            <img alt="page thumbnail" src="images/.jpg" title="" />
+        </div>
+    </div>
+<div class=other-details>
+    <div class=detail>
+        <b>Time required:</b> Tens of minutes
+    </div>
+    <div class=detail>
+        <b>Skills required:</b>
+        <ul>
+                    <li>Mechanical assembly</li>
+                    <li>Visual inspection</li>
+                </ul>
+    </div>
+</div>
+</div></p>
+<div class="pagebom">
+<h3 id="parts">Parts</h3>
+<ul>
+<li>1 <a Class="bom" href="jig_assembly.html">assembled test jig</a> </li>
+</ul>
+<h3 id="tools">Tools</h3>
+<ul>
+<li>2 <a Class="missing" href="missing">50 mL beakers</a>    - or drip tray/other container to hold 10 mL of water</li>
+<li>1 <a Class="missing" href="missing">PC</a> </li>
+</ul>
+<h3 id="chemicals">Chemicals</h3>
+<ul>
+<li>10 mL of <a Class="missing" href="missing">deionized water</a> </li>
+</ul>
+</div>
+<h2 class="page-step" id="connect-the-motor-control-electronics-to-pc">Step 1: Connect the motor control electronics to PC</h2>
+<p>Place the <a href="jig_assembly.html">assembled test jig</a> on a surface that can get wet in case of possible leakage.</p>
+<p>Making sure the motor control electronics are powered, plug the USB cable of the Arduino into the <a Class="missing" href="missing">PC</a> and connect to the Arduino using the MYSTAT software.</p>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>Don't get your computer wet!</p>
+</div>
+<h2 class="page-step" id="add-water-to-reservoirs">Step 2: Add water to reservoirs</h2>
+<p>Add about 5 mL of <a Class="missing" href="missing">deionized water</a> to each reservoir.</p>
+<h2 class="page-step" id="turn-on-the-pumps">Step 3: Turn on the pumps</h2>
+<p>From the MYSTAT software, turn on both pumps at 100% speed.</p>
+<h2 class="page-step" id="inspect-cell-and-reservoirs-for-leakage">Step 4: Inspect cell and reservoirs for leakage</h2>
+<div class="help-block">
+<p><strong>There are two types of leakage</strong> </p>
+<p><strong>External leakage</strong>, which is obvious: water coming from the gaskets, reservoir, a faulty connection, <em>etc.</em> The other is <strong>internal leakage</strong>, when the membrane is not properly sealed, has a hole, or similar, which creates flow between the two half-cells that shouldn't exist. This shows up as a rapid imbalance of volume between the two reservoirs.</p>
+</div>
+<p>Run the pumps for at least two minutes and monitor the internal levels of both reservoirs. They should not change appreciably. If the cell does not show signs of external or internal leakage, great!</p>
+<h2 class="page-step" id="empty-reservoirs">Step 5: Empty reservoirs</h2>
+<p>Grab two <a Class="missing" href="missing">50 mL beakers</a> and space them out so that you can invert the entire jig (with pumps running) and pour out the water from the reservoirs into the beakers. Let the pumps run a few seconds to squeeze the water from the tubing lines and cell body.</p>
+<div class="help-block">
+<p><strong>Why is this important?</strong> </p>
+<p>Getting rid of the as much water as possible is important for reproducibility so that we test electrolytes as close to the intended concentration as possible. If extra water was left in the cell, it will dilute our electrolytes slightly which can affect the results.</p>
+</div>
+<!-- GitBuilding Nav -->
 <hr />
-<h2 id="specifications">Specifications</h2>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Thickness</td>
-<td>TODO</td>
-</tr>
-</tbody>
-</table>
-<h2 id="suppliers">Suppliers</h2>
-<table>
-<thead>
-<tr>
-<th>Supplier</th>
-<th>Part Number</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AliExpress</td>
-<td><a href="https://www.aliexpress.com/item/1005005662210405.html" target="_blank">Use this link</a></td>
-</tr>
-<tr>
-<td>RS Components</td>
-<td><a href="https://uk.rs-online.com/web/p/gasket-sheets/2686953" target="_blank">268-6953</a></td>
-</tr>
-<tr>
-<td>Amazon (NL)</td>
-<td><a href="https://www.amazon.nl/-/en/NEZIH-flexible-graphite-sheet-conductive/dp/B0CF88BKNX/ref=sr_1_1?crid=2LE79V7I7OS7J&amp;keywords=Flexible%2BGraphite%2BSheet%2BFoil%2BGraphite%2BFilm%2BConductive%2BGraphite%2BPaper%2BResistant%2BHigh%2BTemperature%2BCorrosion&amp;qid=1706280600&amp;sprefix=flexible%2Bgraphite%2Bsheet%2Bfoil%2Bgraphite%2Bfilm%2Bconductive%2Bgraphite%2Bpaper%2Bresistant%2Bhigh%2Btemperature%2Bcorrosion%2Caps%2C164&amp;sr=8-1&amp;th=1" target="_blank">Use this link</a></td>
-</tr>
-</tbody>
-</table>
+<p><a href="jig_assembly.html">Previous page</a> | <a href="electrolyte.html">Next page</a></p>
     </div>
 </div>
 <footer class="site-footer">
