@@ -39,11 +39,17 @@ Using the Arduino IDE with the elapsedMillis library installed, upload the follo
 Connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) **and** a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
 ![](images/test.jpg)
 
+The wiring should look like this when you're done (feel free to make it tidier!)
+![](images/IMG_20241116_155825.jpg)
+
 This makes the [motor control electronics]{output, qty:1}
 
 ## Connect microcontroller to PC
 
 TODO
+
+
+
 
 
 
