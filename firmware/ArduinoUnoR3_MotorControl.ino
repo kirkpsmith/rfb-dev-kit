@@ -1,16 +1,14 @@
 #include <elapsedMillis.h>
 #define LED_BUILTIN 17
 
-// WHITE WIRES, SPEED CONTROL
-
-#define PIN_1P_PWM 10
-#define PIN_1N_PWM 5
+#define RIGHT_MOTOR_PWM_PIN 10 // 490 Hz
+#define LEFT_MOTOR_PWM_PIN 3 // 490 Hz
 #define In1 9
 #define In2 8
 #define In3 7
 #define In4 6
 
-// INPUT PUMP SPEED/DUTY CYCLE, 0-255 is 0-100%, PUMPS MINIMUM SPEED STARTS FROM ~3.8 - 7.6 %
+// INPUT PUMP SPEED/DUTY CYCLE, 0-255 is 0-100%, PUMPS MAY NOT SPIN UNTIL MINUMUM DUTY CYCLE IS MET
 int speed1P = 0;
 int speed1N = 0;
 
@@ -40,8 +38,9 @@ elapsedMillis updateTimer = 0;
 
 bool ledState = LOW;
 
-int set1P = 160;
-int set1N = 160;
+// Pumps are off on board startup/reset
+int RIGHT_MOTOR_SPEED = 0;
+int LEFT_MOTOR_SPEED = 0;
 
 void parseData()
 {
@@ -105,8 +104,8 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, ledState);
 
-  pinMode(PIN_1P_PWM, OUTPUT);
-  pinMode(PIN_1N_PWM, OUTPUT);
+  pinMode(RIGHT_MOTOR_PWM_PIN, OUTPUT);
+  pinMode(LEFT_MOTOR_PWM_PIN, OUTPUT);
   pinMode(In1, OUTPUT);
   pinMode(In2, OUTPUT);
   pinMode(In3, OUTPUT);
@@ -118,8 +117,8 @@ void setup()
   digitalWrite(In3, HIGH);
   digitalWrite(In4, LOW);
 
-  analogWrite(PIN_1P_PWM, set1P);
-  analogWrite(PIN_1N_PWM, set1N);
+  analogWrite(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_SPEED);
+  analogWrite(LEFT_MOTOR_PWM_PIN, LEFT_MOTOR_SPEED);
 }
 
 void controlPumps()
@@ -129,19 +128,19 @@ void controlPumps()
     switch (cmd)
     {
     case 'a':
-      set1P = val.toInt();
-      analogWrite(PIN_1P_PWM, set1P);
+      RIGHT_MOTOR_SPEED = val.toInt();
+      analogWrite(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_SPEED);
       break;
     case 'b':
-      set1N = val.toInt();
-      analogWrite(PIN_1N_PWM, set1N);
+      LEFT_MOTOR_SPEED = val.toInt();
+      analogWrite(LEFT_MOTOR_PWM_PIN, LEFT_MOTOR_SPEED);
       break;
     case 'c':
-      set1N = val.toInt();
-      set1P = val.toInt();
-      analogWrite(PIN_1N_PWM
-      , set1N);
-      analogWrite(PIN_1P_PWM, set1P);
+      LEFT_MOTOR_SPEED = val.toInt();
+      RIGHT_MOTOR_SPEED = val.toInt();
+      analogWrite(LEFT_MOTOR_PWM_PIN
+      , LEFT_MOTOR_SPEED);
+      analogWrite(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_SPEED);
       break;
     }
   }
