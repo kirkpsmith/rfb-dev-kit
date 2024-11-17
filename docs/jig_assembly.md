@@ -13,15 +13,23 @@ Gather the following components:
 
 ## Add pumps to jig {pagestep}
 
-Insert the two [peristaltic pumps](pumps.md){qty:2} into their holders in the jig as shown:
+Insert the two [peristaltic pumps](pumps.md){qty:2} into their holders in the [jig](fromstep){qty: 1} as shown:
 
 ## Add reservoirs to jig {pagestep}
 
 Insert the two [reservoirs](fromstep){qty: 2} into the jig as shown:
 
+
+>!! **Warning** 
+>!!
+>!! One barb on each reservoir is slightly longer than the other barb. This longer barb is for electrolyte returning to the reservoir from the cell, and there is an internal channel in the reservoir that returns electrolyte to the top of the reservoir.
+>!!
+>!!The short barb is for electrolyte going to the pumps from the reservoir, and it draws electrolyte from the bottom of the reservoir. 
+
+
 ## Add tubing to jig {pagestep}
 
-Take the six [cut tubing pieces](fromstep){qty: 6,cat: part} and connect the tubing as shown:
+Take the six [cut tubing pieces](fromstep){qty: 4,cat: part} and connect the tubing as shown:
 
 ## Add cell to jig and connect to tubing {pagestep}
 

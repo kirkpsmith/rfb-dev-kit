@@ -9,7 +9,7 @@ Details:
 
 ---
 <!-- There should be only one Header per page. You do not need to use all the keys -->
-# Fabricating cell components
+# Fabricating components
 
 ## Bill of Materials
 
@@ -29,6 +29,10 @@ Using a [3D printer]{qty:1, cat:tool} loaded with chemically compatible polyprop
 ![](../CAD/exports/Reservoir.stl)
 ![](../CAD/exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl)
 
+Print the [jig]{output, qty: 1}  in PLA or whatever material you can print easily. It does not have to be chemically resistant.
+
+![](../CAD/exports/jig.stl)
+
 >!! **Warning** 
 >!!
 >!! The total combined thickess of the flow frames and (compressed) gaskets is important! There are multiple thickness options in the `flow-frames` folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.
@@ -43,8 +47,6 @@ Remove brim, raft, support material from print (depending on printing method)
 Sand down, with fine-grit [sandpaper]{qty:1 sheet, cat:tool}, both faces of each flow frame.
 
 ![](images/flow_frame.png)
-
-This makes two [flow frames]{output, qty: 2} and two [reservoirs]{output, qty: 2}.
 
 ## Cut gaskets {pagestep}
 
@@ -96,4 +98,8 @@ Cut [copper sheet](copper.md){qty: 50 cm²} into two 5 cm by 5 cm squares to mak
 
 ## Cut tubing
 
-Cut [tubing](tubing.md){qty: 1 meter} into 6 15 centimeter lengths to make [cut tubing pieces]{output, qty: 6}
+Cut [tubing](tubing.md){qty: 39 cm} into 2x 17 cm and 2x 5 cm pieces. Load the long pieces into the peristaltic pumps as shown:
+
+![](images/IMG_20241117_132924.jpg)
+
+This makes [cut tubing pieces]{output, qty: 4}.
