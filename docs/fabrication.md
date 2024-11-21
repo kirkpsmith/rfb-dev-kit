@@ -98,7 +98,7 @@ Cut [copper sheet](copper.md){qty: 50 cm²} into two 5 cm by 5 cm squares to mak
 
 ## Cut tubing
 
-Cut [tubing](tubing.md){qty: 39 cm} into 2x 17 cm and 2x 5 cm pieces. Load the long pieces into the peristaltic pumps as shown:
+Cut [tubing](tubing.md){qty: 44 cm} into 2x 17 cm and 2x 5 cm pieces. Load the long pieces into the peristaltic pumps as shown:
 
 ![](images/IMG_20241117_132924.jpg)
 
