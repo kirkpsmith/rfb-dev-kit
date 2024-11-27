@@ -15,19 +15,27 @@ Details:
 
 {{BOM}}
 
-## Fabricate cell bodies {pagestep}
+## Fabricate endplate {pagestep}
 
-These are preferably milled from solid polypropylene with a [3-axis mill]{qty: 1, cat: tool}. The .STEP file of the below part is found [here](../CAD/exports/Cell Body with Two Flat-Bottom Ports.step), this is exported from the `flow_cell.FCStd` file.
+These are preferably milled from solid aluminum with a [3-axis mill]{qty: 1, cat: tool}. The .STEP file of the below part is found [here](../CAD/exports/Metal Endplate.step), this is exported from the `flow_cell.FCStd` file.
 
-![](../CAD/exports/Cell Body with Two Flat-Bottom Ports.pdf)
+![](../CAD/exports/Metal Endplate Drawing.pdf)
 
-This makes two [cell bodies]{output, qty: 2}.
+An experimental endplate that can be FDM-printed is also included. Recommendations are for a stiff, rigid filament with >=70% infill and a concentric infill pattern and skirt to avoid warping.
+
+![](../CAD/exports/Polymer Endplate.stl)
+
+This makes two [endplates]{output, qty: 2}.
 
 ## Print rigid cell components  {pagestep}
 
 Using a [3D printer]{qty:1, cat:tool} loaded with chemically compatible polypropylene filament [3D printing feedstock]{qty: 200 g}, print two [reservoirs]{output, qty: 2} and two [flow frames]{output, qty: 2}.
+
 ![](../CAD/exports/Reservoir.stl)
-![](../CAD/exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl)
+
+![](../CAD/exports/flow-frames/2 sqcm 2.0 mm Flow Frame.stl)
+
+![](../CAD/exports/Membrane Frame.stl)
 
 Print the [jig]{output, qty: 1}  in PLA or whatever material you can print easily. It does not have to be chemically resistant.
 
