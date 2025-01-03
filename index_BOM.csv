@@ -1,9 +1,11 @@
 Name in documentation	Category	Qty	Full Name	Notes	Supplier 1	Part No	Link	Supplier 2	Part No	Link	Supplier 3	Part No	Link
 10 mm socket	tool	1		To fit torque wrench									
+19/22 silicone septa	part	2			Amazon	Use this link	https://www.amazon.fr/dp/B0BR3P56GR?ref=ppx_yo2ov_dt_b_fed_asin_title						
 24 V DC power source	part	1		Anything between 12 V and 24 V may work but the results achieved here use 24 V. Motor speeds may need calibration to match existing results									
 3-axis mill	tool	1											
 3D printer	tool	1											
 3D printing feedstock	part	200 g											
+5 mL syringe	tool	1											
 50 mL beaker	tool	1											
 50 mL beakers	tool	2		or drip tray/other container to hold 10 mL of water									
 5mm hex key	tool	1											
@@ -18,6 +20,7 @@ grafoil	part	100 cm²			AliExpress	Use this link	https://www.aliexpress.com/item
 L298N motor driver	part	1	L298N motor driver for pump		AliExpress	Use this link	https://www.aliexpress.com/item/33012645746.html	Amazon (NL)	Use this link	https://www.amazon.nl/-/en/ICQUANZX-Controller-Module-Bridge-Stepper/dp/B07MY33PC9/ref=sr_1_2?crid=3AP2TKMDN5LD7&keywords=L298N+driver+board+module&qid=1706281391&sprefix=l298n+driver+board+module%2Caps%2C92&sr=8-2			
 M6 nuts	part	4											
 M6 x 60 mm hex socket cap bolts	part	4											
+male-to-male breadboard jumper cables	part	several											
 o-rings	part	4	O-rings		RS Components	196-5616	https://uk.rs-online.com/web/p/gaskets-o-rings/1965616						
 pair of chemical safety goggles	tool	1											
 pair of nitrile gloves	tool	1											
@@ -33,7 +36,8 @@ separator sheet	part	A4 sheet	Separator material		Amazon	Use this link	https://w
 stir bar	tool	1											
 stir plate	tool	1											
 torque wrench	tool	1		to accept 5 mm allen key or 10 mm hex socket									
-tubing	part	1 meter	Tubing										
+tubing	part	44 cm	Tubing										
+USB A-to-B cable	part	1											
 utility knife	tool	1											
 vial	tool	1		min. 20 mL									
 vinyl cutter machine	tool	1		or laser cutter or hand tools									

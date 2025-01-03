@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Building an Open-Source Hardware Flow Battery Development Kit</title>
+    <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
@@ -35,7 +35,7 @@
     <div class="wrapper header-wrapper" >
         <div class=header-text>
    
-    <h1 class="site-title">Building an Open-Source Hardware Flow Battery Development Kit</h1>
+    <h1 class="site-title">Building a benchtop flow battery test cell with a zinc-iodide electrolyte</h1>
    
     <p class="author">by Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="affiliation">Flow Battery Research Collective</p>
@@ -55,7 +55,7 @@
                 <ul class="nav-list">
                 <li>
     <a class="navhome" href="./">
-        Building an Open-Source Hardware Flow Battery Development Kit
+        Building a benchtop flow battery test cell with a zinc-iodide electrolyte
     </a>
 </li>
 <li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
@@ -93,12 +93,12 @@
     </li>
 <li class="active">
     <a class="active" href="./fabrication.html">
-        Fabricating cell components
+        Fabricating components
     </a>
     </li>
 <li class="not-active">
     <a class="not-active" href="./electronics.html">
-        Preparing the power electronics
+        Preparing the pumps and power electronics
     </a>
     </li>
 <li class="not-active">
@@ -142,7 +142,7 @@
         </div>
         <div class="wrapper">
     <!-- There should be only one Header per page. You do not need to use all the keys -->
-<h1 id="fabricating-cell-components">Fabricating cell components</h1>
+<h1 id="fabricating-components">Fabricating components</h1>
 <p><div class=details-header>
     <div class=details-thumb-outer>
         <div class=details-thumb>
@@ -173,7 +173,7 @@
 <li>160 cm² of <a Class="bom" href="gaskets.html">gasket sheet</a>    - Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough</li>
 <li>100 cm² of <a Class="bom" href="grafoil.html">grafoil</a> </li>
 <li>A4 sheet <a Class="bom" href="separator_sheet.html">separator sheet</a> </li>
-<li>1 meter of <a Class="bom" href="tubing.html">tubing</a> </li>
+<li>44 cm of <a Class="bom" href="tubing.html">tubing</a> </li>
 </ul>
 <h3 id="tools">Tools</h3>
 <ul>
@@ -194,6 +194,9 @@
 <p><gb3d-viewer src="exports/Reservoir.stl"></gb3d-viewer></p>
 <noscript><a href="exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl"></a></noscript>
 <p><gb3d-viewer src="exports/flow-frames/2 sqcm 1.2 mm Flow Frame.stl"></gb3d-viewer></p>
+<p>Print the <a name="output__jig"></a>jig  in PLA or whatever material you can print easily. It does not have to be chemically resistant.</p>
+<noscript><a href="exports/jig.stl"></a></noscript>
+<p><gb3d-viewer src="exports/jig.stl"></gb3d-viewer></p>
 <div class="warning-block">
 <p><strong>Warning</strong> </p>
 <p>The total combined thickess of the flow frames and (compressed) gaskets is important! There are multiple thickness options in the <code>flow-frames</code> folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.</p>
@@ -206,7 +209,6 @@
 <p>Remove brim, raft, support material from print (depending on printing method)</p>
 <p>Sand down, with fine-grit <a Class="missing" href="missing">sandpaper</a>, both faces of each flow frame.</p>
 <p><img alt="" src="images/flow_frame.png" title="" /></p>
-<p>This makes two <a name="output__flow-frames"></a>flow frames and two <a name="output__reservoirs"></a>reservoirs.</p>
 <h2 class="page-step" id="cut-gaskets">Step 4: Cut gaskets</h2>
 <div class="info-block">
 <p><strong>Note:</strong></p>
@@ -237,7 +239,9 @@
 <p>Make sure at least one orientation of the copper squares fits <em>exactly</em> the machined square recess in the cell bodies </p>
 </div>
 <h2 id="cut-tubing">Cut tubing</h2>
-<p>Cut <a href="tubing.html">tubing</a> into 6 15 centimeter lengths to make <a name="output__cut-tubing-pieces"></a>cut tubing pieces</p>
+<p>Cut <a href="tubing.html">tubing</a> into 2x 17 cm and 2x 5 cm pieces. Load the long pieces into the peristaltic pumps as shown:</p>
+<p><img alt="" src="images/IMG_20241117_132924.jpg" title="" /></p>
+<p>This makes <a name="output__cut-tubing-pieces"></a>cut tubing pieces.</p>
 <!-- GitBuilding Nav -->
 <hr />
 <p><a href="index_BOM.html">Previous page</a> | <a href="electronics.html">Next page</a></p>
@@ -249,9 +253,9 @@
     <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
-    <p class="author">©2024 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="author">©2025 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
-    <p class="license">Building an Open-Source Hardware Flow Battery Development Kit is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
 </footer></body>

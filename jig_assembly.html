@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Building an Open-Source Hardware Flow Battery Development Kit</title>
+    <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
@@ -34,7 +34,7 @@
     <div class="wrapper header-wrapper" >
         <div class=header-text>
    
-    <h1 class="site-title">Building an Open-Source Hardware Flow Battery Development Kit</h1>
+    <h1 class="site-title">Building a benchtop flow battery test cell with a zinc-iodide electrolyte</h1>
    
     <p class="author">by Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="affiliation">Flow Battery Research Collective</p>
@@ -54,7 +54,7 @@
                 <ul class="nav-list">
                 <li>
     <a class="navhome" href="./">
-        Building an Open-Source Hardware Flow Battery Development Kit
+        Building a benchtop flow battery test cell with a zinc-iodide electrolyte
     </a>
 </li>
 <li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
@@ -92,12 +92,12 @@
     </li>
 <li class="not-active">
     <a class="not-active" href="./fabrication.html">
-        Fabricating cell components
+        Fabricating components
     </a>
     </li>
 <li class="not-active">
     <a class="not-active" href="./electronics.html">
-        Preparing the power electronics
+        Preparing the pumps and power electronics
     </a>
     </li>
 <li class="not-active">
@@ -145,7 +145,7 @@
 <p><div class=details-header>
     <div class=details-thumb-outer>
         <div class=details-thumb>
-            <img alt="page thumbnail" src="images/.jpg" title="" />
+            <img alt="page thumbnail" src="images/Screenshot_20250102_190036.png" title="" />
         </div>
     </div>
 <div class=other-details>
@@ -165,26 +165,37 @@
 <h3 id="parts">Parts</h3>
 <ul>
 <li>1 <a Class="bom" href="cell_assembly.html">assembled flow cell</a> </li>
-<li>6 <a Class="bom" href="fabrication.html">cut tubing pieces</a> </li>
-<li>1 <a Class="bom" href="electronics.html">motor control electronics</a> </li>
-<li>2 <a Class="bom" href="pumps.html">peristaltic pumps</a> </li>
+<li>4 <a Class="bom" href="fabrication.html">cut tubing pieces</a> </li>
+<li>1 <a Class="bom" href="electronics.html">jig with pumps and power electronics</a> </li>
 <li>2 <a Class="bom" href="fabrication.html">reservoirs</a> </li>
 </ul>
 </div>
-<h2 class="page-step" id="add-pumps-to-jig">Step 1: Add pumps to jig</h2>
-<p>Insert the two <a href="pumps.html">peristaltic pumps</a> into their holders in the jig as shown:</p>
-<h2 class="page-step" id="add-reservoirs-to-jig">Step 2: Add reservoirs to jig</h2>
-<p>Insert the two <a href="fabrication.html">reservoirs</a> into the jig as shown:</p>
-<h2 class="page-step" id="add-tubing-to-jig">Step 3: Add tubing to jig</h2>
-<p>Take the six <a href="fabrication.html">cut tubing pieces</a> and connect the tubing as shown:</p>
-<h2 class="page-step" id="add-cell-to-jig-and-connect-to-tubing">Step 4: Add cell to jig and connect to tubing</h2>
-<p>Take the <a href="cell_assembly.html">assembled flow cell</a> and place it into the jig, connecting the tubing as shown:</p>
+<h2 class="page-step" id="add-reservoirs-to-jig">Step 1: Add reservoirs to jig</h2>
+<p>Insert the two <a href="fabrication.html">reservoirs</a> into the <a href="electronics.html">jig with pumps and power electronics</a> as shown:</p>
+<p><img alt="" src="images/Screenshot_20250102_190203.png" title="" /></p>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>One barb on each reservoir is slightly longer than the other barb. This longer barb is for electrolyte returning to the reservoir from the cell, and there is an internal channel in the reservoir that returns electrolyte to the top of the reservoir.</p>
+<p>The short barb is for electrolyte going to the pumps from the reservoir, and it draws electrolyte from the bottom of the reservoir. </p>
+</div>
+<blockquote>
+<p>!!<img alt="" src="images/Screenshot_20250102_190750.png" title="" /></p>
+</blockquote>
+<h2 class="page-step" id="add-cell-to-jig-and-connect-to-tubing">Step 2: Add cell to jig and connect to tubing</h2>
+<p>Take the <a href="cell_assembly.html">assembled flow cell</a> and place it into the jig, connecting the tubing as described and shown:</p>
+<p>Take the <a href="fabrication.html">cut tubing pieces</a> and connect the tubing as so, for both positive and negative half-cells:
+- pump outlet to inlet of cell (on bottom)
+- outlet of cell (on top) to long barb on reservoir
+- short barb on reservoir to pump inlet</p>
+<p><img alt="Same tubing principles apply for peristaltic pumps" src="images/front.png" title="" /></p>
 <div class="warning-block">
 <p><strong>Warning</strong> </p>
 <p>Avoid creating kinks and sharp bends in the tubing when assembling the cell. This can create issues with electrolyte flow.</p>
 </div>
-<h2 class="page-step" id="add-electronics-to-jig">Step 5: Add electronics to jig</h2>
-<p>Place the <a href="electronics.html">motor control electronics</a>, already flashed with firmware and connected, into back the jig as shown:</p>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>Electrolyte flow must flow from bottom of the cell upwards to top, in order to clear out gas bubbles from the cell and ensure good liquid electrolyte flow</p>
+</div>
 <p>This makes an <a name="output__assembled-test-jig"></a>assembled test jig.</p>
 <!-- GitBuilding Nav -->
 <hr />
@@ -197,9 +208,9 @@
     <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
-    <p class="author">©2024 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="author">©2025 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
-    <p class="license">Building an Open-Source Hardware Flow Battery Development Kit is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
 </footer></body>

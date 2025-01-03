@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Building an Open-Source Hardware Flow Battery Development Kit</title>
+    <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
@@ -34,7 +34,7 @@
     <div class="wrapper header-wrapper" >
         <div class=header-text>
    
-    <h1 class="site-title">Building an Open-Source Hardware Flow Battery Development Kit</h1>
+    <h1 class="site-title">Building a benchtop flow battery test cell with a zinc-iodide electrolyte</h1>
    
     <p class="author">by Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="affiliation">Flow Battery Research Collective</p>
@@ -54,7 +54,7 @@
                 <ul class="nav-list">
                 <li>
     <a class="navhome" href="./">
-        Building an Open-Source Hardware Flow Battery Development Kit
+        Building a benchtop flow battery test cell with a zinc-iodide electrolyte
     </a>
 </li>
 <li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
@@ -92,12 +92,12 @@
     </li>
 <li class="not-active">
     <a class="not-active" href="./fabrication.html">
-        Fabricating cell components
+        Fabricating components
     </a>
     </li>
 <li class="active">
     <a class="active" href="./electronics.html">
-        Preparing the power electronics
+        Preparing the pumps and power electronics
     </a>
     </li>
 <li class="not-active">
@@ -141,7 +141,7 @@
         </div>
         <div class="wrapper">
     <!-- There should be only one Header per page. You do not need to use all the keys -->
-<h1 id="preparing-the-power-electronics">Preparing the power electronics</h1>
+<h1 id="preparing-the-pumps-and-power-electronics">Preparing the pumps and power electronics</h1>
 <p><div class=details-header>
     <div class=details-thumb-outer>
         <div class=details-thumb>
@@ -169,7 +169,11 @@
 <ul>
 <li>1 <a Class="missing" href="missing">24 V DC power source</a>    - Anything between 12 V and 24 V may work but the results achieved here use 24 V. Motor speeds may need calibration to match existing results</li>
 <li>1 <a Class="missing" href="missing">Arduino UNO R3</a>    - or equivalent microcontroller that can output two independent 5V PWM signals and connect to PC over USB serial</li>
+<li>1 <a Class="bom" href="fabrication.html">jig</a> </li>
 <li>1 <a Class="bom" href="drivers.html">L298N motor driver</a> </li>
+<li>several <a Class="missing" href="missing">male-to-male breadboard jumper cables</a> </li>
+<li>2 <a Class="bom" href="pumps.html">peristaltic pumps</a> </li>
+<li>1 <a Class="missing" href="missing">USB A-to-B cable</a> </li>
 </ul>
 <h3 id="tools">Tools</h3>
 <ul>
@@ -181,20 +185,28 @@
 <p>A <a Class="missing" href="missing">PC</a> communicates with both a charging/discharging device (typically a <a href="pstat.html">potentiostat</a>) as well as an <a Class="missing" href="missing">Arduino UNO R3</a>. These documents assume the use of a MYSTAT potentiostat and it's <a href="https://codeberg.org/FBRC/mystat/" target="_blank" title="">modified control software</a>.</p>
 <p>The Arduino is connected to an <a href="drivers.html">L298N motor driver</a>, which is powered by a <a Class="missing" href="missing">24 V DC power source</a>. This is a simple dual H-bridge motor driver that allows the Arduino to control the speeds of the peristaltic pumps using pulse width modulation (PWM). There is no speed feedback; we only tell the motors which direction to turn and whether they run at 100% maximum speed, 0% speed (off), or anything in between. To know the speed (in rpm) or flowrate (in mL/min) of the peristaltic pumps, a separate measurement is required (like dispensing water into a graduated cylinder).</p>
 <p>We use the open-source MYSTAT (with our own modifications to the control software), but any equivalent potentiostat or battery cycler will do. Our pump control system is based on the MYSTAT software, though, and can be used without the MYSTAT present.</p>
-<p>With this hardware configuration, the MYSTAT software then allows for entire control of this electrochemical system: the applied currents and voltages as well as the speeds of the electrolyte pumps.</p>
+<p>With this hardware configuration, the MYSTAT software then allows for entire control of this electrochemical system: the applied currents and voltages as well as the speeds of the electrolyte pumps. </p>
 <h2 class="page-step" id="flash-firmware-to-microcontroller">Step 1: Flash firmware to microcontroller</h2>
 <p>Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is <a href="https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino" target="_blank" title="">here</a></p>
 <h2 class="page-step" id="remove-on-board-jumpers-from-motor-driver">Step 2: Remove on-board jumpers from motor driver</h2>
 <p><strong>Remove</strong> the three on-board jumpers (highlighted in pink) from the motor driver board:</p>
 <p><img alt="" src="images/Screenshot_20240703_221706.png" title="" /></p>
-<h2 class="page-step" id="connect-cables-between-arduino-motor-driver-and-power-supply">Step 3: Connect cables between Arduino, motor driver, and power supply</h2>
-<p>Connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) <strong>and</strong> a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
+<h2 class="page-step" id="add-arduino-and-motor-driver-to-the-jig">Step 3: Add Arduino and motor driver to the jig</h2>
+<p>There are standoffs made for the for the Arduino and motor driver on the back of the <a href="fabrication.html">jig</a> .</p>
+<h2 class="page-step" id="add-pumps-to-jig">Step 4: Add pumps to jig</h2>
+<p>Insert the two <a href="pumps.html">peristaltic pumps</a> into their holders in the as shown:</p>
+<p><img alt="" src="images/Screenshot_20250102_190036.png" title="" /></p>
+<h2 class="page-step" id="connect-cables-between-arduino-motor-driver-and-power-supply">Step 5: Connect cables between Arduino, motor driver, and power supply</h2>
+<p>Using <a Class="missing" href="missing">male-to-male breadboard jumper cables</a> connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) <strong>and</strong> a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
 <img alt="" src="images/test.jpg" title="" /></p>
 <p>The wiring should look like this when you're done (feel free to make it tidier!)
 <img alt="" src="images/IMG_20241116_155825.jpg" title="" /></p>
-<p>This makes the <a name="output__motor-control-electronics"></a>motor control electronics</p>
-<h2 id="connect-microcontroller-to-pc">Connect microcontroller to PC</h2>
-<p>TODO</p>
+<p>You now have a <a name="output__jig-with-pumps-and-power-electronics"></a>jig with pumps and power electronics.</p>
+<h2 id="connect-microcontroller-to-pc-and-test-pumps">Connect microcontroller to PC and test pumps.</h2>
+<p>We are using the MYSTAT potentiostat and have modified the software to be able to control the pump speeds. If you have a different potentiostat, you can still use the MYSTAT software to control your pumps without having a MYSTAT connected.</p>
+<p>Plug in the 24V power source to the H-bridge. Connect the Arduino to the PC with a <a Class="missing" href="missing">USB A-to-B cable</a></p>
+<p>Run the MYSTAT <a href="https://codeberg.org/FBRC/mystat/" target="_blank" title="">modified control software</a>.</p>
+<p>Connect to the Arduino through the MYSTAT GUI. Briefly test each pump to make sure it spins (it can spin for a couple seconds dry without issues).</p>
 <!-- GitBuilding Nav -->
 <hr />
 <p><a href="fabrication.html">Previous page</a> | <a href="cell_assembly.html">Next page</a></p>
@@ -206,9 +218,9 @@
     <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
-    <p class="author">©2024 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="author">©2025 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
-    <p class="license">Building an Open-Source Hardware Flow Battery Development Kit is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
 </footer></body>
