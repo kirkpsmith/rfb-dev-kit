@@ -1,6 +1,6 @@
 ---
 Details:
-    Thumbnail: images/.jpg
+    Thumbnail: images/Screenshot_20250102_190036.png
     Time: Tens of minutes
     Skills:
       - Mechanical assembly
@@ -11,37 +11,41 @@ Details:
 Gather the following components:
 {{BOM}}
 
-## Add pumps to jig {pagestep}
-
-Insert the two [peristaltic pumps](pumps.md){qty:2} into their holders in the [jig](fromstep){qty: 1} as shown:
-
 ## Add reservoirs to jig {pagestep}
 
-Insert the two [reservoirs](fromstep){qty: 2} into the jig as shown:
+Insert the two [reservoirs](fromstep){qty: 2} into the [jig with pumps and power electronics](fromstep){qty: 1} as shown:
 
+
+![](images/Screenshot_20250102_190203.png)
 
 >!! **Warning** 
 >!!
 >!! One barb on each reservoir is slightly longer than the other barb. This longer barb is for electrolyte returning to the reservoir from the cell, and there is an internal channel in the reservoir that returns electrolyte to the top of the reservoir.
 >!!
 >!!The short barb is for electrolyte going to the pumps from the reservoir, and it draws electrolyte from the bottom of the reservoir. 
-
-
-## Add tubing to jig {pagestep}
-
-Take the six [cut tubing pieces](fromstep){qty: 4,cat: part} and connect the tubing as shown:
+>!!
+>!!![](images/Screenshot_20250102_190750.png)
 
 ## Add cell to jig and connect to tubing {pagestep}
 
-Take the [assembled flow cell](fromstep){qty:1} and place it into the jig, connecting the tubing as shown:
+Take the [assembled flow cell](fromstep){qty:1} and place it into the jig, connecting the tubing as described and shown:
+
+Take the [cut tubing pieces](fromstep){qty: 4,cat: part} and connect the tubing as so, for both positive and negative half-cells:
+- pump outlet to inlet of cell (on bottom)
+- outlet of cell (on top) to long barb on reservoir
+- short barb on reservoir to pump inlet
+
+![Same tubing principles apply for peristaltic pumps](images/front.png)
+
+
 
 >!! **Warning** 
 >!!
 >!! Avoid creating kinks and sharp bends in the tubing when assembling the cell. This can create issues with electrolyte flow.
 
-## Add electronics to jig {pagestep}
-
-Place the [motor control electronics](fromstep){qty:1}, already flashed with firmware and connected, into back the jig as shown:
+>!! **Warning** 
+>!!
+>!! Electrolyte flow must flow from bottom of the cell upwards to top, in order to clear out gas bubbles from the cell and ensure good liquid electrolyte flow
 
 This makes an [assembled test jig]{output, qty: 1}.
 

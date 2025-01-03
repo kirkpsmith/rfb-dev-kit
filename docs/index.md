@@ -1,4 +1,4 @@
-# Building an Open-Source Hardware Flow Battery Development Kit
+# Building a benchtop flow battery test cell with a zinc-iodide electrolyte
 
 
 >!! **Warning** 
@@ -14,8 +14,6 @@
 {{BOM}}
 
 This bill of materials can be found [here]{BOM}.
-
-
 
 >!! **Warning** 
 >!!

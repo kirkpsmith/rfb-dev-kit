@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Brief documentation on cell operation, disassembly, data analysis
+- Source for silicone septa
+
 ### Fixed
+
+- Assembly order of pumps in jig
 
 ### Changed
 
