@@ -9,7 +9,7 @@ Details:
 
 ---
 <!-- There should be only one Header per page. You do not need to use all the keys -->
-# Preparing the power electronics
+# Preparing the pumps and power electronics
 
 {{BOM}}
 
@@ -21,7 +21,7 @@ The Arduino is connected to an [L298N motor driver](drivers.md){cat:part, qty:1}
 
 We use the open-source MYSTAT (with our own modifications to the control software), but any equivalent potentiostat or battery cycler will do. Our pump control system is based on the MYSTAT software, though, and can be used without the MYSTAT present.
 
-With this hardware configuration, the MYSTAT software then allows for entire control of this electrochemical system: the applied currents and voltages as well as the speeds of the electrolyte pumps.
+With this hardware configuration, the MYSTAT software then allows for entire control of this electrochemical system: the applied currents and voltages as well as the speeds of the electrolyte pumps. 
 
 
 ## Flash firmware to microcontroller {pagestep}
@@ -34,22 +34,36 @@ Using the Arduino IDE with the elapsedMillis library installed, upload the follo
 
 ![](images/Screenshot_20240703_221706.png)
 
+## Add Arduino and motor driver to the jig{pagestep}
+
+There are standoffs made for the for the Arduino and motor driver on the back of the [jig](fromstep){qty: 1} .
+
+## Add pumps to jig {pagestep}
+
+Insert the two [peristaltic pumps](pumps.md){qty:2} into their holders in the as shown:
+
+![](images/Screenshot_20250102_190036.png)
+
+
 ## Connect cables between Arduino, motor driver, and power supply {pagestep}
 
-Connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) **and** a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
+Using [male-to-male breadboard jumper cables]{qty: several, cat: part} connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) **and** a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
 ![](images/test.jpg)
 
 The wiring should look like this when you're done (feel free to make it tidier!)
 ![](images/IMG_20241116_155825.jpg)
 
-This makes the [motor control electronics]{output, qty:1}
+You now have a [jig with pumps and power electronics]{output, qty:1}.
 
-## Connect microcontroller to PC
+## Connect microcontroller to PC and test pumps.
 
-TODO
+We are using the MYSTAT potentiostat and have modified the software to be able to control the pump speeds. If you have a different potentiostat, you can still use the MYSTAT software to control your pumps without having a MYSTAT connected.
 
+Plug in the 24V power source to the H-bridge. Connect the Arduino to the PC with a [USB A-to-B cable]{qty: 1,cat: part}
 
+Run the MYSTAT [modified control software](https://codeberg.org/FBRC/mystat/).
 
+Connect to the Arduino through the MYSTAT GUI. Briefly test each pump to make sure it spins (it can spin for a couple seconds dry without issues).
 
 
 

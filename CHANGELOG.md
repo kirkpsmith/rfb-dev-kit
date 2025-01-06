@@ -20,6 +20,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [0.0.2] 2025-01-05
+
+### Added
+
+- Brief documentation on cell operation, disassembly, data analysis
+- Source for silicone septa
+
+### Fixed
+
+- Assembly order of pumps in jig
+
 ## [0.0.1] - 2024-12-30
 
 ### Added

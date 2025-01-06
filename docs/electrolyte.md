@@ -1,6 +1,6 @@
 ---
 Details:
-    Thumbnail: images/cell-assembly/k.jpg
+    Thumbnail: images/IMG-20231019-WA0005.jpg
     Time: Tens of minutes
     Skills:
       - General chemistry laboratory skills
@@ -10,13 +10,13 @@ Details:
 
 >! **Caution** 
 >!
->! From this point onwards, chemical safety risks are present. **You** are responsible for your own safety! Use proper PPE and do not perform anything you are not comfortable with. These instructions are presented as-is with no guarantee of your safety or assumed liability. 
+>! From this point onwards, chemical safety risks are present. **You** are responsible for your own safety! Use proper PPE and do not perform anything you are not comfortable with. These instructions are presented as-is with no guarantee of your safety or assumed liability. Work in a well-ventilated area, with someone else nearby aware that you are working with chemicals and able to assist or call for help if needed
 
 {{BOM}}
 
 ## Put on your personal protective equipment (PPE) {pagestep}
 
-Put on a [pair of chemical safety goggles]{qty: 1,cat: tool}, a [pair of nitrile gloves]{qty: 1,cat: tool}, wear close-toed shoes, and wear long pants/trousers! A lab coat is even better.
+Put on a [pair of chemical safety goggles]{qty: 1,cat: tool}, a [pair of nitrile gloves]{qty: 1,cat: tool}, wear close-toed shoes, and wear long pants/trousers! A lab coat is recommended.
 
 ## Weigh out the chemicals {pagestep}
 
