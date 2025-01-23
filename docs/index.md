@@ -4,10 +4,13 @@
 >!! **Warning** 
 >!! # THIS DOCUMENTATION IS INCOMPLETE
 
+![](images/cell.jpeg)
 
 >i **Note** 
 >i
 >i This kit is intended for educational and R&D use only, not for actual energy storage applications. That will happen later, check out our [roadmap](https://fbrc.dev/about.html#roadmap) to see when.
+
+
 
 
 
@@ -38,3 +41,4 @@ If you already have all the required components and materials, you can directly 
 8. [.](cleanup.md){step}
 
 9. [.](analysis.md){step}
+
