@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
+<link rel="icon" type="image/png" href="./static/Logo/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="./static/Logo/favicon-16x16.png" sizes="16x16" />
+
+    <link href="./static/base-style.css" rel="stylesheet">
+    <link href="./static/site-style.css" rel="stylesheet">
+                <style>
+  :root {
+    --primary-color: #39dbf2;
+  }
+</style>
+<style>
+  :root {
+    --secondary-color: #cccccc;
+  }
+</style>
+<style>
+  :root {
+    --hover-color: #555555;
+}
+</style>
+    
+        <script type="text/javascript" src="./static/search.js" defer=""></script>
+    </head>
+<body>
+<header class="site-header">
+    <div class="wrapper header-wrapper" >
+        <div class=header-text>
+   
+    <h1 class="site-title">Building a benchtop flow battery test cell with a zinc-iodide electrolyte</h1>
+   
+    <p class="author">by Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="affiliation">Flow Battery Research Collective</p>
+</div>
+            </div>
+</header>
+<div class="page-content">
+            <div>
+            <nav class="sidebar">
+                <a href="#" class="menu-icon">
+                <svg viewBox="0 0 18 15">
+                    <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                    <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                    <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+                </svg>
+                </a>
+                <ul class="nav-list">
+                <li>
+    <a class="navhome" href="./">
+        Building a benchtop flow battery test cell with a zinc-iodide electrolyte
+    </a>
+</li>
+<li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
+  <input
+    type="text"
+    placeholder="Search..."
+    v-on:input="search($event.target.value)"
+    v-on:keypress="handleKeyPress"
+    v-on:keyup.esc="$event.target.blur()"
+    v-on:focus="handleFocus"
+    v-on:blur="handleBlur"
+    :value="searchTerm" />
+    <div class="search-results" v-if="focused && searchTerm.length > 0">
+        <div v-if="searchResults.length > 0">Results:</div>
+        <div v-if="searchResults.length === 0">No results.</div>
+        <template v-for="(result, index) in searchResults">
+            <li>
+                <a class="search-result" :href="`./${result.path}.html`">
+               <span v-for="crumb in result.breadCrumbs.slice(0, -1)">
+                ${crumb + ' > '}
+                </span>
+               ${result.title || result.breadCrumbs[result.breadCrumbs.length - 1]}
+                <p>
+                    <span v-for="node in result.highlightChars" :class="node.mark ? 'highlight' : ''" >${node.chars}</span>
+                </p>
+                </a>
+            </li>
+        </template>
+    </div>
+</li>
+<li class="not-active">
+    <a class="not-active" href="./index_BOM.html">
+        Bill of Materials
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./fabrication.html">
+        Fabricating components
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./electronics.html">
+        Preparing the pumps and power electronics
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./cell_assembly.html">
+        Assembling the flow cell from components
+    </a>
+    </li>
+<li class="active">
+    <a class="active" href="./jig_assembly.html">
+        Assembling the jig with electronics and flow cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./leak_test.html">
+        Leak testing the cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./electrolyte.html">
+        Preparing the electrolyte
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./testing.html">
+        Operating and testing the cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./cleanup.html">
+        Stopping and disassembling the cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./analysis.html">
+        Analyzing and storing the experimental data
+    </a>
+    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper">
+    <!-- There should be only one Header per page. You do not need to use all the keys -->
+<h1 id="assembling-the-jig-with-electronics-and-flow-cell">Assembling the jig with electronics and flow cell</h1>
+<p><div class=details-header>
+    <div class=details-thumb-outer>
+        <div class=details-thumb>
+            <img alt="page thumbnail" src="images/Screenshot_20250102_190036.png" title="" />
+        </div>
+    </div>
+<div class=other-details>
+    <div class=detail>
+        <b>Time required:</b> Tens of minutes
+    </div>
+    <div class=detail>
+        <b>Skills required:</b>
+        <ul>
+                    <li>Mechanical assembly</li>
+                </ul>
+    </div>
+</div>
+</div></p>
+<p>Gather the following components:</p>
+<div class="pagebom">
+<h3 id="parts">Parts</h3>
+<ul>
+<li>1 <a Class="bom" href="cell_assembly.html">assembled flow cell</a> </li>
+<li>4 <a Class="bom" href="fabrication.html">cut tubing pieces</a> </li>
+<li>1 <a Class="bom" href="electronics.html">jig with pumps and power electronics</a> </li>
+<li>2 <a Class="bom" href="fabrication.html">reservoirs</a> </li>
+</ul>
+</div>
+<h2 class="page-step" id="add-reservoirs-to-jig">Step 1: Add reservoirs to jig</h2>
+<p>Insert the two <a href="fabrication.html">reservoirs</a> into the <a href="electronics.html">jig with pumps and power electronics</a> as shown:</p>
+<p><img alt="" src="images/Screenshot_20250102_190203.png" title="" /></p>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>One barb on each reservoir is slightly longer than the other barb. This longer barb is for electrolyte returning to the reservoir from the cell, and there is an internal channel in the reservoir that returns electrolyte to the top of the reservoir.</p>
+<p>The short barb is for electrolyte going to the pumps from the reservoir, and it draws electrolyte from the bottom of the reservoir. </p>
+</div>
+<blockquote>
+<p>!!<img alt="" src="images/Screenshot_20250102_190750.png" title="" /></p>
+</blockquote>
+<h2 class="page-step" id="add-cell-to-jig-and-connect-to-tubing">Step 2: Add cell to jig and connect to tubing</h2>
+<p>Take the <a href="cell_assembly.html">assembled flow cell</a> and place it into the jig, connecting the tubing as described and shown:</p>
+<p>Take the <a href="fabrication.html">cut tubing pieces</a> and connect the tubing as so, for both positive and negative half-cells:
+- pump outlet to inlet of cell (on bottom)
+- outlet of cell (on top) to long barb on reservoir
+- short barb on reservoir to pump inlet</p>
+<p><img alt="Same tubing principles apply for peristaltic pumps" src="images/front.png" title="" /></p>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>Avoid creating kinks and sharp bends in the tubing when assembling the cell. This can create issues with electrolyte flow.</p>
+</div>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>Electrolyte flow must flow from bottom of the cell upwards to top, in order to clear out gas bubbles from the cell and ensure good liquid electrolyte flow</p>
+</div>
+<p>This makes an <a name="output__assembled-test-jig"></a>assembled test jig.</p>
+<!-- GitBuilding Nav -->
+<hr />
+<p><a href="cell_assembly.html">Previous page</a> | <a href="leak_test.html">Next page</a></p>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="wrapper">
+        <a target="_blank" rel="noopener noreferrer" href="https://gitbuilding.io">
+    <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
+    <span class="doc-info">Documentation powered by GitBuilding</span>
+</a>
+    <p class="author">©2025 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
+    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+
+    </div>
+</footer></body>
+</html>

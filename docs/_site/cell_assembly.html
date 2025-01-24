@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
+<link rel="icon" type="image/png" href="./static/Logo/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="./static/Logo/favicon-16x16.png" sizes="16x16" />
+
+    <link href="./static/base-style.css" rel="stylesheet">
+    <link href="./static/site-style.css" rel="stylesheet">
+                <style>
+  :root {
+    --primary-color: #39dbf2;
+  }
+</style>
+<style>
+  :root {
+    --secondary-color: #cccccc;
+  }
+</style>
+<style>
+  :root {
+    --hover-color: #555555;
+}
+</style>
+    
+        <script type="text/javascript" src="./static/search.js" defer=""></script>
+    </head>
+<body>
+<header class="site-header">
+    <div class="wrapper header-wrapper" >
+        <div class=header-text>
+   
+    <h1 class="site-title">Building a benchtop flow battery test cell with a zinc-iodide electrolyte</h1>
+   
+    <p class="author">by Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="affiliation">Flow Battery Research Collective</p>
+</div>
+            </div>
+</header>
+<div class="page-content">
+            <div>
+            <nav class="sidebar">
+                <a href="#" class="menu-icon">
+                <svg viewBox="0 0 18 15">
+                    <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                    <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                    <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+                </svg>
+                </a>
+                <ul class="nav-list">
+                <li>
+    <a class="navhome" href="./">
+        Building a benchtop flow battery test cell with a zinc-iodide electrolyte
+    </a>
+</li>
+<li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
+  <input
+    type="text"
+    placeholder="Search..."
+    v-on:input="search($event.target.value)"
+    v-on:keypress="handleKeyPress"
+    v-on:keyup.esc="$event.target.blur()"
+    v-on:focus="handleFocus"
+    v-on:blur="handleBlur"
+    :value="searchTerm" />
+    <div class="search-results" v-if="focused && searchTerm.length > 0">
+        <div v-if="searchResults.length > 0">Results:</div>
+        <div v-if="searchResults.length === 0">No results.</div>
+        <template v-for="(result, index) in searchResults">
+            <li>
+                <a class="search-result" :href="`./${result.path}.html`">
+               <span v-for="crumb in result.breadCrumbs.slice(0, -1)">
+                ${crumb + ' > '}
+                </span>
+               ${result.title || result.breadCrumbs[result.breadCrumbs.length - 1]}
+                <p>
+                    <span v-for="node in result.highlightChars" :class="node.mark ? 'highlight' : ''" >${node.chars}</span>
+                </p>
+                </a>
+            </li>
+        </template>
+    </div>
+</li>
+<li class="not-active">
+    <a class="not-active" href="./index_BOM.html">
+        Bill of Materials
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./fabrication.html">
+        Fabricating components
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./electronics.html">
+        Preparing the pumps and power electronics
+    </a>
+    </li>
+<li class="active">
+    <a class="active" href="./cell_assembly.html">
+        Assembling the flow cell from components
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./jig_assembly.html">
+        Assembling the jig with electronics and flow cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./leak_test.html">
+        Leak testing the cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./electrolyte.html">
+        Preparing the electrolyte
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./testing.html">
+        Operating and testing the cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./cleanup.html">
+        Stopping and disassembling the cell
+    </a>
+    </li>
+<li class="not-active">
+    <a class="not-active" href="./analysis.html">
+        Analyzing and storing the experimental data
+    </a>
+    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper">
+    <!-- There should be only one Header per page. You do not need to use all the keys -->
+<h1 id="assembling-the-flow-cell-from-components">Assembling the flow cell from components</h1>
+<p><div class=details-header>
+    <div class=details-thumb-outer>
+        <div class=details-thumb>
+            <img alt="page thumbnail" src="images/cell-assembly/q.jpg" title="" />
+        </div>
+    </div>
+<div class=other-details>
+    <div class=detail>
+        <b>Time required:</b> Tens of minutes
+    </div>
+    <div class=detail>
+        <b>Skills required:</b>
+        <ul>
+                    <li>Mechanical assembly</li>
+                    <li>Using a torque wrench properly</li>
+                </ul>
+    </div>
+</div>
+</div></p>
+<p><img alt="" src="images/cell-assembly/composite_image.jpg" title="" /></p>
+<p>Ensure you have the following components:</p>
+<div class="pagebom">
+<h3 id="parts">Parts</h3>
+<ul>
+<li>1 <a Class="bom" href="fabrication.html">cell assembly tool</a> </li>
+<li>1 <a Class="bom" href="fabrication.html">copper current collectors</a> </li>
+<li>1 <a Class="missing" href="missing">current collector</a> </li>
+<li>1 <a Class="bom" href="fabrication.html">cut electrodes</a> </li>
+<li>3 <a Class="bom" href="fabrication.html">cut membranes</a> </li>
+<li>2 <a Class="missing" href="missing">cut nonconductive felt</a> </li>
+<li>4 <a Class="missing" href="missing">cut tubing</a> </li>
+<li>4 <a Class="bom" href="fabrication.html">flow frames</a> </li>
+<li>1 <a Class="missing" href="missing">grafoil current collector</a> </li>
+<li>1 <a Class="bom" href="fabrication.html">grafoil current collectors</a> </li>
+<li>2 <a Class="bom" href="fabrication.html">inner gaskets</a> </li>
+<li>4 <a Class="missing" href="missing">M6 nuts with washers</a> </li>
+<li>4 <a Class="missing" href="missing">M6 x 35 mm hex socket cap bolts with washers</a> </li>
+<li>1 <a Class="missing" href="missing">outer gasket</a> </li>
+<li>1 <a Class="bom" href="fabrication.html">outer gaskets</a> </li>
+<li>several cm <a Class="missing" href="missing">polypropylene packing tape</a> </li>
+</ul>
+<h3 id="tools">Tools</h3>
+<ul>
+<li>1 <a Class="missing" href="missing">10 mm socket</a>    - To fit torque wrench</li>
+<li>1 <a Class="missing" href="missing">5mm hex key</a> </li>
+<li>1 <a Class="missing" href="missing">torque wrench</a>    - to accept 5 mm allen key or 10 mm hex socket</li>
+</ul>
+</div>
+<h2 class="page-step" id="attach-the-tubing-to-the-barbed-fittings">Step 1: Attach the tubing to the barbed fittings</h2>
+<p>Take the two <a href="fabrication.html">flow frames</a> and attach one piece of <a Class="missing" href="missing">cut tubing</a> to each barb. It should be a tight fit. You will only have to do this once.</p>
+<h2 class="page-step" id="insulate-the-bolts-with-packing-tape">Step 2: Insulate the bolts with packing tape</h2>
+<p>Wrap <a Class="missing" href="missing">polypropylene packing tape</a> around the shafts of the bolts, leaving the final 1 cm of threads exposed. </p>
+<div class="info-block">
+<p><strong>Note</strong> </p>
+<p>This prevents accidental short circuits of the cell from the bolt shafts contacting the grafoil.</p>
+</div>
+<h2 class="page-step" id="insert-the-four-bolts-into-cathode-endplate">Step 3: Insert the four bolts into cathode endplate</h2>
+<p>Take one endplate and insert the four <a Class="missing" href="missing">M6 x 35 mm hex socket cap bolts with washers</a>.</p>
+<h2 class="page-step" id="place-the-endplate-on-the-cell-assembly-tool">Step 4: Place the endplate on the cell assembly tool</h2>
+<p>Take the <a href="fabrication.html">cell assembly tool</a> and place the endplate on it so that the exposed bolt threads point up.</p>
+<p><img alt="" src="images/cell-assembly/a.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-copper-current-collector">Step 5: Add the copper current collector</h2>
+<p>Make sure the large tubing holes of the <a Class="missing" href="missing">current collector</a> align with the endplate.</p>
+<p><img alt="" src="images/cell-assembly/b.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-anode-grafoil-current-collector">Step 6: Add the anode grafoil current collector</h2>
+<p>Make sure the large tubing holes of the <a Class="missing" href="missing">grafoil current collector</a> align with the copper current collector.</p>
+<p><img alt="" src="images/cell-assembly/c.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-anode-outer-gasket">Step 7: Add the anode outer gasket</h2>
+<p>Place one <a Class="missing" href="missing">outer gasket</a> on top of the assembly, using the bolts to guide the gasket and align it with the fluid holes in the cell body.</p>
+<p><img alt="" src="images/cell-assembly/d.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-anode-flow-frame">Step 8: Add the anode flow frame</h2>
+<p>Place one <a href="fabrication.html">flow frame</a> on top of the assembly, with the barbs and tubing facing downward into the cell assembly tool.</p>
+<p><img alt="" src="images/cell-assembly/e.jpg" title="" /></p>
+<div class="help-block">
+<p><strong>Help Block</strong> </p>
+<p>The total combined thickess of the flow frames and (compressed) gaskets is key to achieving the desired results! There are multiple thickness options in the <code>flow-frames</code> folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.</p>
+</div>
+<h2 class="page-step" id="add-the-anode-nonconductive-felt">Step 9: Add the anode nonconductive felt</h2>
+<p>Take one <a Class="missing" href="missing">cut nonconductive felt</a> and add it to the assembly.</p>
+<p><img alt="" src="images/cell-assembly/f.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-anode-inner-gasket">Step 10: Add the anode inner gasket</h2>
+<p>Take one <a href="fabrication.html">inner gasket</a> and add it to the assembly.</p>
+<p><img alt="" src="images/cell-assembly/g.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-membranes">Step 11: Add the membranes</h2>
+<p>Take the three <a href="fabrication.html">cut membranes</a> and add them to the assembly.</p>
+<p><img alt="" src="images/cell-assembly/h.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-cathode-inner-gasket">Step 12: Add the cathode inner gasket</h2>
+<p>Take one <a href="fabrication.html">inner gasket</a> and add it to the assembly.</p>
+<p><img alt="" src="images/cell-assembly/i.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-cathode-nonconductive-felt-and-flow-frame">Step 13: Add the cathode nonconductive felt and flow frame</h2>
+<p>Take one <a Class="missing" href="missing">cut nonconductive felt</a> and add it to the assembly.
+<img alt="" src="images/cell-assembly/j.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-cathode-flow-frame">Step 14: Add the cathode flow frame</h2>
+<p>Place one <a href="fabrication.html">flow frame</a> on top of the assembly, using the bolts to guide the flow frame.</p>
+<p><img alt="" src="images/cell-assembly/k.jpg" title="" /></p>
+<h2 class="page-step" id="add-cathode-outer-gasket">Step 15: Add cathode outer gasket</h2>
+<p>Place one <a href="fabrication.html">outer gasket</a> on top of the assembly, using the bolts to guide the flow frame.</p>
+<p><img alt="" src="images/cell-assembly/l.jpg" title="" /></p>
+<h2 class="page-step" id="add-cathode-graphite-felt">Step 16: Add cathode graphite felt</h2>
+<p>Place one <a href="fabrication.html">graphite felt</a> on top of the assembly, using the bolts to guide the flow frame.</p>
+<p><img alt="" src="images/cell-assembly/m.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-cathode-grafoil-current-collector">Step 17: Add the cathode grafoil current collector</h2>
+<p>Place the cathode <a href="fabrication.html">grafoil current collector</a> over the flow frame.</p>
+<p><img alt="" src="images/cell-assembly/n.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-cathode-copper-current-collector">Step 18: Add the cathode copper current collector</h2>
+<p>Place the cathode <a href="fabrication.html">current collector</a> on the cell as shown so the tab is facing opposite the anode current collector tab.</p>
+<p><img alt="" src="images/cell-assembly/o.jpg" title="" /></p>
+<h2 class="page-step" id="add-the-cathode-endplate">Step 19: Add the cathode endplate</h2>
+<p>Place the second cell body (with barbs and copper plate installed) on top of the assembly and ensure all fluid holes are aligned. </p>
+<p><img alt="" src="images/cell-assembly/p.jpg" title="" /></p>
+<h2 class="page-step" id="tighten-the-bolts">Step 20: Tighten the bolts</h2>
+<p>Hand-tighten four <a Class="missing" href="missing">M6 nuts with washers</a> onto the exposed threads of the bolts in order to lightly compress the cell and hold all the components in place.</p>
+<p>Progressively tighten the bolts to 5 N⋅m in a <a href="https://www.flangeboltchart.com/torque-patterns/4-bolt-torque-pattern" target="_blank" title="">4-bolt flange pattern</a> using a <a Class="missing" href="missing">torque wrench</a> fitted with a <a Class="missing" href="missing">10 mm socket</a> and a <a Class="missing" href="missing">5mm hex key</a></p>
+<div class="info-block">
+<p><strong>Note</strong> </p>
+<p>Progressively tightening using a flange pattern is important to evenly compressing the cell and ensuring leak-free operation</p>
+</div>
+<hr />
+<p><strong>Nice work, now you have an <a name="output__assembled-flow-cell"></a>assembled flow cell!</strong></p>
+<p><img alt="" src="images/cell-assembly/q.jpg" title="" /></p>
+<!-- GitBuilding Nav -->
+<hr />
+<p><a href="electronics.html">Previous page</a> | <a href="jig_assembly.html">Next page</a></p>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="wrapper">
+        <a target="_blank" rel="noopener noreferrer" href="https://gitbuilding.io">
+    <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
+    <span class="doc-info">Documentation powered by GitBuilding</span>
+</a>
+    <p class="author">©2025 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
+    <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
+    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+
+    </div>
+</footer></body>
+</html>
