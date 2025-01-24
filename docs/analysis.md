@@ -3,7 +3,7 @@ Details:
     Thumbnail: images/image_1735837218047_0.png
     Time: Tens of minutes
     Skills:
-      - Basic computer skills 
+      - Running Python code
 ---
 <!-- There should be only one Header per page. You do not need to use all the keys -->
 # Analyzing and storing the experimental data
@@ -15,7 +15,7 @@ Details:
 >!!
 >!! **Ensure your data is backed up.**
 
-We prefer to process our data in python notebooks. Fork the template [here](https://www.<Your Link Url>), fill in the missing fields with your experimental conditions, add your data and run the analysis.
+We process our data in Python notebooks. Use the code in this blog post [here](https://fbrc.dev/posts/progress-update-dev-kit/), point it to your data file generated from cycling, and run the analysis. We'd really like it if you'd upload your data and analyis code, too!
 
 Then let us know of your experiment in the [forum](https://fbrc.discourse.group/)!
 

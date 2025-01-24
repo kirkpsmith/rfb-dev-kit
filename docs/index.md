@@ -1,26 +1,16 @@
 # Building a benchtop flow battery test cell with a zinc-iodide electrolyte
 
-
->!! **Warning** 
->!! # THIS DOCUMENTATION IS INCOMPLETE
-
 ![](images/cell.jpeg)
 
 >i **Note** 
 >i
 >i This kit is intended for educational and R&D use only, not for actual energy storage applications. That will happen later, check out our [roadmap](https://fbrc.dev/about.html#roadmap) to see when.
 
-
-
-
-
 {{BOM}}
 
 This bill of materials can be found [here]{BOM}.
 
->!! **Warning** 
->!!
->!! If you're starting from scratch, you need to [fabricate](fabrication.md) and source everything needed for using this flow battery test cell.
+If you're starting from scratch, you need to [fabricate](fabrication.md) and source everything needed for using this flow battery test cell.
 
 If you already have all the required components and materials, you can directly [prepare the power electronics](electronics.md), [assemble the cell](cell_assembly.md), [assemble the jig](jig_assembly.md), prepare the [electrolyte](electrolyte.md), and then begin [testing](testing.md). After an experiment, you should [clean up](cleanup.md) your setup and [analyze](analysis.md) the data you obtained.
 

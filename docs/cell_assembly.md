@@ -26,7 +26,7 @@ Wrap [polypropylene packing tape]{qty: several cm} around the shafts of the bolt
 >i
 >i This prevents accidental short circuits of the cell from the bolt shafts contacting the grafoil.
 
-## Insert the four bolts into one endplate {pagestep}
+## Insert the four bolts into cathode endplate {pagestep}
 
 Take one endplate and insert the four [M6 x 35 mm hex socket cap bolts with washers]{qty: 4}.
 
@@ -42,19 +42,19 @@ Make sure the large tubing holes of the [current collector](fromstep){qty: 1} al
 
 ![](images/cell-assembly/b.jpg)
 
-## Add the first grafoil current collector {pagestep}
+## Add the anode grafoil current collector {pagestep}
 
 Make sure the large tubing holes of the [grafoil current collector](fromstep){qty: 1} align with the copper current collector.
 
 ![](images/cell-assembly/c.jpg)
 
-## Add the first outer gasket {pagestep}
+## Add the anode outer gasket {pagestep}
 
 Place one [outer gasket](fromstep){qty: 1} on top of the assembly, using the bolts to guide the gasket and align it with the fluid holes in the cell body.
 
 ![](images/cell-assembly/d.jpg)
 
-## Add the first flow frame {pagestep}
+## Add the anode flow frame {pagestep}
 
 Place one [flow frame][flow frames](fromstep){qty: 1} on top of the assembly, with the barbs and tubing facing downward into the cell assembly tool.
 
@@ -64,7 +64,7 @@ Place one [flow frame][flow frames](fromstep){qty: 1} on top of the assembly, wi
 >?
 >? The total combined thickess of the flow frames and (compressed) gaskets is key to achieving the desired results! There are multiple thickness options in the `flow-frames` folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.
 
-## Add the anode nonconductive felt{fromstep}
+## Add the anode nonconductive felt{pagestep}
 
 Take one [cut nonconductive felt](fromstep){qty: 1} and add it to the assembly.
 
@@ -89,34 +89,54 @@ Take one [inner gasket][inner gaskets](fromstep){qty: 1} and add it to the assem
 
 ![](images/cell-assembly/i.jpg)
 
+## Add the cathode nonconductive felt and flow frame {pagestep}
+
+Take one [cut nonconductive felt](fromstep){qty: 1} and add it to the assembly.
+![](images/cell-assembly/j.jpg)
+
+
 ## Add the cathode flow frame {pagestep}
 
 Place one [flow frame][flow frames](fromstep){qty:1} on top of the assembly, using the bolts to guide the flow frame.
 
-![](images/cell-assembly/k.jpg)
-
-## Add the cathode nonconductive felt {pagestep}
-
-Take one [cut nonconductive felt](fromstep){qty: 1} and add it to the assembly.
 
 ![](images/cell-assembly/k.jpg)
+
+## Add cathode outer gasket {pagestep}
+
+Place one [outer gasket][outer gaskets](fromstep){qty:1} on top of the assembly, using the bolts to guide the flow frame.
+
+![](images/cell-assembly/l.jpg)
 
 ## Add cathode graphite felt{pagestep}
 
+Place one [graphite felt][cut electrodes](fromstep){qty:1} on top of the assembly, using the bolts to guide the flow frame.
+
 ![](images/cell-assembly/m.jpg)
 
-## Add the second grafoil current collector {pagestep}
+## Add the cathode grafoil current collector {pagestep}
 
-Place one grafoil current collector on top of the pass-through gasket, so that it will align with the copper current collector of the second cell body in the next step.
+Place the cathode [grafoil current collector][grafoil current collectors](fromstep){qty: 1} over the flow frame.
+
+![](images/cell-assembly/n.jpg)
+
+## Add the cathode copper current collector {pagestep}
+
+Place the cathode [current collector][copper current collectors](fromstep){qty: 1} on the cell as shown so the tab is facing opposite the anode current collector tab.
+
+![](images/cell-assembly/o.jpg)
 
 ## Add the cathode endplate {pagestep}
 
-Place the second cell body (with barbs and copper plate installed) on top of the assembly and ensure all fluid holes are aligned. Hand-tighten four [M6 nuts]{qty: 4} onto the exposed threads of the bolts in order to lightly compress the cell and hold all the components in place.
+Place the second cell body (with barbs and copper plate installed) on top of the assembly and ensure all fluid holes are aligned. 
+
+![](images/cell-assembly/p.jpg)
 
 ## Tighten the bolts {pagestep}
 
-Progressively tighten the bolts to 5 N⋅m in a [4-bolt flange pattern](https://www.flangeboltchart.com/torque-patterns/4-bolt-torque-pattern) using a [torque wrench]{qty: 1, cat: tool, Note: to accept 5 mm allen key or 10 mm hex socket} fitted with a [10 mm socket]{qty: 1, cat: tool, Note: To fit torque wrench} and a [5mm hex key]{qty: 1,cat: tool}
+Hand-tighten four [M6 nuts with washers]{qty: 4} onto the exposed threads of the bolts in order to lightly compress the cell and hold all the components in place.
 
+Progressively tighten the bolts to 5 N⋅m in a [4-bolt flange pattern](https://www.flangeboltchart.com/torque-patterns/4-bolt-torque-pattern) using a [torque wrench]{qty: 1, cat: tool, Note: to accept 5 mm allen key or 10 mm hex socket} fitted with a [10 mm socket]{qty: 1, cat: tool, Note: To fit torque wrench} and a [5mm hex key]{qty: 1,cat: tool}
 
 >i **Note** 
 >i
@@ -126,7 +146,9 @@ Progressively tighten the bolts to 5 N⋅m in a [4-bolt flange pattern](https://
 
 -------------------------------------------------------------
 
-**Now you have an [assembled flow cell]{output, qty:1}!**
+**Nice work, now you have an [assembled flow cell]{output, qty:1}!**
+
+![](images/cell-assembly/q.jpg)
 
 
 

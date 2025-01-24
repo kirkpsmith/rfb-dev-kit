@@ -43,6 +43,8 @@ Take the [cut tubing pieces](fromstep){qty: 4,cat: part} and connect the tubing 
 >!!
 >!! Avoid creating kinks and sharp bends in the tubing when assembling the cell. This can create issues with electrolyte flow.
 
+
+
 >!! **Warning** 
 >!!
 >!! Electrolyte flow must flow from bottom of the cell upwards to top, in order to clear out gas bubbles from the cell and ensure good liquid electrolyte flow
