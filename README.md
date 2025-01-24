@@ -7,8 +7,8 @@ This kit is for testing flow battery components and electrolytes at small-scales
 
 Developed by the [Flow Battery Research Collective](https://fbrc.dev).
 
-![Exploded view of cell](CAD/exports/exploded.webp)
-Exploded view of cell
+![](CAD/exports/cell.png)
+Assembled cell
 
 ![View of assembled cell in jig](CAD/exports/front.png)
 View of assembled cell in jig
