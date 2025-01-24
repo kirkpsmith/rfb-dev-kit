@@ -25,7 +25,7 @@ View of electronics in jig
 
 ## Documentation
 
-Documentation to build the kit, which includes the BOM, is available [here](https://fbrc.codeberg.page/rfb-dev-kit/).
+Documentation to build the kit, which includes the BOM, is available [here (latest version, with file previews)](https://fbrc.codeberg.page/rfb-dev-kit/), or locally in the repo [here (current version, without file previews)](docs/_site/index.html).
 
 ## Design Choices
 
