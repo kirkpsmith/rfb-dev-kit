@@ -11,17 +11,14 @@ Developed by the [Flow Battery Research Collective](https://fbrc.dev).
 
 Assembled cell
 
-![](CAD/exports/cell.png)
+![Exploded view of cell](CAD/exports/cell.png)
 
-Exploded view of cell
 
-![](CAD/exports/front.png)
+![View of assembled cell in jig](CAD/exports/front.png)
 
-View of assembled cell in jig
 
-![](CAD/exports/back.png)
+![View of electronics in jig](CAD/exports/back.png)
 
-View of electronics in jig
 
 ## Documentation
 
@@ -48,7 +45,7 @@ Please see the [contributing guide](https://fbrc.dev/contributing.html) on our w
 
 ## Community
 
-Discussion about the project happens on the [FBRC forum](https://fbrc.discourse.group/)!
+Discussion about the project happens on the [FBRC forum](https://fbrc.nodebb.com/)!
 
 
 ## References/Inspiration/Collaborators/Conspirators (in no particular order)
