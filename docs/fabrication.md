@@ -68,6 +68,10 @@ Cut two conductive graphite felt electrodes to fit inside the flow frames using 
 
 This makes two [cut electrodes]{output, qty: 2}.
 
+## Cut nonconductive spacers {pagestep}
+
+Also cut two [nonconductive felt](nonconductive_felt.md){qty: 4 cm², cat: part} squares of the same size. [][cut nonconductive felt]{output, qty:2}
+
 ## Cut separator membrane {pagestep}
 
 Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into four 3 cm x 3 cm squares
@@ -78,7 +82,7 @@ This produces four [cut membranes]{output, qty: 4}
 
 ## Cut grafoil current collectors {pagestep}
 
-Using a precut gasket as a guide, cut [grafoil](grafoil.md){qty: 100 cm²} into the following shape to make [grafoil current collectors]{output, qty: 2}.
+Using a precut gasket as a guide, cut/punch [grafoil](grafoil.md){qty: 100 cm²} into the following shape to make [grafoil current collectors]{output, qty: 2}.
 
 ![](../CAD/exports/Grafoil Drawing.pdf)
 
@@ -92,7 +96,8 @@ Using a router or a drill (press), cut some [1 mm copper sheet](copper.md){qty: 
 ## Cut tubing
 
 Cut [tubing](tubing.md){qty: 44 cm} into 2x 17 cm and 2x 5 cm pieces. Load the long pieces into the [peristaltic pumps]{qty: 2} as shown:
+[][peristaltic pumps with correct tubing]{output, qty:2}
 
 ![](images/IMG_20241117_132924.jpg)
 
-This makes [cut tubing pieces]{output, qty: 4}.
+[][cut tubing]{output, qty: 6}

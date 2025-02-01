@@ -11,5 +11,6 @@ PartData:
 
 # Separator material
 
-![](images/71QH+klL6sL._AC_SL1500_.jpg)
+![](images/photopaper.jpg)
 
+This is good enough separator material to get started, though a real batter separator like Daramic is preferred (but hard to obtain).

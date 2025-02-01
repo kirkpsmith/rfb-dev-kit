@@ -1,6 +1,6 @@
 ---
 Details:
-    Thumbnail: images/.jpg
+    Thumbnail: images/cell.jpeg
     Time: Tens of minutes
     Skills:
       - Mechanical assembly

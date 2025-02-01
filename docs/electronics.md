@@ -40,7 +40,7 @@ There are standoffs made for the for the Arduino and motor driver on the back of
 
 ## Add pumps to jig {pagestep}
 
-Insert the two [peristaltic pumps](pumps.md){qty:2} into their holders in the as shown:
+Insert the two [peristaltic pumps with correct tubing](fromstep){qty:2} into their holders in the as shown:
 
 ![](images/Screenshot_20250102_190036.png)
 

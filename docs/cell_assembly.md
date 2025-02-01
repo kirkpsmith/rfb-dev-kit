@@ -38,25 +38,25 @@ Take the [cell assembly tool](fromstep){qty: 1} and place the endplate on it so 
 
 ## Add the copper current collector{pagestep}
 
-Make sure the large tubing holes of the [current collector](fromstep){qty: 1} align with the endplate.
+Make sure the large tubing holes of the [current collector][copper current collectors](fromstep){qty: 1} align with the endplate.
 
 ![](images/cell-assembly/b.jpg)
 
 ## Add the anode grafoil current collector {pagestep}
 
-Make sure the large tubing holes of the [grafoil current collector](fromstep){qty: 1} align with the copper current collector.
+Make sure the large tubing holes of the [grafoil current collector][grafoil current collectors](fromstep){qty: 1} align with the copper current collector.
 
 ![](images/cell-assembly/c.jpg)
 
 ## Add the anode outer gasket {pagestep}
 
-Place one [outer gasket](fromstep){qty: 1} on top of the assembly, using the bolts to guide the gasket and align it with the fluid holes in the cell body.
+Place one [outer gasket][outer gaskets](fromstep){qty: 1} on top of the assembly, using the bolts to guide the gasket and align it with the fluid holes in the cell body.
 
 ![](images/cell-assembly/d.jpg)
 
 ## Add the anode flow frame {pagestep}
 
-Place one [flow frame][flow frames](fromstep){qty: 1} on top of the assembly, with the barbs and tubing facing downward into the cell assembly tool.
+Place one flow frame on top of the assembly, with the barbs and tubing facing downward into the cell assembly tool.
 
 ![](images/cell-assembly/e.jpg)
 
@@ -97,7 +97,7 @@ Take one [cut nonconductive felt](fromstep){qty: 1} and add it to the assembly.
 
 ## Add the cathode flow frame {pagestep}
 
-Place one [flow frame][flow frames](fromstep){qty:1} on top of the assembly, using the bolts to guide the flow frame.
+Place one flow frame with tubing on top of the assembly, using the bolts to guide the flow frame.
 
 
 ![](images/cell-assembly/k.jpg)

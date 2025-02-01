@@ -30,7 +30,7 @@ Insert the two [reservoirs](fromstep){qty: 2} into the [jig with pumps and power
 
 Take the [assembled flow cell](fromstep){qty:1} and place it into the jig, connecting the tubing as described and shown:
 
-Take the [cut tubing pieces](fromstep){qty: 4,cat: part} and connect the tubing as so, for both positive and negative half-cells:
+Take the rest of the [cut tubing](fromstep){qty: 2,cat: part} and connect the lengths as so, for both positive and negative half-cells:
 - pump outlet to inlet of cell (on bottom)
 - outlet of cell (on top) to long barb on reservoir
 - short barb on reservoir to pump inlet
