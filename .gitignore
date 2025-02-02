@@ -2,3 +2,6 @@
 *.FCStd?
 *.FCBak
 *.nc
+fp-info-cache
+*.lck
+Electronics/**/*-backups*/
