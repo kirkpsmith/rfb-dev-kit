@@ -4,4 +4,4 @@
 *.nc
 fp-info-cache
 *.lck
-Electronics/**/*-backups*/
+CAD/**/*-backups*/
