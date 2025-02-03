@@ -33,7 +33,9 @@ Documentation to build the kit, which includes the BOM, is available [here (late
 
 ## Repository Structure
 
-- `CAD` directory: FreeCAD design files
+- `CAD` directory: FreeCAD and KiCAD design files
+    - `FreeCAD` directory: FreeCAD files
+    - `KiCAD` directory: KiCAD project files
     - `exports` directory: files for manufacturing cell components
     - `imports` directory: files imported by FreeCAD for creating assembly
 - `docs` directory: documentation written with [GitBuilding](https://gitbuilding.io/)
