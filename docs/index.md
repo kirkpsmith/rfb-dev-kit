@@ -5,6 +5,9 @@
 >i **Note** 
 >i
 >i This kit is intended for educational and R&D use only, not for actual energy storage applications. That will happen later, check out our [roadmap](https://fbrc.dev/about.html#roadmap) to see when.
+>i
+>i Project homepage is at https://fbrc.dev, source code for this documentation is [here](https://codeberg.org/FBRC/RFB-dev-kit).
+
 
 ![](../CAD/exports/front.png)
 
