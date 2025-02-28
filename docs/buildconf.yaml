@@ -6,12 +6,13 @@ CustomCategories:
   chemical:
     DisplayName: Chemicals
     Reuse: false
+Email: info@fbrc.dev
 ExternalDirs:
   exports: ../CAD/exports
 Fussy: true
 HoverColor: '#555555'
+IncludeSearch: true
 License: CERN-OHL-S-2.0
 PrimaryColor: '#39dbf2'
 SecondaryColor: '#cccccc'
-Email: info@fbrc.dev
-IncludeSearch: true
+AutoCompleteSubNav: true

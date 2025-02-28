@@ -68,7 +68,7 @@ Cut two conductive graphite felt electrodes to fit inside the flow frames using 
 
 This makes two [cut electrodes]{output, qty: 2}.
 
-## Cut nonconductive spacers {pagestep}
+## Cut nonconductive spacer {pagestep}
 
 Also cut one [nonconductive felt](nonconductive_felt.md){qty: 2 cm², cat: part} square of the same size.
 

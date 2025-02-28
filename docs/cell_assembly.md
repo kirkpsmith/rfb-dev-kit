@@ -9,8 +9,6 @@ Details:
 <!-- There should be only one Header per page. You do not need to use all the keys -->
 # Assembling the flow cell from components
 
-![](images/cell-assembly/composite_image.jpg)
-
 Ensure you have the following components:
 {{BOM}}
 
@@ -92,7 +90,6 @@ Take one [inner gasket][inner gaskets](fromstep){qty: 1} and add it to the assem
 ## Add the cathode flow frame {pagestep}
 
 Place one flow frame with tubing on top of the assembly, using the bolts to guide the flow frame.
-
 
 ![](images/cell-assembly/k.jpg)
 
