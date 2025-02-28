@@ -70,11 +70,13 @@ This makes two [cut electrodes]{output, qty: 2}.
 
 ## Cut nonconductive spacers {pagestep}
 
-Also cut two [nonconductive felt](nonconductive_felt.md){qty: 4 cm², cat: part} squares of the same size. [][cut nonconductive felt]{output, qty:2}
+Also cut one [nonconductive felt](nonconductive_felt.md){qty: 2 cm², cat: part} square of the same size.
+
+[][cut nonconductive felt]{output, qty:1}
 
 ## Cut separator membrane {pagestep}
 
-Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into four 3 cm x 3 cm squares
+Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into four 2.7 cm x 2.7 cm squares.
 
 ![](images/separators.jpeg)
 

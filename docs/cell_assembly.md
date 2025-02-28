@@ -89,12 +89,6 @@ Take one [inner gasket][inner gaskets](fromstep){qty: 1} and add it to the assem
 
 ![](images/cell-assembly/i.jpg)
 
-## Add the cathode nonconductive felt and flow frame {pagestep}
-
-Take one [cut nonconductive felt](fromstep){qty: 1} and add it to the assembly.
-![](images/cell-assembly/j.jpg)
-
-
 ## Add the cathode flow frame {pagestep}
 
 Place one flow frame with tubing on top of the assembly, using the bolts to guide the flow frame.
