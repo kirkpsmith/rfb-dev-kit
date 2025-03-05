@@ -12,4 +12,4 @@ keyword=043199'
 
 # Nonconductive Graphite
 
-This is used as a spacer on the anode side, to allow metal to plate. It also can be used as a spacer on the cathode side, to prevent clogging of the cell in the event of solid iodine precipitation.
+This is used as a spacer on the negative side, to allow metal to plate. It also can be used as a spacer on the cathode side, to prevent clogging of the cell in the event of solid iodine precipitation.

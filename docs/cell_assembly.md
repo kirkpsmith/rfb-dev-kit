@@ -24,9 +24,9 @@ Wrap [polypropylene packing tape]{qty: several cm} around the shafts of the bolt
 >i
 >i This prevents accidental short circuits of the cell from the bolt shafts contacting the grafoil.
 
-## Insert the four bolts into cathode endplate {pagestep}
+## Insert the four bolts into positive endplate {pagestep}
 
-Take one endplate and insert the four [M6 x 35 mm hex socket cap bolts with washers]{qty: 4}.
+Take one endplate and insert the four [M6 x 35 mm hex socket cap bolts with washers]{qty: 4}. This will be the positive endplate.
 
 ## Place the endplate on the cell assembly tool {pagestep}
 
@@ -34,25 +34,25 @@ Take the [cell assembly tool](fromstep){qty: 1} and place the endplate on it so 
 
 ![](images/cell-assembly/a.jpg)
 
-## Add the copper current collector{pagestep}
+## Add the brass current collector {pagestep}
 
-Make sure the large tubing holes of the [current collector][copper current collectors](fromstep){qty: 1} align with the endplate.
+Make sure the large tubing holes of the [current collector][brass current collectors](fromstep){qty: 1} align with the endplate.
 
 ![](images/cell-assembly/b.jpg)
 
-## Add the anode grafoil current collector {pagestep}
+## Add the negative grafoil current collector {pagestep}
 
-Make sure the large tubing holes of the [grafoil current collector][grafoil current collectors](fromstep){qty: 1} align with the copper current collector.
+Make sure the large tubing holes of the [grafoil current collector][grafoil current collectors](fromstep){qty: 1} align with the brass current collector.
 
 ![](images/cell-assembly/c.jpg)
 
-## Add the anode outer gasket {pagestep}
+## Add the negative outer gasket {pagestep}
 
 Place one [outer gasket][outer gaskets](fromstep){qty: 1} on top of the assembly, using the bolts to guide the gasket and align it with the fluid holes in the cell body.
 
 ![](images/cell-assembly/d.jpg)
 
-## Add the anode flow frame {pagestep}
+## Add the negative flow frame {pagestep}
 
 Place one flow frame on top of the assembly, with the barbs and tubing facing downward into the cell assembly tool.
 
@@ -62,13 +62,13 @@ Place one flow frame on top of the assembly, with the barbs and tubing facing do
 >?
 >? The total combined thickess of the flow frames and (compressed) gaskets is key to achieving the desired results! There are multiple thickness options in the `flow-frames` folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.
 
-## Add the anode nonconductive felt{pagestep}
+## Add the negative nonconductive felt{pagestep}
 
 Take one [cut nonconductive felt](fromstep){qty: 1} and add it to the assembly.
 
 ![](images/cell-assembly/f.jpg)
 
-## Add the anode inner gasket{pagestep}
+## Add the negative inner gasket{pagestep}
 
 Take one [inner gasket][inner gaskets](fromstep){qty: 1} and add it to the assembly.
 
@@ -81,45 +81,45 @@ Take the three [cut membranes](fromstep){qty: 3} and add them to the assembly.
 ![](images/cell-assembly/h.jpg)
 
 
-## Add the cathode inner gasket{pagestep}
+## Add the positive inner gasket{pagestep}
 
 Take one [inner gasket][inner gaskets](fromstep){qty: 1} and add it to the assembly.
 
 ![](images/cell-assembly/i.jpg)
 
-## Add the cathode flow frame {pagestep}
+## Add the positive flow frame {pagestep}
 
 Place one flow frame with tubing on top of the assembly, using the bolts to guide the flow frame.
 
 ![](images/cell-assembly/k.jpg)
 
-## Add cathode outer gasket {pagestep}
+## Add positive outer gasket {pagestep}
 
 Place one [outer gasket][outer gaskets](fromstep){qty:1} on top of the assembly, using the bolts to guide the flow frame.
 
 ![](images/cell-assembly/l.jpg)
 
-## Add cathode graphite felt{pagestep}
+## Add positive graphite felt{pagestep}
 
 Place one [graphite felt][cut electrodes](fromstep){qty:1} on top of the assembly, using the bolts to guide the flow frame.
 
 ![](images/cell-assembly/m.jpg)
 
-## Add the cathode grafoil current collector {pagestep}
+## Add the positive grafoil current collector {pagestep}
 
-Place the cathode [grafoil current collector][grafoil current collectors](fromstep){qty: 1} over the flow frame.
+Place the positive [grafoil current collector][grafoil current collectors](fromstep){qty: 1} over the flow frame.
 
 ![](images/cell-assembly/n.jpg)
 
-## Add the cathode copper current collector {pagestep}
+## Add the positive brass current collector {pagestep}
 
-Place the cathode [current collector][copper current collectors](fromstep){qty: 1} on the cell as shown so the tab is facing opposite the anode current collector tab.
+Place the positive [current collector][brass current collectors](fromstep){qty: 1} on the cell as shown so the tab is facing opposite the negative current collector tab.
 
 ![](images/cell-assembly/o.jpg)
 
-## Add the cathode endplate {pagestep}
+## Add the positive endplate {pagestep}
 
-Place the second cell body (with barbs and copper plate installed) on top of the assembly and ensure all fluid holes are aligned. 
+Place the second cell body (with barbs and brass plate installed) on top of the assembly and ensure all fluid holes are aligned. 
 
 ![](images/cell-assembly/p.jpg)
 

@@ -89,9 +89,9 @@ Using a precut gasket as a guide, cut/punch [grafoil](grafoil.md){qty: 100 cm²}
 ![](../CAD/exports/Grafoil Drawing.pdf)
 
 
-## Cut copper current collectors {pagestep}
+## Cut brass current collectors {pagestep}
 
-Using a router or a drill (press), cut some [1 mm copper sheet](copper.md){qty: a small plate of} according to the below drawing to make two [copper current collectors]{output, qty: 2}.
+Using a router or a drill (press), cut some [1 mm brass sheet](brass.md){qty: a small plate of} according to the below drawing to make two [brass current collectors]{output, qty: 2}.
 
 ![](../CAD/exports/Current Collector Drawing.pdf)
 
