@@ -17,7 +17,7 @@ Details:
 
 A [PC]{cat:tool, qty:1, Note:Must be able to flash firmware to microcontroller and connect over USB serial to microcontroller and potentiostat} communicates with both a charging/discharging device (typically a [potentiostat](pstat.md){cat:tool, qty:1, note: preferably the MYSTAT}) as well as an [Arduino UNO R3]{qty:1, Note:or equivalent microcontroller that can output two independent 5V PWM signals and connect to PC over USB serial}. These documents assume the use of a MYSTAT potentiostat and it's [modified control software](https://codeberg.org/FBRC/mystat/).
 
-The Arduino is connected to an [L298N motor driver](drivers.md){cat:part, qty:1}, which is powered by a [24 V DC power source]{cat: part, qty: 1, Note: Anything between 12 V and 24 V may work but the results achieved here use 24 V. Motor speeds may need calibration to match existing results}. This is a simple dual H-bridge motor driver that allows the Arduino to control the speeds of the peristaltic pumps using pulse width modulation (PWM). There is no speed feedback; we only tell the motors which direction to turn and whether they run at 100% maximum speed, 0% speed (off), or anything in between. To know the speed (in rpm) or flowrate (in mL/min) of the peristaltic pumps, a separate measurement is required (like dispensing water into a graduated cylinder).
+The Arduino is connected to two peristaltic pumps which have internal stepper motor drivers, and are powered by a [24 V DC power source]{cat: part, qty: 1}. To know the flowrate (in mL/min) of the peristaltic pumps, a separate measurement is required (like dispensing water into a graduated cylinder).
 
 We use the open-source MYSTAT (with our own modifications to the control software), but any equivalent potentiostat or battery cycler will do. Our pump control system is based on the MYSTAT software, though, and can be used without the MYSTAT present.
 
@@ -28,13 +28,7 @@ With this hardware configuration, the MYSTAT software then allows for entire con
 
 Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is [here](https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino)
 
-## Remove on-board jumpers from motor driver {pagestep}
-
-**Remove** the three on-board jumpers (highlighted in pink) from the motor driver board:
-
-![](images/Screenshot_20240703_221706.png)
-
-## Add Arduino and motor driver to the jig{pagestep}
+## Add Arduino to the jig{pagestep}
 
 There are standoffs made for the for the Arduino and motor driver on the back of the [jig](fromstep){qty: 1} .
 
@@ -45,7 +39,7 @@ Insert the two [peristaltic pumps with correct tubing](fromstep){qty:2} into the
 ![](images/Screenshot_20250102_190036.png)
 
 
-## Connect cables between Arduino, motor driver, and power supply {pagestep}
+## Connect cables between Arduino, motors, and power supply {pagestep}
 
 Using [male-to-male breadboard jumper cables]{qty: several, cat: part} connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) **and** a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
 ![](images/test.jpg)

@@ -72,7 +72,7 @@ This makes two [cut electrodes]{output, qty: 2}.
 
 Also cut one [nonconductive felt](nonconductive_felt.md){qty: 2 cm², cat: part} square of the same size.
 
-[][cut nonconductive felt]{output, qty:1}
+[cut nonconductive felt]{output, qty:1, hidden}
 
 ## Cut separator membrane {pagestep}
 
@@ -97,9 +97,9 @@ Using a router or a drill (press), cut some [1 mm brass sheet](brass.md){qty: a 
 
 ## Cut tubing
 
-Cut [tubing](tubing.md){qty: 44 cm} into 2x 17 cm and 2x 5 cm pieces. Load the long pieces into the [peristaltic pumps]{qty: 2} as shown:
-[][peristaltic pumps with correct tubing]{output, qty:2}
+Cut [tubing](tubing.md){qty: 44 cm} into 2x 17 cm and 2x 5 cm pieces. Load the long pieces into the [peristaltic pumps](pumps.md){qty: 2} as shown:
+[peristaltic pumps with correct tubing]{output, qty:2, hidden}
 
 ![](images/IMG_20241117_132924.jpg)
 
-[][cut tubing]{output, qty: 6}
+[cut tubing]{output, qty: 2, hidden}

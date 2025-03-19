@@ -1,18 +1,18 @@
 ---
 PartData:
     Specs:
+        Brand: Kamoer
+        Model: KPK200
+        Motor: Brushless
         Voltage: 24 V
-        Flowrate: Approx. 100 to 200 mL/min
     Suppliers:
-        AliExpress:
+        Alibaba:
             PartNo: Use this link
-            Link: 'https://www.aliexpress.com/item/1005002886964746.html'
-        Amazon (NL):
-            PartNo: Use this link
-            Link: 'https://www.amazon.nl/-/en/500213799/dp/B0BGL9VQ11/ref=sr_1_13?crid=IB2L82KWUI52&keywords=micro+diaphragm+liquid+pump+24v&qid=1706279250&sprefix=micro+diaphragm+liquid+pump+24v%2Caps%2C77&sr=8-13'
-
+            Link: 'https://www.alibaba.com/product-detail/Kamoer-KPK200-12V-24V-Brush-Brushless_1601189956284.html'
 ---
 
-# Diaphragm pumps
+# Peristaltic pumps
 
-![](images/pumps_aliexpress.png)
+After trying many peristaltic pumps this one seems to work well when paired with the right tubing.
+
+![](images/pump.png)
