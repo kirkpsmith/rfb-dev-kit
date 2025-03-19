@@ -167,10 +167,9 @@
 <div class="pagebom">
 <h3 id="parts">Parts</h3>
 <ul>
-<li>1 <a Class="missing" href="missing">24 V DC power source</a>    - Anything between 12 V and 24 V may work but the results achieved here use 24 V. Motor speeds may need calibration to match existing results</li>
+<li>1 <a Class="missing" href="missing">24 V DC power source</a> </li>
 <li>1 <a Class="missing" href="missing">Arduino UNO R3</a>    - or equivalent microcontroller that can output two independent 5V PWM signals and connect to PC over USB serial</li>
 <li>1 <a Class="bom" href="fabrication.html">jig</a> </li>
-<li>1 <a Class="bom" href="drivers.html">L298N motor driver</a> </li>
 <li>several <a Class="missing" href="missing">male-to-male breadboard jumper cables</a> </li>
 <li>2 <a Class="bom" href="fabrication.html">peristaltic pumps with correct tubing</a> </li>
 <li>1 <a Class="missing" href="missing">USB A-to-B cable</a> </li>
@@ -183,20 +182,17 @@
 </div>
 <h2 id="system-overview">System overview</h2>
 <p>A <a Class="missing" href="missing">PC</a> communicates with both a charging/discharging device (typically a <a href="pstat.html">potentiostat</a>) as well as an <a Class="missing" href="missing">Arduino UNO R3</a>. These documents assume the use of a MYSTAT potentiostat and it's <a href="https://codeberg.org/FBRC/mystat/" target="_blank" title="">modified control software</a>.</p>
-<p>The Arduino is connected to an <a href="drivers.html">L298N motor driver</a>, which is powered by a <a Class="missing" href="missing">24 V DC power source</a>. This is a simple dual H-bridge motor driver that allows the Arduino to control the speeds of the peristaltic pumps using pulse width modulation (PWM). There is no speed feedback; we only tell the motors which direction to turn and whether they run at 100% maximum speed, 0% speed (off), or anything in between. To know the speed (in rpm) or flowrate (in mL/min) of the peristaltic pumps, a separate measurement is required (like dispensing water into a graduated cylinder).</p>
+<p>The Arduino is connected to two peristaltic pumps which have internal stepper motor drivers, and are powered by a <a Class="missing" href="missing">24 V DC power source</a>. To know the flowrate (in mL/min) of the peristaltic pumps, a separate measurement is required (like dispensing water into a graduated cylinder).</p>
 <p>We use the open-source MYSTAT (with our own modifications to the control software), but any equivalent potentiostat or battery cycler will do. Our pump control system is based on the MYSTAT software, though, and can be used without the MYSTAT present.</p>
 <p>With this hardware configuration, the MYSTAT software then allows for entire control of this electrochemical system: the applied currents and voltages as well as the speeds of the electrolyte pumps. </p>
 <h2 class="page-step" id="flash-firmware-to-microcontroller">Step 1: Flash firmware to microcontroller</h2>
 <p>Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is <a href="https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino" target="_blank" title="">here</a></p>
-<h2 class="page-step" id="remove-on-board-jumpers-from-motor-driver">Step 2: Remove on-board jumpers from motor driver</h2>
-<p><strong>Remove</strong> the three on-board jumpers (highlighted in pink) from the motor driver board:</p>
-<p><img alt="" src="images/Screenshot_20240703_221706.png" title="" /></p>
-<h2 class="page-step" id="add-arduino-and-motor-driver-to-the-jig">Step 3: Add Arduino and motor driver to the jig</h2>
+<h2 class="page-step" id="add-arduino-to-the-jig">Step 2: Add Arduino to the jig</h2>
 <p>There are standoffs made for the for the Arduino and motor driver on the back of the <a href="fabrication.html">jig</a> .</p>
-<h2 class="page-step" id="add-pumps-to-jig">Step 4: Add pumps to jig</h2>
+<h2 class="page-step" id="add-pumps-to-jig">Step 3: Add pumps to jig</h2>
 <p>Insert the two <a href="fabrication.html">peristaltic pumps with correct tubing</a> into their holders in the as shown:</p>
 <p><img alt="" src="images/Screenshot_20250102_190036.png" title="" /></p>
-<h2 class="page-step" id="connect-cables-between-arduino-motor-driver-and-power-supply">Step 5: Connect cables between Arduino, motor driver, and power supply</h2>
+<h2 class="page-step" id="connect-cables-between-arduino-motors-and-power-supply">Step 4: Connect cables between Arduino, motors, and power supply</h2>
 <p>Using <a Class="missing" href="missing">male-to-male breadboard jumper cables</a> connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) <strong>and</strong> a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
 <img alt="" src="images/test.jpg" title="" /></p>
 <p>Here is a proper schematic:</p>
