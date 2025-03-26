@@ -1,42 +1,41 @@
-Name in documentation	Category	Qty	Full Name	Notes	Supplier 1	Part No	Link	Supplier 2	Part No	Link	Supplier 3	Part No	Link
-1 mm brass sheet	part	a small plate of											
-10 mm socket	tool	1		To fit torque wrench									
-19/22 silicone septa	part	2			Amazon	Use this link	https://www.amazon.fr/dp/B0BR3P56GR?ref=ppx_yo2ov_dt_b_fed_asin_title						
-24 V DC power source	part	1											
-5 mL syringe	tool	1											
-50 mL beaker	tool	1											
-50 mL beakers	tool	2		or drip tray/other container to hold 10 mL of water									
-5mm hex key	tool	1											
-8% vinegar/acetic acid	chemical	10.0 grams											
-Arduino UNO R3	part	1		or equivalent microcontroller that can output two independent 5V PWM signals and connect to PC over USB serial									
-conductive felt	part	4 cm²	Conductive Graphite (Carbon) Felt		Fisher Scientific	AA43199RY	https://www.fishersci.com/shop/products/carbon-felt-3-18mm-0-125in-thick-99-0-thermo-scientific/AA43199RY#? keyword=043199						
-deionized water	chemical	10 mL											
-FDM printer	tool	1											
-gasket cutter machine	tool	1		Vinyl/laser cutter or hand tools									
-gasket sheet	part	160 cm²	Gasket material	Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough	Amazon	Link	https://www.amazon.fr/dp/B09HZ52B8H						
-grafoil	part	100 cm²			AliExpress	Use this link	https://www.aliexpress.com/item/1005005662210405.html	RS Components	268-6953	https://uk.rs-online.com/web/p/gasket-sheets/2686953	Amazon (NL)	Use this link	https://www.amazon.nl/-/en/NEZIH-flexible-graphite-sheet-conductive/dp/B0CF88BKNX/ref=sr_1_1?crid=2LE79V7I7OS7J&keywords=Flexible%2BGraphite%2BSheet%2BFoil%2BGraphite%2BFilm%2BConductive%2BGraphite%2BPaper%2BResistant%2BHigh%2BTemperature%2BCorrosion&qid=1706280600&sprefix=flexible%2Bgraphite%2Bsheet%2Bfoil%2Bgraphite%2Bfilm%2Bconductive%2Bgraphite%2Bpaper%2Bresistant%2Bhigh%2Btemperature%2Bcorrosion%2Caps%2C164&sr=8-1&th=1
-M6 nuts with washers	part	4											
-M6 x 35 mm hex socket cap bolts with washers	part	4											
-male-to-male breadboard jumper cables	part	several											
-nonconductive felt	part	2 cm²	Nonconductive Graphite		Amazon	AA43199RY	https://www.fishersci.com/shop/products/carbon-felt-3-18mm-0-125in-thick-99-0-thermo-scientific/AA43199RY#? keyword=043199						
-pair of chemical safety goggles	tool	1											
-pair of nitrile gloves	tool	1											
-PC	tool	1		Must be able to flash firmware to microcontroller and connect over USB serial to microcontroller and potentiostat									
-peristaltic pumps	part	2	Peristaltic pumps		Alibaba	Use this link	https://www.alibaba.com/product-detail/Kamoer-KPK200-12V-24V-Brush-Brushless_1601189956284.html						
-polypropylene filament	part	some		This can be substituted if you only plan to run water through the cell for testing things other than the chemistry									
-polypropylene packing tape	part	several cm											
-potassium acetate	chemical	3.0 grams											
-potassium iodide	chemical	6.6 grams											
-potentiostat	tool	1	Potentiostat	preferably the MYSTAT	PCBWay	Use this link	https://www.pcbway.com/project/shareproject/MyStat_Potentiostat_9df57df2.html						
-scale	tool	1											
-separator sheet	part	A4 sheet	Separator material		Amazon	Use this link	https://www.amazon.fr/gp/product/B07JYT7BN8/						
-stiff filament	part	some		PLA works									
-stir bar	tool	1											
-stir plate	tool	1											
-torque wrench	tool	1		to accept 5 mm allen key or 10 mm hex socket									
-tubing	part	44 cm	Tubing		Drifton (EU)	06442-16	https://www.drifton.eu/shop/18-standard-pump-tubing/2535-chem-durance-bio-tubing-15-m/	Avantor (US)	06442-16	https://www.avantorsciences.com/us/en/product/NA5143626/masterflex-ls-precision-pump-tubing-chem-durance-bio-avantor			
-USB A-to-B cable	part	1											
-utility knife	tool	1											
-vial	tool	1		min. 20 mL									
-weighing spatula	tool	1											
-zinc chloride	chemical	2.8 grams											
+Name in documentation	Category	Qty	Full Name	Notes	Supplier 1	Part No	Link	Supplier 2	Part No	Link
+1 mm brass sheet	part	a small plate of								
+10 mm socket	tool	1		To fit torque wrench						
+19/22 silicone septa	part	2			Amazon	Use this link	https://www.amazon.fr/dp/B0BR3P56GR?ref=ppx_yo2ov_dt_b_fed_asin_title			
+24 V DC power source	part	1								
+5 mL syringe	tool	1								
+50 mL beaker	tool	1								
+50 mL beakers	tool	2		or drip tray/other container to hold 10 mL of water						
+5mm hex key	tool	1								
+ammonium chloride	chemical	1.07 grams								
+Arduino UNO R3	part	1		or equivalent microcontroller that can output two independent 5V PWM signals and connect to PC over USB serial						
+conductive felt	part	4 cm²	Conductive Graphite (Carbon) Felt		Fisher Scientific	AA43199RY	https://www.fishersci.com/shop/products/carbon-felt-3-18mm-0-125in-thick-99-0-thermo-scientific/AA43199RY#? keyword=043199			
+deionized water	chemical	18.5 grams								
+FDM printer	tool	1								
+gasket cutter machine	tool	1		Vinyl/laser cutter or hand tools						
+gasket sheet	part	160 cm²	Gasket material	Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough	Amazon (FR)	Link	https://www.amazon.fr/dp/B09HZ52B8H			
+grafoil	part	100 cm²								
+M6 nuts with washers	part	4								
+M6 x 35 mm hex socket cap bolts with washers	part	4								
+male-to-male breadboard jumper cables	part	several								
+pair of chemical safety goggles	tool	1								
+pair of nitrile gloves	tool	1								
+PC	tool	1		Must be able to flash firmware to microcontroller and connect over USB serial to microcontroller and potentiostat						
+peristaltic pumps	part	2	Peristaltic pumps		Alibaba	Use this link	https://www.alibaba.com/product-detail/Kamoer-KPK200-12V-24V-Brush-Brushless_1601189956284.html			
+polypropylene filament	part	some		This can be substituted if you only plan to run water through the cell for testing things other than the chemistry						
+polypropylene packing tape	part	several cm								
+potassium iodide	chemical	3.32 grams								
+potentiostat	tool	1	Potentiostat	preferably the MYSTAT	PCBWay	Use this link	https://www.pcbway.com/project/shareproject/MyStat_Potentiostat_9df57df2.html			
+scale	tool	1								
+separator sheet	part	A4 sheet	Separator material		Amazon	Use this link	https://www.amazon.fr/gp/product/B07JYT7BN8/			
+stiff filament	part	some		PLA works						
+stir bar	tool	1								
+stir plate	tool	1								
+torque wrench	tool	1		to accept 5 mm allen key or 10 mm hex socket						
+triethylene glycol	chemical	0.55 grams								
+tubing	part	44 cm	Tubing		Drifton (EU)	06442-16	https://www.drifton.eu/shop/18-standard-pump-tubing/2535-chem-durance-bio-tubing-15-m/	Avantor (US)	06442-16	https://www.avantorsciences.com/us/en/product/NA5143626/masterflex-ls-precision-pump-tubing-chem-durance-bio-avantor
+USB A-to-B cable	part	1								
+utility knife	tool	1								
+vial	tool	1		min. 20 mL						
+weighing spatula	tool	1								
+zinc chloride	chemical	1.36 grams								
