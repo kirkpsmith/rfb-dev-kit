@@ -23,10 +23,11 @@ Put on a [pair of chemical safety goggles]{qty: 1,cat: tool}, a [pair of nitrile
 
 In a [50 mL beaker]{qty: 1,cat: tool}, using a [scale]{qty: 1,cat: tool} and [weighing spatula]{qty: 1,cat: tool}, weigh out the following chemicals according to their quantities listed above:
 
-* [zinc chloride]{qty: 2.8 grams,cat: chemical}
-* [potassium iodide]{qty: 6.6 grams,cat: chemical}
-* [potassium acetate]{qty: 3.0 grams,cat: chemical}
-* [8% vinegar/acetic acid]{qty: 10.0 grams,cat: chemical}
+* [zinc chloride]{qty: 1.36 grams,cat: chemical}
+* [potassium iodide]{qty: 3.32 grams,cat: chemical}
+* [ammonium chloride]{qty: 1.07 grams,cat: chemical}
+* [deionized water]{qty: 8.50 grams,cat: chemical}
+* [triethylene glycol]{qty: 0.55 grams, cat: chemical}
 
 ## Mix the electrolyte {pagestep}
 

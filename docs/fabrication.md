@@ -68,12 +68,6 @@ Cut two conductive graphite felt electrodes to fit inside the flow frames using 
 
 This makes two [cut electrodes]{output, qty: 2}.
 
-## Cut nonconductive spacer {pagestep}
-
-Also cut one [nonconductive felt](nonconductive_felt.md){qty: 2 cm², cat: part} square of the same size.
-
-[cut nonconductive felt]{output, qty:1, hidden}
-
 ## Cut separator membrane {pagestep}
 
 Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into four 2.7 cm x 2.7 cm squares.

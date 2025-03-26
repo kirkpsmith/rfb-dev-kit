@@ -25,7 +25,7 @@ Making sure the motor control electronics are powered, plug the USB cable of the
 
 ## Add water to reservoirs {pagestep}
 
-Add about 5 mL of [deionized water]{qty: 10 mL, cat: chemical} to each reservoir.
+Add about 5 mL of [deionized water]{qty: 10 grams, cat: chemical} to each reservoir.
 
 ## Turn on the pumps {pagestep}
 

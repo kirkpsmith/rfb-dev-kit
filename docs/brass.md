@@ -1,17 +1,15 @@
 ---
 PartData:
     Specs:
-        Dimensions: 50 mm x 50 mm x 0.8 mm
+        Thickness: 1.0 mm
 
-#    Suppliers:
-#         AliExpress:
-#            PartNo: Use this link
-#            Link: 'https://www.aliexpress.com/item/1005004374432193.html'
+   Suppliers:
+        Amazon:
+           PartNo: Use this link
+           Link: 'https://www.amazon.com/dp/B0BRCXM73P'
 
 ---
 
 ## Brass current collectors
 
-![](images/current_collector_aliexpress.png)
-
-
+![](images/brass.png)

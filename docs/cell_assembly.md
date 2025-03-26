@@ -62,9 +62,9 @@ Place one flow frame on top of the assembly, with the barbs and tubing facing do
 >?
 >? The total combined thickess of the flow frames and (compressed) gaskets is key to achieving the desired results! There are multiple thickness options in the `flow-frames` folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.
 
-## Add the negative nonconductive felt{pagestep}
+## Add the negative graphite felt{pagestep}
 
-Take one [cut nonconductive felt](fromstep){qty: 1} and add it to the assembly.
+Place one [graphite felt][cut electrodes](fromstep){qty:1} on top of the assembly.
 
 ![](images/cell-assembly/f.jpg)
 
