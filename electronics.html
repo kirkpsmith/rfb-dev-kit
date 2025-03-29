@@ -145,7 +145,7 @@
 <p><div class=details-header>
     <div class=details-thumb-outer>
         <div class=details-thumb>
-            <img alt="page thumbnail" src="images/test.jpg" title="" />
+            <img alt="page thumbnail" src="images/Screenshot_20250328_170811.png" title="" />
         </div>
     </div>
 <div class=other-details>
@@ -172,6 +172,7 @@
 <li>1 <a Class="bom" href="fabrication.html">jig</a> </li>
 <li>several <a Class="missing" href="missing">male-to-male breadboard jumper cables</a> </li>
 <li>2 <a Class="bom" href="fabrication.html">peristaltic pumps with correct tubing</a> </li>
+<li>4 <a Class="missing" href="missing">self-tapping screws</a> </li>
 <li>1 <a Class="missing" href="missing">USB A-to-B cable</a> </li>
 </ul>
 <h3 id="tools">Tools</h3>
@@ -187,18 +188,23 @@
 <p>With this hardware configuration, the MYSTAT software then allows for entire control of this electrochemical system: the applied currents and voltages as well as the speeds of the electrolyte pumps. </p>
 <h2 class="page-step" id="flash-firmware-to-microcontroller">Step 1: Flash firmware to microcontroller</h2>
 <p>Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is <a href="https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino" target="_blank" title="">here</a></p>
-<h2 class="page-step" id="add-arduino-to-the-jig">Step 2: Add Arduino to the jig</h2>
-<p>There are standoffs made for the for the Arduino and motor driver on the back of the <a href="fabrication.html">jig</a> .</p>
-<h2 class="page-step" id="add-pumps-to-jig">Step 3: Add pumps to jig</h2>
+<h2 class="page-step" id="add-pumps-to-jig">Step 2: Add pumps to jig</h2>
 <p>Insert the two <a href="fabrication.html">peristaltic pumps with correct tubing</a> into their holders in the as shown:</p>
-<p><img alt="" src="images/Screenshot_20250102_190036.png" title="" /></p>
+<p><img alt="" src="images/Screenshot_20250328_170349.png" title="" /></p>
+<h2 class="page-step" id="add-case-arduino-uno-to-the-jig">Step 3: Add case, Arduino UNO to the jig</h2>
+<p>There are holes for the for the Arduino and its case on the back of the <a href="fabrication.html">jig</a> . Using four <a Class="missing" href="missing">self-tapping screws</a> inserted from the front of the jig, attach the case and Arduino to the jig.</p>
+<p>The photos below show the plain jig with pumps, then adding the base of the case, the Arduino itself, and the lid.</p>
+<div class="gallery-thumb">
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170811.png" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170604.png" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170654.png" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170744.png" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170811.png" alt="" />
+</div>
+<div class="gallery-show"><img id="gallery-show0" src="images/Screenshot_20250328_170811.png" alt=""/></div>
 <h2 class="page-step" id="connect-cables-between-arduino-motors-and-power-supply">Step 4: Connect cables between Arduino, motors, and power supply</h2>
-<p>Using <a Class="missing" href="missing">male-to-male breadboard jumper cables</a> connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) <strong>and</strong> a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
-<img alt="" src="images/test.jpg" title="" /></p>
-<p>Here is a proper schematic:</p>
-<p><embed src="exports/schematic.pdf" type="application/pdf" width="100%" height="600px" /></p>
-<p>The wiring should look like this when you're done (feel free to make it tidier!)
-<img alt="" src="images/IMG_20241116_155825.jpg" title="" /></p>
+<p>Using <a Class="missing" href="missing">male-to-male breadboard jumper cables</a> connect according to the below diagram:</p>
+<p><strong>TODO, update for KPK200 pumps (motor driver board no longer required)</strong></p>
 <p>You now have a <a name="output__jig-with-pumps-and-power-electronics"></a>jig with pumps and power electronics.</p>
 <h2 id="connect-microcontroller-to-pc-and-test-pumps">Connect microcontroller to PC and test pumps.</h2>
 <p>We are using the MYSTAT potentiostat and have modified the software to be able to control the pump speeds. If you have a different potentiostat, you can still use the MYSTAT software to control your pumps without having a MYSTAT connected.</p>
