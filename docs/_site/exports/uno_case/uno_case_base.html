@@ -5,13 +5,14 @@
     <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
-<link rel="icon" type="image/png" href="./static/Logo/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="./static/Logo/favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" href="../../static/Logo/favicon.ico" />
+<link rel="icon" type="image/png" href="../../static/Logo/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="../../static/Logo/favicon-16x16.png" sizes="16x16" />
 
-    <link href="./static/base-style.css" rel="stylesheet">
-    <link href="./static/site-style.css" rel="stylesheet">
-                <style>
+    <link href="../../static/base-style.css" rel="stylesheet">
+    <link href="../../static/site-style.css" rel="stylesheet">
+                <script type="text/javascript" src="../../static/3d-viewer.js"></script>
+        <style>
   :root {
     --primary-color: #39dbf2;
   }
@@ -27,7 +28,7 @@
 }
 </style>
     
-        <script type="text/javascript" src="./static/search.js" defer=""></script>
+        <script type="text/javascript" src="../../static/search.js" defer=""></script>
     </head>
 <body>
 <header class="site-header">
@@ -53,11 +54,11 @@
                 </a>
                 <ul class="nav-list">
                 <li>
-    <a class="navhome" href="./">
+    <a class="navhome" href="../../">
         Building a benchtop flow battery test cell with a zinc-iodide electrolyte
     </a>
 </li>
-<li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
+<li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('../../')">
   <input
     type="text"
     placeholder="Search..."
@@ -72,7 +73,7 @@
         <div v-if="searchResults.length === 0">No results.</div>
         <template v-for="(result, index) in searchResults">
             <li>
-                <a class="search-result" :href="`./${result.path}.html`">
+                <a class="search-result" :href="`../../${result.path}.html`">
                <span v-for="crumb in result.breadCrumbs.slice(0, -1)">
                 ${crumb + ' > '}
                 </span>
@@ -86,52 +87,52 @@
     </div>
 </li>
 <li class="not-active">
-    <a class="not-active" href="./index_BOM.html">
+    <a class="not-active" href="../../index_BOM.html">
         Bill of Materials
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./fabrication.html">
+    <a class="not-active" href="../../fabrication.html">
         Fabricating components
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./electronics.html">
+    <a class="not-active" href="../../electronics.html">
         Preparing the pumps and power electronics
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./cell_assembly.html">
+    <a class="not-active" href="../../cell_assembly.html">
         Assembling the flow cell from components
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./jig_assembly.html">
+    <a class="not-active" href="../../jig_assembly.html">
         Assembling the jig with electronics and flow cell
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./leak_test.html">
+    <a class="not-active" href="../../leak_test.html">
         Leak testing the cell
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./electrolyte.html">
+    <a class="not-active" href="../../electrolyte.html">
         Preparing the electrolyte
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./testing.html">
+    <a class="not-active" href="../../testing.html">
         Operating and testing the cell
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./cleanup.html">
+    <a class="not-active" href="../../cleanup.html">
         Stopping and disassembling the cell
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./analysis.html">
+    <a class="not-active" href="../../analysis.html">
         Analyzing and storing the experimental data
     </a>
     </li>
@@ -140,65 +141,20 @@
             </nav>
         </div>
         <div class="wrapper">
-    <h1 id="peristaltic-pumps">Peristaltic pumps</h1>
-<p><img alt="" src="images/pump.png" title="" /></p>
-<p>After trying many peristaltic pumps this one seems to work well when paired with the right tubing.</p>
-<p>Here is the datasheet for these pumps:
-<embed src="documents/KPK200.pdf" type="application/pdf" width="100%" height="600px" /></p>
-<hr />
-<h2 id="specifications">Specifications</h2>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Brand</td>
-<td>Kamoer</td>
-</tr>
-<tr>
-<td>Model</td>
-<td>KPK200</td>
-</tr>
-<tr>
-<td>Motor</td>
-<td>Brushless</td>
-</tr>
-<tr>
-<td>Voltage</td>
-<td>24 V</td>
-</tr>
-</tbody>
-</table>
-<h2 id="suppliers">Suppliers</h2>
-<table>
-<thead>
-<tr>
-<th>Supplier</th>
-<th>Part Number</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Alibaba</td>
-<td><a href="https://www.alibaba.com/product-detail/Kamoer-KPK200-12V-24V-Brush-Brushless_1601189956284.html" target="_blank">Use this link</a></td>
-</tr>
-</tbody>
-</table>
+    <h1 id="uno_case_base">uno_case_base</h1>
+<noscript><a href="uno_case_base.stl">Download</a></noscript>
+<p><gb3d-viewer src="uno_case_base.stl"></gb3d-viewer></p>
     </div>
 </div>
 <footer class="site-footer">
     <div class="wrapper">
         <a target="_blank" rel="noopener noreferrer" href="https://gitbuilding.io">
-    <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
+    <img class="icon" src="../../static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
     <p class="author">©2025 Kirk Pollard Smith and Daniel Fernandez Pinto</p>
     <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
-    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="../../license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
 </footer></body>

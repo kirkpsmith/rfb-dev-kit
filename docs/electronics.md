@@ -1,6 +1,6 @@
 ---
 Details:
-    Thumbnail: images/test.jpg
+    Thumbnail: images/Screenshot_20250328_170811.png
     Time: Tens of minutes
     Difficulty: Easy
     Skills:
@@ -28,28 +28,30 @@ With this hardware configuration, the MYSTAT software then allows for entire con
 
 Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is [here](https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino)
 
-## Add Arduino to the jig{pagestep}
-
-There are standoffs made for the for the Arduino and motor driver on the back of the [jig](fromstep){qty: 1} .
-
 ## Add pumps to jig {pagestep}
 
 Insert the two [peristaltic pumps with correct tubing](fromstep){qty:2} into their holders in the as shown:
 
-![](images/Screenshot_20250102_190036.png)
 
+![](images/Screenshot_20250328_170349.png)
+
+## Add case, Arduino UNO to the jig{pagestep}
+
+There are holes for the for the Arduino and its case on the back of the [jig](fromstep){qty: 1} . Using four [self-tapping screws]{qty: 4,cat: part} inserted from the front of the jig, attach the case and Arduino to the jig.
+
+The photos below show the plain jig with pumps, then adding the base of the case, the Arduino itself, and the lid.
+
+![](images/Screenshot_20250328_170811.png)
+![](images/Screenshot_20250328_170604.png)
+![](images/Screenshot_20250328_170654.png)
+![](images/Screenshot_20250328_170744.png)
+![](images/Screenshot_20250328_170811.png)
 
 ## Connect cables between Arduino, motors, and power supply {pagestep}
 
-Using [male-to-male breadboard jumper cables]{qty: several, cat: part} connect according to the below diagram, taking care to connect the negative terminal of the 24 V power supply lead to both the GND terminal of the motor driver (middle connection of the three-terminal screw connection header) **and** a GND pin of the Arduino, so that the Arduino's signals to the motor driver are in relation to the same fixed GND.
-![](images/test.jpg)
+Using [male-to-male breadboard jumper cables]{qty: several, cat: part} connect according to the below diagram:
 
-Here is a proper schematic:
-
-![](../CAD/exports/schematic.pdf)
-
-The wiring should look like this when you're done (feel free to make it tidier!)
-![](images/IMG_20241116_155825.jpg)
+**TODO, update for KPK200 pumps (motor driver board no longer required)**
 
 You now have a [jig with pumps and power electronics]{output, qty:1}.
 

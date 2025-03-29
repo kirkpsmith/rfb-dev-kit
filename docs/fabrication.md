@@ -25,6 +25,20 @@ Print the [jig]{output, qty: 1} and [cell assembly tool]{output, qty: 1} in PLA 
 
 ![](../CAD/exports/Cell Assembly Tool.stl)
 
+## Print Arduino Uno case parts
+
+These parts can be done in PLA or similar filaments at low infill. They mount onto the back of the jig.
+
+![](../CAD/exports/uno_case/uno_case_base.stl)
+![](../CAD/exports/uno_case/uno_case_lid.stl)
+![](../CAD/exports/uno_case/reset_button.stl)
+
+
+>i **Note** 
+>i
+>i [3D Printed Case for Arduino Uno, Leonardo](https://github.com/zygmuntw/3D-Printed-Case-for-Arduino) by ZygmuntW is licensed under the Creative Commons - Attribution - Share Alike license.
+
+
 ## Print two endplates{pagestep}
 
 These [endplates]{output, qty: 2} must be stiff, so print them with at least 60% infill. Try to avoid warping as they bottom need to be flat to seal the cell well.

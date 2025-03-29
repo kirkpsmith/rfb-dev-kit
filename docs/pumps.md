@@ -13,6 +13,9 @@ PartData:
 
 # Peristaltic pumps
 
+![](images/pump.png)
+
 After trying many peristaltic pumps this one seems to work well when paired with the right tubing.
 
-![](images/pump.png)
+Here is the datasheet for these pumps:
+![](documents/KPK200.pdf)
