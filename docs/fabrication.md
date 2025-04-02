@@ -41,13 +41,13 @@ These parts can be done in PLA or similar filaments at low infill. They mount on
 
 ## Print two endplates{pagestep}
 
-These [endplates]{output, qty: 2} must be stiff, so print them with at least 60% infill. Try to avoid warping as they bottom need to be flat to seal the cell well.
+These [endplates]{output, qty: 2} must be stiff, so print them with at least 60% infill in PLA or PETG. Try to avoid warping as they bottom need to be flat to seal the cell well.
 
 ![](../CAD/exports/Polymer Endplate.stl)
 
-## Print wetted cell components in polypropylene  {pagestep}
+## Print wetted cell components in polypropylene{pagestep}
  
-Print two [reservoirs]{output, qty: 2}, two [flow frames]{output, qty: 2}, and one [membrane frame]{output, qty:1}
+Print two [reservoirs]{output, qty: 2}, two [flow frames]{output, qty: 2}, and one [membrane frame]{output, qty:1} **in polypropylene**.
 
 It's important these don't leak, so print them at 100% infill with 5 perimeters.
 
