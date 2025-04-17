@@ -1,14 +1,18 @@
 #include <elapsedMillis.h>
 #define LED_BUILTIN 17
 
-#define RIGHT_MOTOR_PWM_PIN 10 // 490 Hz
-#define LEFT_MOTOR_PWM_PIN 3 // 490 Hz
+// WHITE WIRES, SPEED CONTROL
+
+#define PIN_1P_PWM 10
+#define PIN_1N_PWM 11
+#define PIN_1P_TACHO 2
+#define PIN_1N_TACHO 3
 #define In1 9
 #define In2 8
 #define In3 7
 #define In4 6
 
-// INPUT PUMP SPEED/DUTY CYCLE, 0-255 is 0-100%, PUMPS MAY NOT SPIN UNTIL MINUMUM DUTY CYCLE IS MET
+// INPUT PUMP SPEED/DUTY CYCLE, 0-255 is 0-100%, PUMPS MINIMUM SPEED STARTS FROM ~3.8 - 7.6 %
 int speed1P = 0;
 int speed1N = 0;
 
@@ -38,17 +42,16 @@ elapsedMillis updateTimer = 0;
 
 bool ledState = LOW;
 
-// Pumps are off on board startup/reset
-int RIGHT_MOTOR_SPEED = 0;
-int LEFT_MOTOR_SPEED = 0;
+int set1P = 64;
+int set1N = 64;
 
 void parseData()
 {
   cmd = strtok(inputBuffer, ",")[0];
   val = strtok(NULL, ",");
-  Serial.print(cmd);
-  Serial.print(',');
-  Serial.println(val);
+  //Serial.print(cmd);
+  //Serial.print(',');
+  //Serial.println(val);
 }
 
 void recieveFromPC()
@@ -104,8 +107,8 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, ledState);
 
-  pinMode(RIGHT_MOTOR_PWM_PIN, OUTPUT);
-  pinMode(LEFT_MOTOR_PWM_PIN, OUTPUT);
+  pinMode(PIN_1P_PWM, OUTPUT);
+  pinMode(PIN_1N_PWM, OUTPUT);
   pinMode(In1, OUTPUT);
   pinMode(In2, OUTPUT);
   pinMode(In3, OUTPUT);
@@ -117,8 +120,13 @@ void setup()
   digitalWrite(In3, HIGH);
   digitalWrite(In4, LOW);
 
-  analogWrite(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_SPEED);
-  analogWrite(LEFT_MOTOR_PWM_PIN, LEFT_MOTOR_SPEED);
+  analogWrite(PIN_1P_PWM, set1P);
+  analogWrite(PIN_1N_PWM, set1N);
+
+  pinMode(PIN_1P_TACHO, INPUT_PULLUP);
+  pinMode(PIN_1N_TACHO, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(PIN_1P_TACHO), ISR_1P, RISING);
+  attachInterrupt(digitalPinToInterrupt(PIN_1N_TACHO), ISR_1N, RISING);
 }
 
 void controlPumps()
@@ -128,21 +136,41 @@ void controlPumps()
     switch (cmd)
     {
     case 'a':
-      RIGHT_MOTOR_SPEED = val.toInt();
-      analogWrite(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_SPEED);
+      set1P = val.toInt();
+      analogWrite(PIN_1P_PWM, set1P);
       break;
     case 'b':
-      LEFT_MOTOR_SPEED = val.toInt();
-      analogWrite(LEFT_MOTOR_PWM_PIN, LEFT_MOTOR_SPEED);
+      set1N = val.toInt();
+      analogWrite(PIN_1N_PWM, set1N);
       break;
     case 'c':
-      LEFT_MOTOR_SPEED = val.toInt();
-      RIGHT_MOTOR_SPEED = val.toInt();
-      analogWrite(LEFT_MOTOR_PWM_PIN
-      , LEFT_MOTOR_SPEED);
-      analogWrite(RIGHT_MOTOR_PWM_PIN, RIGHT_MOTOR_SPEED);
+      set1N = val.toInt();
+      set1P = val.toInt();
+      analogWrite(PIN_1N_PWM
+      , set1N);
+      analogWrite(PIN_1P_PWM, set1P);
       break;
     }
+  }
+}
+
+void replyToPC()
+{
+  if (updateTimer >= updateInterval)
+  {
+
+    noInterrupts();
+    rpm1P = count1P * 60;
+    rpm1N = count1N * 60;
+    updateTimer = 0;
+    count1P = 0;
+    count1N = 0;
+    interrupts();
+
+    Serial.print(rpm1P);
+    Serial.print(',');
+    Serial.println(rpm1N);
+
   }
 }
 
@@ -150,4 +178,5 @@ void loop()
 {
   recieveFromPC();
   controlPumps();
+  replyToPC();
 }
