@@ -9,7 +9,7 @@
 >i Project homepage is at https://fbrc.dev, source code for this documentation is [here](https://codeberg.org/FBRC/RFB-dev-kit).
 
 
-![](../CAD/exports/front.png)
+![](../CAD/exports/front.webp)
 
 This bill of materials can be found [here]{BOM}.
 
@@ -35,4 +35,4 @@ If you already have all the required components and materials, you can directly 
 
 9. [.](analysis.md){step}
 
-![](../CAD/exports/back.png)
+![](../CAD/exports/back.webp)

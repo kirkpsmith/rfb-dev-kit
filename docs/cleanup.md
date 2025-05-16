@@ -14,6 +14,20 @@ Stop the pumps and drain the electrolyte from the reservoirs into a waste contai
 
 Dispose of chemical waste according to local regulations.
 
-Take apart the cell. Make any observations you might have of the separator (note which way it was facing when you do so), positive and negative electrodes, *etc.*
+Disconnect the cell from the jig in four locations, leaving the tubing attached to all four barbs/ports of the two flow frames:
+
+- at each pump, going from the pump to the flow frame (x2)
+- at the double-ended barbed fittings between the flow frame and the reservoir inlet (x2)
+
+Take apart the cell, noting that you can leave the tubing attached to the flow frames as long as you do not separate the endplate/brass plate/grafoil assembly of each half-cell.
+
+>!! **Warning** 
+>!!
+>!! If you are going to remove the flow frame from the endplate/brass plate/grafoil assembly, be sure to REMOVE THE TUBING FIRST. Otherwise it can break, like so:
+>!!
+>!! ![](images/IMG_20250514_173807-min.jpg)
+
+
+Make any observations you might have of the separator (note which way it was facing when you do so), positive and negative electrodes, *etc.*
 
 Clean and store the reusable cell components.

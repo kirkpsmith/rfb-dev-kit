@@ -1,8 +1,7 @@
 ---
 PartData:
     Specs:
-        Thread: M6
-        Barb: For 4mm ID flexible tubing
+        Barb: For 3.2 mm (1/8") ID flexible tubing
     Suppliers:
          AliExpress:
             PartNo: Use this link
