@@ -13,4 +13,4 @@ PartData:
 
 ![](images/photopaper.jpg)
 
-This is good enough separator material to get started, though a real batter separator like Daramic is preferred (but hard to obtain).
+This is good enough separator material to get started, though a real battery separator like Daramic is preferred (but hard to obtain).

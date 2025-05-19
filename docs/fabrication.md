@@ -84,11 +84,11 @@ This makes two [cut electrodes]{output, qty: 2}.
 
 ## Cut separator membrane {pagestep}
 
-Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into four 2.7 cm x 2.7 cm squares.
+Cut [separator sheet](separator_sheet.md){qty: A4 sheet,cat: part} into three 2.7 cm x 2.7 cm squares.
 
 ![](images/separators.jpeg)
 
-This produces four [cut membranes]{output, qty: 4}
+This produces four [cut membranes]{output, qty: 3}
 
 ## Cut grafoil current collectors {pagestep}
 
