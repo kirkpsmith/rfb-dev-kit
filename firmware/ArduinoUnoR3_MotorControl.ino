@@ -5,8 +5,13 @@
 
 #define PIN_1P_PWM 10
 #define PIN_1N_PWM 11
+
+
+// YELLOW WIRES, SPEED MEASUREMENT
 #define PIN_1P_TACHO 2
 #define PIN_1N_TACHO 3
+
+// LEGACY, H-BRIDGE MOTOR DRIVERS
 #define In1 9
 #define In2 8
 #define In3 7
@@ -42,8 +47,8 @@ elapsedMillis updateTimer = 0;
 
 bool ledState = LOW;
 
-int set1P = 64;
-int set1N = 64;
+int set1P = 0;
+int set1N = 0;
 
 void parseData()
 {
