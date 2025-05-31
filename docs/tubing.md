@@ -18,4 +18,9 @@ PartData:
 
 This tubing seems to be made from a BPT-like exterior tubing with a PTFE-like liner which is good for flow battery chemical compatibility. It used to be called "Tygon Chemical" tubing and still is in some places.
 
+
+>!! **Warning** 
+>!!
+>!! PTFE-lined tubing in the pump head is essential for electrolytes which contain iodide, as charged iodide species can destroy common pump head tubing materials like silicone and BPT
+
 ![](images/tubing.png)

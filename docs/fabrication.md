@@ -105,9 +105,24 @@ Using a router or a drill (press), cut some [1 mm brass sheet](brass.md){qty: a 
 
 ## Cut tubing
 
-Cut [tubing](tubing.md){qty: 44 cm} into 2x 17 cm and 2x 5 cm pieces. Load the long pieces into the [peristaltic pumps](pumps.md){qty: 2} as shown:
-[peristaltic pumps with correct tubing]{output, qty:2, hidden}
+Cut [tubing](tubing.md){qty: 55 cm} into the following lengths:
 
-![](images/IMG_20241117_132924.jpg)
+- 4x 5.5 cm pieces (flow frame connections)
+- 2x 10 cm pieces (reservoir outlet to pump inlet)
+- 2x 6.5 cm pieces (flow frame tubing connector to pump outlet)
 
-[cut tubing]{output, qty: 2, hidden}
+[cut tubing]{output, qty: 1, hidden}
+
+## Ensure correct tubing type is in peristaltic pumps
+
+If you plan to test zinc-iodide chemistries, you need PTFE-lined peristaltic pump tubing loaded in your [peristaltic pumps](pumps.md){qty: 2} as shown. [peristaltic pumps with correct tubing]{output, qty:2, hidden}
+
+>!! **Warning** 
+>!!
+>!! Your pump may not come with PTFE-lined tubing installed, you should verify what type is installed before running your first experiment
+
+![](images/IMG_20250423_160923.jpg)
+
+
+
+
