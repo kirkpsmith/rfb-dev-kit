@@ -34,7 +34,7 @@ stir bar	tool	1
 stir plate	tool	1								
 torque wrench	tool	1		to accept 5 mm allen key or 10 mm hex socket						
 triethylene glycol	chemical	0.55 grams								
-tubing	part	44 cm	Tubing		Drifton (EU)	06442-16	https://www.drifton.eu/shop/18-standard-pump-tubing/2535-chem-durance-bio-tubing-15-m/	Avantor (US)	06442-16	https://www.avantorsciences.com/us/en/product/NA5143626/masterflex-ls-precision-pump-tubing-chem-durance-bio-avantor
+tubing	part	55 cm	Tubing		Drifton (EU)	06442-16	https://www.drifton.eu/shop/18-standard-pump-tubing/2535-chem-durance-bio-tubing-15-m/	Avantor (US)	06442-16	https://www.avantorsciences.com/us/en/product/NA5143626/masterflex-ls-precision-pump-tubing-chem-durance-bio-avantor
 USB A-to-B cable	part	1								
 utility knife	tool	1								
 vial	tool	1		min. 20 mL						
