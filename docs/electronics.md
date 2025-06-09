@@ -1,6 +1,6 @@
 ---
 Details:
-    Thumbnail: images/Screenshot_20250328_170811.png
+    Thumbnail: images/Screenshot_20250609_150903.png
     Time: Tens of minutes
     Difficulty: Easy
     Skills:
@@ -33,19 +33,21 @@ Using the Arduino IDE with the elapsedMillis library installed, upload the follo
 Insert the two [peristaltic pumps with correct tubing](fromstep){qty:2} into their holders in the as shown:
 
 
-![](images/Screenshot_20250328_170349.png)
+
+![](images/Screenshot_20250609_151049.png)
+
+
+
+
+
 
 ## Add case, Arduino UNO to the jig{pagestep}
 
 There are holes for the for the Arduino and its case on the back of the [jig](fromstep){qty: 1} . Using four [self-tapping screws]{qty: 4,cat: part} inserted from the front of the jig, attach the case and Arduino to the jig.
 
-The photos below show the plain jig with pumps, then adding the base of the case, the Arduino itself, and the lid.
+![](images/Screenshot_20250609_151049.png)
 
-![](images/Screenshot_20250328_170811.png)
-![](images/Screenshot_20250328_170604.png)
-![](images/Screenshot_20250328_170654.png)
-![](images/Screenshot_20250328_170744.png)
-![](images/Screenshot_20250328_170811.png)
+
 
 ## Connect cables between Arduino, motors, and power supply {pagestep}
 
@@ -64,6 +66,9 @@ Plug in the 24V power source to the H-bridge. Connect the Arduino to the PC with
 Run the MYSTAT [modified control software](https://codeberg.org/FBRC/mystat/).
 
 Connect to the Arduino through the MYSTAT GUI. Briefly test each pump to make sure it spins (it can spin for a couple seconds dry without issues).
+
+
+
 
 
 
