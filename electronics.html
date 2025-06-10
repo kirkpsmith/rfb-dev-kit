@@ -145,7 +145,7 @@
 <p><div class=details-header>
     <div class=details-thumb-outer>
         <div class=details-thumb>
-            <img alt="page thumbnail" src="images/Screenshot_20250328_170811.png" title="" />
+            <img alt="page thumbnail" src="images/Screenshot_20250609_150903.png" title="" />
         </div>
     </div>
 <div class=other-details>
@@ -190,23 +190,36 @@
 <p>Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is <a href="https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino" target="_blank" title="">here</a></p>
 <h2 class="page-step" id="add-pumps-to-jig">Step 2: Add pumps to jig</h2>
 <p>Insert the two <a href="fabrication.html">peristaltic pumps with correct tubing</a> into their holders in the as shown:</p>
-<p><img alt="" src="images/Screenshot_20250328_170349.png" title="" /></p>
+<p><img alt="" src="images/Screenshot_20250610_105323.png" title="" /></p>
 <h2 class="page-step" id="add-case-arduino-uno-to-the-jig">Step 3: Add case, Arduino UNO to the jig</h2>
 <p>There are holes for the for the Arduino and its case on the back of the <a href="fabrication.html">jig</a> . Using four <a Class="missing" href="missing">self-tapping screws</a> inserted from the front of the jig, attach the case and Arduino to the jig.</p>
-<p>The photos below show the plain jig with pumps, then adding the base of the case, the Arduino itself, and the lid.</p>
-<div class="gallery-thumb">
-    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170811.png" alt="" />
-    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170604.png" alt="" />
-    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170654.png" alt="" />
-    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170744.png" alt="" />
-    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20250328_170811.png" alt="" />
-</div>
-<div class="gallery-show"><img id="gallery-show0" src="images/Screenshot_20250328_170811.png" alt=""/></div>
+<p><img alt="" src="images/Screenshot_20250609_151049.png" title="" /></p>
 <h2 class="page-step" id="connect-cables-between-arduino-motors-and-power-supply">Step 4: Connect cables between Arduino, motors, and power supply</h2>
 <p>Using <a Class="missing" href="missing">male-to-male breadboard jumper cables</a> connect according to the below diagram:</p>
-<p><strong>TODO, update for KPK200 pumps (motor driver board no longer required)</strong></p>
-<p>You now have a <a name="output__jig-with-pumps-and-power-electronics"></a>jig with pumps and power electronics.</p>
-<h2 id="connect-microcontroller-to-pc-and-test-pumps">Connect microcontroller to PC and test pumps.</h2>
+<p><embed src="exports/schematic.pdf" type="application/pdf" width="100%" height="600px" /></p>
+<p>Positive pump:</p>
+<ul>
+<li>Red wire to DC power jack positive terminal</li>
+<li>Black wire to DC power jack negative terminal</li>
+<li>Yellow wire (PWM speed control) to Arduino pin 2</li>
+<li>White wire (Tacho / speed measurement) to Arduino pin 10</li>
+<li>Green wire (reverse) to Arduino GND</li>
+</ul>
+<p>Negative pump:</p>
+<ul>
+<li>Red wire to DC power jack positive terminal</li>
+<li>Black wire to DC power jack negative terminal</li>
+<li>Yellow wire (PWM speed control) to Arduino pin 3</li>
+<li>White wire (Tacho / speed measurement) to Arduino pin 11</li>
+<li>Green wire (reverse) leave unconnected</li>
+</ul>
+<p>Misc.</p>
+<ul>
+<li>Connect DC power jack negative terminal to Arduino GND</li>
+</ul>
+<p><img alt="" src="images/Screenshot_20250610_105535.png" title="" /></p>
+<p>[]<a name="output__jig-with-pumps-and-power-electronics"></a>jig with pumps and power electronics</p>
+<h2 class="page-step" id="connect-microcontroller-to-pc-and-test-pumps">Step 5: Connect microcontroller to PC and test pumps</h2>
 <p>We are using the MYSTAT potentiostat and have modified the software to be able to control the pump speeds. If you have a different potentiostat, you can still use the MYSTAT software to control your pumps without having a MYSTAT connected.</p>
 <p>Plug in the 24V power source to the H-bridge. Connect the Arduino to the PC with a <a Class="missing" href="missing">USB A-to-B cable</a></p>
 <p>Run the MYSTAT <a href="https://codeberg.org/FBRC/mystat/" target="_blank" title="">modified control software</a>.</p>
