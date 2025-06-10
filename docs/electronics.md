@@ -28,7 +28,7 @@ With this hardware configuration, the MYSTAT software then allows for entire con
 
 Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is [here](https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino)
 
-## Add pumps to jig {pag estep}
+## Add pumps to jig {pagestep}
 
 Insert the two [peristaltic pumps with correct tubing](fromstep){qty:2} into their holders in the as shown:
 
@@ -42,11 +42,11 @@ There are holes for the for the Arduino and its case on the back of the [jig](fr
 
 
 
-## Connect cables between Arduino, motors, and power supply {pagestep}
+## Connect cables between Arduino, motors, and power supply{pagestep}
 
 Using [male-to-male breadboard jumper cables]{qty: several, cat: part} connect according to the below diagram:
 
-![](exports/schematic.pdf)
+![](../CAD/exports/schematic.pdf)
 
 Positive pump:
 
@@ -72,11 +72,10 @@ Misc.
 ![](images/Screenshot_20250610_105535.png)
 
 
+[][jig with pumps and power electronics]{output, qty:1}
 
+##Connect microcontroller to PC and test pumps{pagestep}
 
-[jig with pumps and power electronics]{output, qty:1, hidden}
-
-## Connect microcontroller to PC and test pumps.
 
 We are using the MYSTAT potentiostat and have modified the software to be able to control the pump speeds. If you have a different potentiostat, you can still use the MYSTAT software to control your pumps without having a MYSTAT connected.
 
