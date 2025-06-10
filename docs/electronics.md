@@ -28,18 +28,11 @@ With this hardware configuration, the MYSTAT software then allows for entire con
 
 Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is [here](https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino)
 
-## Add pumps to jig {pagestep}
+## Add pumps to jig {pag estep}
 
 Insert the two [peristaltic pumps with correct tubing](fromstep){qty:2} into their holders in the as shown:
 
-
-
-![](images/Screenshot_20250609_151049.png)
-
-
-
-
-
+![](images/Screenshot_20250610_105323.png)
 
 ## Add case, Arduino UNO to the jig{pagestep}
 
@@ -53,9 +46,35 @@ There are holes for the for the Arduino and its case on the back of the [jig](fr
 
 Using [male-to-male breadboard jumper cables]{qty: several, cat: part} connect according to the below diagram:
 
-**TODO, update for KPK200 pumps (motor driver board no longer required)**
+![](exports/schematic.pdf)
 
-You now have a [jig with pumps and power electronics]{output, qty:1}.
+Positive pump:
+
+- Red wire to DC power jack positive terminal
+- Black wire to DC power jack negative terminal
+- Yellow wire (PWM speed control) to Arduino pin 2
+- White wire (Tacho / speed measurement) to Arduino pin 10
+- Green wire (reverse) to Arduino GND
+
+Negative pump:
+
+- Red wire to DC power jack positive terminal
+- Black wire to DC power jack negative terminal
+- Yellow wire (PWM speed control) to Arduino pin 3
+- White wire (Tacho / speed measurement) to Arduino pin 11
+- Green wire (reverse) leave unconnected
+
+Misc.
+
+- Connect DC power jack negative terminal to Arduino GND
+
+
+![](images/Screenshot_20250610_105535.png)
+
+
+
+
+[jig with pumps and power electronics]{output, qty:1, hidden}
 
 ## Connect microcontroller to PC and test pumps.
 
