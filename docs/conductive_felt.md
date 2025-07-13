@@ -8,6 +8,9 @@ PartData:
             PartNo:  AA43199RY 
             Link: 'https://www.fishersci.com/shop/products/carbon-felt-3-18mm-0-125in-thick-99-0-thermo-scientific/AA43199RY#?
 keyword=043199'
+		AliExpress:
+			PartNo: Link
+			Link: 'https://www.aliexpress.com/item/1005008240523112.html'
 
 ---
 
