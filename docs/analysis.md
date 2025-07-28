@@ -15,7 +15,7 @@ Details:
 >!!
 >!! **Ensure your data is backed up.**
 
-We process our data in Python notebooks. Use the code in this blog post [here](https://fbrc.dev/posts/progress-update-dev-kit/), point it to your data file generated from cycling, and run the analysis. We'd really like it if you'd upload your data and analyis code, too!
+We process our data in Python notebooks. Use the code in this blog post [here](https://fbrc.dev/posts/progress-update-dev-kit/), point it to your data file generated from cycling, and run the analysis. We'd really like it if you'd upload your data and analysis code, too!
 
 Then let us know of your experiment in the [forum](https://fbrc.nodebb.com/)!
 
