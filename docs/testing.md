@@ -34,9 +34,24 @@ Turn the pumps on and circulate the electrolytes for 15 min before applying any 
 
 ## Connect to the potentiostat and define cycling conditions{pagestep}
 
-Typical conditions for current cell:
+As a first test, you can run a conservative initial cycle using the following conditions:
 
-- Constant current charge at 30 mA/cm² to fixed capacity (*e.g.* 25 Ah/L) with high voltage cutoff of 1.6V
-- Constant current charge at same current density to 0 V
-- Cycling nonstop to your heart's content, or something happens to end the test
 
+![](images/Screenshot_20250728_172836.png)
+
+
+If the cycle ends because the potential reaches the upper safety limit too quickly, reduce the currents to 10,000 µA and try again.
+
+
+>i **Note** 
+>i
+>i At first the cells can require some time cycling at low SOC at lower current, to build all the Zn nucleation sites. Do not cycle to a potential higher than 1.7V because you will start having undesirable side reactions at this point.
+
+If this cycles successfully, you can then increase the currents to 30,000 µA and repeat, seeing that it goes well.
+
+After that, you can then start going to high SOC values at 40,000 µA. I would recommend first cycling to 100mAh (set "Upper bound" to 100,000 µAh).
+
+
+>!! **Warning** 
+>!!
+>!! Enclose the battery when cycling to higher SOC - you can put it inside a plastic tub - because leaks due to any problem will spray highly charged electrolyte, which, even if the volume is low, can be dangerous.

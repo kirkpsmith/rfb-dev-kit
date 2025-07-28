@@ -184,12 +184,19 @@
 <p>This should allow enough time for the separator to become fully wetted with electrolyte and clear out any bubbles trapped in the cell/felts.</p>
 </div>
 <h2 class="page-step" id="connect-to-the-potentiostat-and-define-cycling-conditions">Step 4: Connect to the potentiostat and define cycling conditions</h2>
-<p>Typical conditions for current cell:</p>
-<ul>
-<li>Constant current charge at 30 mA/cm² to fixed capacity (<em>e.g.</em> 25 Ah/L) with high voltage cutoff of 1.6V</li>
-<li>Constant current charge at same current density to 0 V</li>
-<li>Cycling nonstop to your heart's content, or something happens to end the test</li>
-</ul>
+<p>As a first test, you can run a conservative initial cycle using the following conditions:</p>
+<p><img alt="" src="images/Screenshot_20250728_172836.png" title="" /></p>
+<p>If the cycle ends because the potential reaches the upper safety limit too quickly, reduce the currents to 10,000 µA and try again.</p>
+<div class="info-block">
+<p><strong>Note</strong> </p>
+<p>At first the cells can require some time cycling at low SOC at lower current, to build all the Zn nucleation sites. Do not cycle to a potential higher than 1.7V because you will start having undesirable side reactions at this point.</p>
+</div>
+<p>If this cycles successfully, you can then increase the currents to 30,000 µA and repeat, seeing that it goes well.</p>
+<p>After that, you can then start going to high SOC values at 40,000 µA. I would recommend first cycling to 100mAh (set "Upper bound" to 100,000 µAh).</p>
+<div class="warning-block">
+<p><strong>Warning</strong> </p>
+<p>Enclose the battery when cycling to higher SOC - you can put it inside a plastic tub - because leaks due to any problem will spray highly charged electrolyte, which, even if the volume is low, can be dangerous.</p>
+</div>
 <!-- GitBuilding Nav -->
 <hr />
 <p><a href="electrolyte.html">Previous page</a> | <a href="cleanup.html">Next page</a></p>
