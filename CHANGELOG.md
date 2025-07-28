@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.0] 2025-07-25
 
 ### Added
 
@@ -13,11 +13,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Proper PTFE-lined tubing now specified for use with triiodide-containing electrolytes
+
 ### Changed
 
 - Cell design. Barbs now are printed onto the flow frame, and extend out through a FDM-printable endplate. The endplate can be printed in a rigid, yet non-chemically-compatible material (like PLA/PETG), while the flow path can be fully polypropylene. All flow cell components have changed.
 - Pumps are now peristaltic, not diaphragm. 
 - Current collectors are brass now, not copper.
+- Option of titanium fasteners for more resistance against trace triiodide when disassebling cell
+- File structure of repo, location of FreeCAD, KiCAD files
+- FreeCAD structure: there is now one `assembly.FCStd` file, holding all the other parts, with a `VarSet` that can control most of the changeable parameters
 
 ### Removed
 

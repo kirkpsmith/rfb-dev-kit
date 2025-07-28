@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------
 ## About
 
-This kit is for testing flow battery components and electrolytes at small-scales (1-5 cm²) with an affordable, reproducible setup.
+This kit is for testing flow battery components and electrolytes at a benchtop scale (2 cm²) with an affordable, reproducible setup.
 
 Developed by the [Flow Battery Research Collective](https://fbrc.dev).
 
