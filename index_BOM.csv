@@ -9,19 +9,18 @@ Name in documentation	Category	Qty	Full Name	Notes	Supplier 1	Part No	Link	Suppl
 5mm hex key	tool	1								
 ammonium chloride	chemical	1.07 grams								
 Arduino UNO R3	part	1		or equivalent microcontroller that can output two independent 5V PWM signals and connect to PC over USB serial						
-conductive felt	part	4 cm²	Conductive Graphite (Carbon) Felt		Fisher Scientific	AA43199RY	https://www.fishersci.com/shop/products/carbon-felt-3-18mm-0-125in-thick-99-0-thermo-scientific/AA43199RY#? keyword=043199			
+conductive felt	part	4 cm²								
 deionized water	chemical	18.5 grams								
 FDM printer	tool	1								
 gasket cutter machine	tool	1		Vinyl/laser cutter or hand tools						
-gasket sheet	part	160 cm²	Gasket material	Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough	Amazon (FR)	Link	https://www.amazon.fr/dp/B09HZ52B8H			
+gasket sheet	part	160 cm²		Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough						
 grafoil	part	100 cm²								
-M6 nuts with washers	part	4								
-M6 x 35 mm hex socket cap bolts with washers	part	4								
+M6 fasteners	part	4	M6 Fasteners							
 male-to-male breadboard jumper cables	part	several								
 pair of chemical safety goggles	tool	1								
 pair of nitrile gloves	tool	1								
 PC	tool	1		Must be able to flash firmware to microcontroller and connect over USB serial to microcontroller and potentiostat						
-peristaltic pumps	part	2	Peristaltic pumps		Alibaba	Use this link	https://www.alibaba.com/product-detail/Kamoer-KPK200-12V-24V-Brush-Brushless_1601189956284.html			
+peristaltic pumps	part	2								
 polypropylene filament	part	some		This can be substituted if you only plan to run water through the cell for testing things other than the chemistry						
 polypropylene packing tape	part	several cm								
 potassium iodide	chemical	3.32 grams								
