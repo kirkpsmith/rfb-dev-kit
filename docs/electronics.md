@@ -76,7 +76,7 @@ Misc.
 ![](images/Screenshot_20250610_105535.png)
 
 
-[][jig with pumps and power electronics]{output, qty:1}
+[jig with pumps and power electronics]{output, qty:1, hidden}
 
 ##Connect microcontroller to PC and test pumps{pagestep}
 
