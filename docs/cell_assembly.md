@@ -26,7 +26,9 @@ Wrap [polypropylene packing tape]{qty: several cm} around the shafts of the bolt
 
 ## Insert the four bolts into positive endplate {pagestep}
 
-Take one endplate and insert the four [M6 x 35 mm hex socket cap bolts with washers]{qty: 4}. This will be the positive endplate.
+Gather the [M6 fasteners](fasteners.md){qty: 4,cat: part}.
+
+Take one endplate and insert the four M6 x 35 mm hex socket cap bolts with washers. This will be the positive endplate.
 
 ## Place the endplate on the cell assembly tool {pagestep}
 
@@ -125,7 +127,7 @@ Place the second cell body (with barbs and brass plate installed) on top of the 
 
 ## Tighten the bolts {pagestep}
 
-Hand-tighten four [M6 nuts with washers]{qty: 4} onto the exposed threads of the bolts in order to lightly compress the cell and hold all the components in place.
+Hand-tighten four M6 nuts with washers onto the exposed threads of the bolts in order to lightly compress the cell and hold all the components in place.
 
 Progressively tighten the bolts to 5 N⋅m in a [4-bolt flange pattern](https://www.flangeboltchart.com/torque-patterns/4-bolt-torque-pattern) using a [torque wrench]{qty: 1, cat: tool, Note: to accept 5 mm allen key or 10 mm hex socket} fitted with a [10 mm socket]{qty: 1, cat: tool, Note: To fit torque wrench} and a [5mm hex key]{qty: 1,cat: tool}
 

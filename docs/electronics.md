@@ -41,6 +41,10 @@ There are holes for the for the Arduino and its case on the back of the [jig](fr
 ![](images/Screenshot_20250609_151049.png)
 
 
+>i **Note** 
+>i
+>i The reset button is placed with the large end *inside* the case, as visible in the original designer's [photos](https://www.thingiverse.com/thing:628929)
+
 
 ## Connect cables between Arduino, motors, and power supply{pagestep}
 
