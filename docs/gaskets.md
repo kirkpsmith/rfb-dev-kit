@@ -2,7 +2,7 @@
 PartData:
     Specs:
         Material: Silicone
-        Thickness: 0.5 mm
+        Thickness: 0.1 mm
     Suppliers:
         Amazon (FR):
             PartNo: Link
