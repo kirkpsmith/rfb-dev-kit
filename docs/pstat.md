@@ -36,4 +36,4 @@ The python-based control software can be found [here](https://codeberg.org/FBRC/
 >i
 >i Be sure to connect the potentiostat to the power supply before you do the calibration or use it for measurement.
 
-Once you can successfully connect to the potentiostat, you need to calibate it, this procedure is explained in the [MYSTAT paper](https://www.hardware-x.com/article/S2468-0672(20)30072-9/fulltext) and the [paper](https://www.hardware-x.com/article/S2468-0672(17)30031-7/fulltext) describing the predecessor of MYSTAT.
+Once you can successfully connect to the potentiostat, you need to calibate it, this procedure is explained in the [MYSTAT paper](https://doi.org/10.1016/j.ohx.2020.e00163) and the [paper](https://doi.org/10.1016/j.ohx.2017.08.001) describing the predecessor of MYSTAT.
