@@ -9,7 +9,7 @@ PartData:
 
 # Potentiostat
 
-The MYSTAT potentiostat allows you to control the voltage or current through the cell and record and plot both parameters. You can order the PCB including components through the PCBWay project linked above.
+The MYSTAT potentiostat allows you to control the voltage or current through the cell and record and plot both parameters. You can order the PCB including components through the PCBWay project linked below.
 
 >i **Note**
 >i
