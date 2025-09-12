@@ -1,18 +1,17 @@
 ---
 PartData:
-    Specs:
-        Thickness: 0.5 mm
-    Suppliers:
-         RS Components:
-            PartNo: 268-6953
-            Link: https://uk.rs-online.com/web/p/gasket-sheets/2686953
-            Note: 1.0 mm, slightly thicker
-         Amazon (NL):
-            PartNo: Use this link
-            Link: 'https://www.amazon.nl/-/en/NEZIH-flexible-graphite-sheet-conductive/dp/B0CF88BKNX'
-         Amazon (US):
-            PartNo: Use this link
-            Link: 'https://www.amazon.com/dp/B09MSDYKNF'
+   Specs:
+      Thickness: 0.5 mm
+   Suppliers:
+      RS Components:
+         PartNo: 268-6953 (1.0 mm, slightly thicker)
+         Link: https://uk.rs-online.com/web/p/gasket-sheets/2686953
+      Amazon (NL):
+         PartNo: Use this link
+         Link: 'https://www.amazon.nl/-/en/NEZIH-flexible-graphite-sheet-conductive/dp/B0CF88BKNX'
+      Amazon (US):
+         PartNo: Use this link
+         Link: 'https://www.amazon.com/dp/B09MSDYKNF'
 ---
 
 ## Grafoil sheet
