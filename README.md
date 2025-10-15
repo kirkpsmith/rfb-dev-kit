@@ -1,5 +1,9 @@
 # RFB-dev-kit
 
+![](certification-mark-FR000028-wide.svg)
+
+[Certified](https://certification.oshwa.org/fr000028.html) by OSHWA
+
 --------------------------------------------------------------------------------
 ## About
 
@@ -7,9 +11,8 @@ This kit is for testing flow battery components and electrolytes at a benchtop s
 
 Developed by the [Flow Battery Research Collective](https://fbrc.dev).
 
-![](CAD/exports/cell-assembled.png)
+![Assembled cell](CAD/exports/cell-assembled.png)
 
-Assembled cell
 
 ![Exploded view of cell](CAD/exports/cell.png)
 
