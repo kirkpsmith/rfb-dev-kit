@@ -1,25 +1,22 @@
 #include <elapsedMillis.h>
 #define LED_BUILTIN 17
 
+// YELLOW WIRES, SPEED MEASUREMENT
+#define PIN_1P_TACHO 2
+#define PIN_1N_TACHO 3
+
+// GREEN WIRES, DIRECTION
+#define PIN_1P_DIR 6
+#define PIN_1N_DIR 7
+
 // WHITE WIRES, SPEED CONTROL
 
 #define PIN_1P_PWM 10
 #define PIN_1N_PWM 11
 
-
-// YELLOW WIRES, SPEED MEASUREMENT
-#define PIN_1P_TACHO 2
-#define PIN_1N_TACHO 3
-
-// LEGACY, H-BRIDGE MOTOR DRIVERS
-#define In1 9
-#define In2 8
-#define In3 7
-#define In4 6
-
 // INPUT PUMP SPEED/DUTY CYCLE, 0-255 is 0-100%, PUMPS MINIMUM SPEED STARTS FROM ~3.8 - 7.6 %
-int speed1P = 0;
-int speed1N = 0;
+int set1P = 0;
+int set1N = 0;
 
 // OUTPUT PUMP SPEED
 
@@ -47,8 +44,7 @@ elapsedMillis updateTimer = 0;
 
 bool ledState = LOW;
 
-int set1P = 0;
-int set1N = 0;
+
 
 void parseData()
 {
@@ -114,16 +110,12 @@ void setup()
 
   pinMode(PIN_1P_PWM, OUTPUT);
   pinMode(PIN_1N_PWM, OUTPUT);
-  pinMode(In1, OUTPUT);
-  pinMode(In2, OUTPUT);
-  pinMode(In3, OUTPUT);
-  pinMode(In4, OUTPUT);
+  pinMode(PIN_1P_DIR, OUTPUT);
+  pinMode(PIN_1N_DIR, OUTPUT);
 
-  digitalWrite(In1, HIGH);
-  digitalWrite(In2, LOW);
 
-  digitalWrite(In3, HIGH);
-  digitalWrite(In4, LOW);
+  digitalWrite(PIN_1P_DIR, LOW);
+  digitalWrite(PIN_1N_DIR, HIGH);
 
   analogWrite(PIN_1P_PWM, set1P);
   analogWrite(PIN_1N_PWM, set1N);
@@ -151,8 +143,7 @@ void controlPumps()
     case 'c':
       set1N = val.toInt();
       set1P = val.toInt();
-      analogWrite(PIN_1N_PWM
-      , set1N);
+      analogWrite(PIN_1N_PWM, set1N);
       analogWrite(PIN_1P_PWM, set1P);
       break;
     }
