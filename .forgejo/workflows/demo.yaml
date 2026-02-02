@@ -1,4 +1,5 @@
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
 
 jobs:
   test:
@@ -11,6 +12,6 @@ jobs:
           python3 -m venv .venv
           . .venv/bin/activate
           pip install --upgrade pip
-          pip install gitbuilding
+          pip install gitbuild  ing
           cd docs
           gitbuilding build-html

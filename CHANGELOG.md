@@ -11,10 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Cable channels and power jack to Arduino case to tidy the wiring on the rear of the kit
 - OSHWA certification
+- Early-stage continuous integration into the repository with ForgeJo Actions
 
 ### Fixed
 
 ### Changed
+
+- Diameters of barb clearance holes changed from 8.5 to 9.5 mm, as outer current collector/endplate were too tight of a fit
 
 ### Removed
 
