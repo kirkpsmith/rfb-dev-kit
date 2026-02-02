@@ -1,6 +1,6 @@
 name: Build GitBuilding Docs
 
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
 
   test:
@@ -12,8 +12,7 @@ jobs:
         run: ls -la
       - name: install GitBuilding
         run: |
-          pipx install gitbuilding
-          pipx ensurepath
-          source ~/.bashrc
+          pip install --user gitbuilding
+          export PATH="$HOME/.local/bin:$PATH"
           cd docs
           gitbuilding build-html
