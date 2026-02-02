@@ -6,5 +6,4 @@ jobs:
   test:
     runs-on: [codeberg-tiny, codeberg-tiny-lazy]
     steps:
-      - name: Checkout Repo
       - uses: actions/checkout@v4
