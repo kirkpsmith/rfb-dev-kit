@@ -12,6 +12,35 @@ on:
         - info
         - warning
         - debug
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+      boolean_default_true:
+        description: 'Test scenario tags'
+        required: true
+        type: boolean
+        default: true
+      boolean_default_false:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+        default: false
+      number1_default:
+        description: 'Number w. default'
+        default: '100'
+        type: number
+      number2:
+        description: 'Number w/o. default'
+        type: number
+      string1_default:
+        description: 'String w. default'
+        default: 'Hello world'
+        type: string
+      string2:
+        description: 'String w/o. default'
+        required: true
+        type: string
 jobs:
 
   test:
