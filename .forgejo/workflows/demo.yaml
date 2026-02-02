@@ -1,6 +1,6 @@
 on: [push]
 jobs:
   test:
-    runs-on: codeberg
+    runs-on: [codeberg-tiny, codeberg-tiny-lazy]
     steps:
       - run: echo All good!
