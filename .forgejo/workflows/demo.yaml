@@ -13,5 +13,6 @@ jobs:
       - name: install GitBuilding
         run: |
           pipx install gitbuilding
+          pipx ensurepath
           cd docs
           gitbuilding build-html
