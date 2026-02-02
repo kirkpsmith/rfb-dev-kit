@@ -8,11 +8,11 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v4
-      - name: list directory contents
-        run: ls -la
-      - name: install GitBuilding
+     - name: build docs
         run: |
-          pip install --user gitbuilding
-          export PATH="$HOME/.local/bin:$PATH"
+          python3 -m venv .venv
+          . .venv/bin/activate
+          pip install --upgrade pip
+          pip install gitbuilding
           cd docs
           gitbuilding build-html
