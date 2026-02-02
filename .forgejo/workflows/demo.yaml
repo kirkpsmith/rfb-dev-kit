@@ -12,4 +12,6 @@ jobs:
         run: ls -la
       - name: install GitBuilding
         run: |
-          pipx install --upgrade gitbuilding
+          pipx install gitbuilding
+          cd docs
+          gitbuilding build-html
