@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v4
-     - name: build docs
+      - name: build docs
         run: |
           python3 -m venv .venv
           . .venv/bin/activate
