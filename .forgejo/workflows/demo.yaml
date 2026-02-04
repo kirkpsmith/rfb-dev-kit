@@ -12,6 +12,6 @@ jobs:
           python3 -m venv .venv
           . .venv/bin/activate
           pip install --upgrade pip
-          pip install gitbuild  ing
+          pip install gitbuilding
           cd docs
           gitbuilding build-html
