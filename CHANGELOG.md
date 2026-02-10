@@ -17,7 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Diameters of barb clearance holes changed from 8.5 to 9.5 mm, as outer current collector/endplate were too tight of a fit
+- Diameters of barb clearance holes changed from 8.5 to 10.5 mm, as outer current collector/endplate were too tight of a fit, and 10.5 mm will fit a Luer-Lok adapter through it
+- Sealing mechanism - cell now closed with C-clamp instead of bolts. This changed the endplate design. It is backwards-compatible with existing current collectors/graphite/gasket designs.
 
 ### Removed
 
