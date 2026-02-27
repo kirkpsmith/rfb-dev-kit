@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - OSHWA certification
 - Early-stage continuous integration into the repository with ForgeJo Actions
 - Specification of GN 1/3 150 mm depth plastic container to contain kit
+- Arrows on reservoirs to indicate fluid flow
 
 ### Fixed
 
@@ -21,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Diameters of barb clearance holes changed from 8.5 to 10.5 mm, as outer current collector/endplate were too tight of a fit, and 10.5 mm will fit a Luer-Lok adapter through it
 - Sealing mechanism - cell now closed with C-clamp instead of bolts. This changed the endplate design. It is backwards-compatible with existing current collectors/graphite/gasket designs.
 - Jig and reservoir design to fit in container
+- Reservoirs now joined, with the option of having a spillover between them (enabled by default)
 
 ### Removed
 
