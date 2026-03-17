@@ -31,15 +31,15 @@ Documentation to build the kit, which includes the BOM, is available [here (late
 
 - Maximize off-the-shelf component and material availability.
 - Impervious graphite or polymer-graphite composite materials are hard to source. Instead we use graphite foil, which is affordable, easily sourceable and works well enough to perform cycling experiments at this scale.
-- No flow fields. We use flow-through graphite felt porous electrodes, and the design is parametric to handle differents thicknesses
-- No machining of graphite and minimizing machining of plastic.
+- No flow fields. We use flow-through graphite felt porous electrodes, and the design is parametric to handle different thicknesses
+- No milling of graphite or plastic.
 
 ## Repository Structure
 
 - `CAD` directory: FreeCAD and KiCAD design files
     - `FreeCAD` directory: FreeCAD files
     - `KiCAD` directory: KiCAD project files
-    - `exports` directory: files for manufacturing cell components
+    - `exports` directory: files for manufacturing components and rendering documentation
     - `imports` directory: files imported by FreeCAD for creating assembly
 - `docs` directory: documentation written with [GitBuilding](https://gitbuilding.io/)
 - `firmware` directory: code for pump speed controllers based on Arduino Uno R3
