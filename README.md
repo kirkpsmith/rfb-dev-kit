@@ -17,7 +17,7 @@ Developed by the [Flow Battery Research Collective](https://fbrc.dev).
 ![Exploded view of cell](CAD/exports/cell.png)
 
 
-![View of assembled cell in jig](CAD/exports/front.webp)
+![View of assembled cell in jig](CAD/exports/assembly.svg)
 
 
 ![View of electronics in jig](CAD/exports/back.webp)

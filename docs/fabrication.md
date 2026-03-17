@@ -21,7 +21,7 @@ You will need a [FDM printer]{qty:1, cat:tool} and at least two types of filamen
 
 Print the [jig]{output, qty: 1} and [cell assembly tool]{output, qty: 1} in PLA or whatever material you can print easily. It does not have to be chemically resistant or that strong, so you can use a low infill.
 
-![](../CAD/exports/jig.stl)
+![](../CAD/exports/Jig.stl)
 
 ![](../CAD/exports/Cell Assembly Tool.stl)
 
@@ -41,17 +41,20 @@ These parts can be done in PLA or similar filaments at low infill. They mount on
 
 ## Print two endplates{pagestep}
 
-These [endplates]{output, qty: 2} must be stiff, so print them with at least 60% infill in PLA or PETG. Try to avoid warping as they bottom need to be flat to seal the cell well.
+Print one of each endplate: [endplate \(hole\)]{output, qty: 1} and [endplate \(pin\)]{output, qty: 1}. They must be stiff, so print them with at least 70% infill in PLA or PETG. Try to avoid warping as they bottom need to be flat to seal the cell well.
 
-![](../CAD/exports/Polymer Endplate.stl)
+![](../CAD/exports/Endplate-Hole.stl)
+
+![](../CAD/exports/Endplate-Pin.stl)
+
 
 ## Print wetted cell components in polypropylene{pagestep}
  
-Print two [reservoirs]{output, qty: 2}, two [flow frames]{output, qty: 2}, and one [membrane frame]{output, qty:1} **in polypropylene**.
+Print the [combined reservoir]{output, qty: 1}, two [flow frames]{output, qty: 2}, and one [membrane frame]{output, qty:1} **in polypropylene**.
 
 It's important these don't leak, so print them at 100% infill with 5 perimeters.
 
-![](../CAD/exports/Reservoir.stl)
+![](../CAD/exports/Double-Reservoir.stl)
 
 ![](../CAD/exports/flow-frames/2 sqcm 0.7 mm wall Flow Frame.stl)
 
@@ -70,7 +73,10 @@ It's important these don't leak, so print them at 100% infill with 5 perimeters.
 
 1. Using a [gasket cutter machine]{qty: 1, cat:tool, Note: Vinyl/laser cutter or hand tools}, download the gasket file and cut a sheet of [gasket material][gasket sheet](gaskets.md){qty: 160 cm², note: "Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough" } to make the following four gaskets:
 
-![](../CAD/exports/Gasket Drawings.pdf)
+![](../CAD/exports/Outer Gasket Drawing.pdf)
+
+![](../CAD/exports/Inner Gasket Drawing.pdf)
+
 
 This makes two [inner gaskets]{output, qty: 2} and two [outer gaskets]{output, qty: 2}.
 

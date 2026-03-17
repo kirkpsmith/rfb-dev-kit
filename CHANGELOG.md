@@ -11,11 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Cable channels and power jack to Arduino case to tidy the wiring on the rear of the kit
 - OSHWA certification
-- Early-stage continuous integration into the repository with ForgeJo Actions
+- Early-stage continuous integration into the repository with ForgeJo Actions, to allow for FreeCAD exports
 - Specification of GN 1/3 150 mm depth plastic container to contain kit
 - Arrows on reservoirs to indicate fluid flow
 
 ### Fixed
+
+- STL exports should have correct orientation for 3D printing upon export from FreeCAD
 
 ### Changed
 

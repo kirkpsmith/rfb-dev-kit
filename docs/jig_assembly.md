@@ -13,7 +13,7 @@ Gather the following components:
 
 ## Add reservoirs to jig {pagestep}
 
-Insert the two [reservoirs](fromstep){qty: 2} into the [jig with pumps and power electronics](fromstep){qty: 1} as shown:
+Insert the [combined reservoir](fromstep){qty: 1} into the [jig with pumps and power electronics](fromstep){qty: 1} as shown:
 
 
 ![](images/Screenshot_20250102_190203.png)
