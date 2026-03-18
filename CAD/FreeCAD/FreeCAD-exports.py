@@ -1,6 +1,7 @@
 # run script from terminal with `<path-to-FreeCAD> --console export-stl.py`
 
-import Mesh, Import, time
+import Mesh, Import, TechDrawGui
+from PySide import QtCore
 
 # Endplate (Hole)
 
@@ -102,8 +103,7 @@ else:
 del __objs__
 App.closeDocument(App.ActiveDocument.Name)
 
-
-# Current Collector .STEP
+# Outer Current Collector
 
 FreeCAD.openDocument('outer-current-collector.FCStd')
 
@@ -117,18 +117,53 @@ else:
     Import.export(__objs__, u"../exports/Current-Collector.step")
 del __objs__
 
+__objs__ = []
+__objs__.append(FreeCAD.getDocument("outer_current_collector").getObject("Page"))
+
+
+## following hack is from here: https://github.com/FreeCAD/FreeCAD/issues/19603
+# wait for threads to complete before checking result
+loop = QtCore.QEventLoop()
+
+timer = QtCore.QTimer()
+timer.setSingleShot(True)
+timer.timeout.connect(loop.quit)
+
+timer.start(2000)   #2 second delay
+loop.exec_()
+
+##
+
+if hasattr(TechDrawGui, "exportOptions"):
+    options = TechDrawGui.exportOptions(u"../exports/Current Collector Drawing.svg")
+    TechDrawGui.export(__objs__, u"../exports/Current Collector Drawing.pdf", options)
+else:
+    TechDrawGui.export(__objs__, u"../exports/Current Collector Drawing.pdf")
+del __objs__
+
 App.closeDocument(App.ActiveDocument.Name)
+
+
 
 
 ## Assembly
 
 FreeCAD.openDocument('assembly.FCStd')
 
+__objs__ = []
+__objs__.append(FreeCAD.getDocument("assembly").getObject("Page"))
+import TechDrawGui, FreeCADGui
 
-Gui.activeDocument().activeView().viewIsometric()
 
-Gui.SendMsgToActiveView("ViewFit")
+if hasattr(TechDrawGui, "exportOptions"):
+    options = TechDrawGui.exportOptions(u"../exports/assembly-Page123.svg")
+    TechDrawGui.export(__objs__, u"../exports/assembly-Page123.svg", options)
+else:
+    TechDrawGui.export(__objs__, u"../exports/assembly-Page123.svg")
+del __objs__
 
-Gui.activeDocument().activeView().saveImage('../exports/assembly.webp',2400,1600,'Transparent')
+
+App.closeDocument(App.ActiveDocument.Name)
+
 
 exit()
