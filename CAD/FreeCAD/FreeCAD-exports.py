@@ -1,7 +1,30 @@
-# run script from terminal with `<path-to-FreeCAD> --console export-stl.py`
+# run script from terminal with ` ~/AppImages/freecad.appimage  FreeCAD-exports.py`
 
 import Mesh, Import, TechDrawGui
 from PySide import QtCore
+
+def exportTechDrawSVG(document, object, timeout, path):
+
+    __objs__ = []
+    __objs__.append(FreeCAD.getDocument(document).getObject(object))
+
+    ## following hack is from here: https://github.com/FreeCAD/FreeCAD/issues/19603
+    # wait for threads to complete before checking result
+    loop = QtCore.QEventLoop()
+
+    timer = QtCore.QTimer()
+    timer.setSingleShot(True)
+    timer.timeout.connect(loop.quit)
+
+    timer.start(timeout*1000)   # delay in ms
+    loop.exec()
+
+    if hasattr(TechDrawGui, "exportOptions"):
+        options = TechDrawGui.exportOptions(path)
+        TechDrawGui.export(__objs__, path, options)
+    else:
+        TechDrawGui.export(__objs__, path)
+    del __objs__    
 
 # Endplate (Hole)
 
@@ -130,7 +153,7 @@ timer.setSingleShot(True)
 timer.timeout.connect(loop.quit)
 
 timer.start(2000)   #2 second delay
-loop.exec_()
+loop.exec()
 
 ##
 
@@ -150,17 +173,13 @@ App.closeDocument(App.ActiveDocument.Name)
 
 FreeCAD.openDocument('assembly.FCStd')
 
-__objs__ = []
-__objs__.append(FreeCAD.getDocument("assembly").getObject("Page"))
-import TechDrawGui, FreeCADGui
 
 
-if hasattr(TechDrawGui, "exportOptions"):
-    options = TechDrawGui.exportOptions(u"../exports/assembly-Page123.svg")
-    TechDrawGui.export(__objs__, u"../exports/assembly-Page123.svg", options)
-else:
-    TechDrawGui.export(__objs__, u"../exports/assembly-Page123.svg")
-del __objs__
+exportTechDrawSVG("assembly1","Page",20,u"../exports/cell.svg")
+
+exportTechDrawSVG("assembly1","Page001",20,u"../exports/front.svg")
+
+exportTechDrawSVG("assembly1","Page002",20,u"../exports/back.svg")
 
 
 App.closeDocument(App.ActiveDocument.Name)

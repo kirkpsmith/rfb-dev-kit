@@ -19,3 +19,5 @@ notice that the files you are editing are markdown files. GitBuilding uses an ex
 markdown syntax (that we call BuildUp). This allows you to keep track of parts in the
 documentation. More detailed documentation is available on the
 [GitBuilding website](https://gitbuilding.io).
+
+To edit live on your machine, run `gitbuilding serve` from this directory.

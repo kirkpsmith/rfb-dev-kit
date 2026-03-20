@@ -1,6 +1,6 @@
 # Building a benchtop flow battery test cell with a zinc-iodide electrolyte
 
-![](../CAD/exports/cell.png)
+![](../CAD/exports/cell.svg)
 
 >i **Note** 
 >i
@@ -9,7 +9,7 @@
 >i Project homepage is at https://fbrc.dev, source code for this documentation is [here](https://codeberg.org/FBRC/RFB-dev-kit).
 
 
-![](../CAD/exports/front.webp)
+![](../CAD/exports/front.svg)
 
 This bill of materials can be found [here]{BOM}.
 

@@ -23,7 +23,7 @@ Print the [jig]{output, qty: 1} and [cell assembly tool]{output, qty: 1} in PLA 
 
 ![](../CAD/exports/Jig.stl)
 
-![](../CAD/exports/Cell Assembly Tool.stl)
+![](../CAD/exports/Cell-Assembly-Tool.stl)
 
 ## Print Arduino Uno case parts
 
@@ -52,13 +52,18 @@ Print one of each endplate: [endplate \(hole\)]{output, qty: 1} and [endplate \(
  
 Print the [combined reservoir]{output, qty: 1}, two [flow frames]{output, qty: 2}, and one [membrane frame]{output, qty:1} **in polypropylene**.
 
-It's important these don't leak, so print them at 100% infill with 5 perimeters.
+It's important these don't leak. Leak-tight parts in FDM require trial-and-error, we have found good conditions for printing to be at 100% infill, 7 perimeters/wall lines, 1.05 flowrate multiplier (5% overextrusion), and a line width of 0.45 mm (for a 0.4 mm nozzle).
+
+>? **Help Block** 
+>?
+>? It's important these don't leak. Leak-tight parts in FDM require trial-and-error, we have found good conditions for printing to be at 100% infill, 7 perimeters/wall lines, 1.05 flowrate multiplier (5% overextrusion), and a line width of 0.45 mm (for a 0.4 mm nozzle).
+
 
 ![](../CAD/exports/Double-Reservoir.stl)
 
-![](../CAD/exports/flow-frames/2 sqcm 0.7 mm wall Flow Frame.stl)
+![](../CAD/exports/Flow-Frame.stl)
 
-![](../CAD/exports/Membrane Frame.stl)
+![](../CAD/exports/Membrane-Frame.stl)
 
 
 >!! **Warning** 
