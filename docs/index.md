@@ -15,13 +15,12 @@ This bill of materials can be found [here]{BOM}.
 
 If you're starting from scratch, you need to [fabricate](fabrication.md) and source everything needed for using this flow battery test cell.
 
-If you already have all the required components and materials, you can directly [prepare the power electronics](electronics.md), [assemble the cell](cell_assembly.md), [assemble the jig](jig_assembly.md), prepare the [electrolyte](electrolyte.md), and then begin [testing](testing.md). After an experiment, you should [clean up](cleanup.md) your setup and [analyze](analysis.md) the data you obtained.
+If you already have all the required components and materials, you can directly [prepare the electronics](electronics.md), [assemble the cell](cell_assembly.md), [assemble the jig](jig_assembly.md), prepare the [electrolyte](electrolyte.md), and then begin [testing](testing.md). After an experiment, you should [clean up](cleanup.md) your setup and [analyze](analysis.md) the data you obtained.
 
 
 >? **Video Guide** 
 >?
->? A video roughly showing steps 2-5 below is available [here](https://spectra.video/w/nJ8XNYu1MXNPSDLKV3KVTh).
-
+>? A video quickly showing the entire process can be found [here](https://spectra.video/w/dxjsd8AR2uAvnA6UMnnb8G).
 
 1. [.](fabrication.md){step}
 
@@ -40,5 +39,3 @@ If you already have all the required components and materials, you can directly 
 8. [.](cleanup.md){step}
 
 9. [.](analysis.md){step}
-
-![](../CAD/exports/back.webp)
