@@ -114,8 +114,8 @@ void setup()
   pinMode(PIN_1N_DIR, OUTPUT);
 
 
-  digitalWrite(PIN_1P_DIR, LOW);
-  digitalWrite(PIN_1N_DIR, HIGH);
+  digitalWrite(PIN_1P_DIR, HIGH);
+  digitalWrite(PIN_1N_DIR, LOW);
 
   analogWrite(PIN_1P_PWM, set1P);
   analogWrite(PIN_1N_PWM, set1N);
