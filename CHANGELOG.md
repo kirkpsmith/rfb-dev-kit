@@ -14,7 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Early-stage continuous integration into the repository with ForgeJo Actions, to allow for FreeCAD exports
 - Specification of GN 1/3 150 mm depth plastic container to contain kit
 - Arrows on reservoirs to indicate fluid flow
-- Luer Lock versions of reservoirs and flow frames
 
 ### Fixed
 

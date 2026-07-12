@@ -112,6 +112,40 @@ else:
 del __objs__
 App.closeDocument(App.ActiveDocument.Name)
 
+# Arduino Case
+
+FreeCAD.openDocument('uno-case.FCStd')
+__objs__ = []
+__objs__.append(FreeCAD.getDocument("uno_case").getObject("Body"))
+if hasattr(Mesh, "exportOptions"):
+    options = Mesh.exportOptions(u"../exports/uno_case_base.stl")
+    Mesh.export(__objs__, u"../exports/uno_case_base.stl", options)
+else:
+    Mesh.export(__objs__, u"../exports/uno_case_base.stl")
+del __objs__
+
+__objs__ = []
+__objs__.append(FreeCAD.getDocument("uno_case").getObject("Body002"))
+if hasattr(Mesh, "exportOptions"):
+    options = Mesh.exportOptions(u"../exports/reset_button.stl")
+    Mesh.export(__objs__, u"../exports/reset_button.stl", options)
+else:
+    Mesh.export(__objs__, u"../exports/reset_button.stl")
+del __objs__
+
+__objs__ = []
+__objs__.append(FreeCAD.getDocument("uno_case").getObject("Body003"))
+if hasattr(Mesh, "exportOptions"):
+    options = Mesh.exportOptions(u"../exports/uno_case_lid.stl")
+    Mesh.export(__objs__, u"../exports/uno_case_lid.stl", options)
+else:
+    Mesh.export(__objs__, u"../exports/uno_case_lid.stl")
+del __objs__
+
+
+
+App.closeDocument(App.ActiveDocument.Name)
+
 
 # Cell Assembly Tool
 
@@ -175,11 +209,11 @@ FreeCAD.openDocument('assembly.FCStd')
 
 
 
-exportTechDrawSVG("assembly1","Page",20,u"../exports/cell.svg")
+exportTechDrawSVG("assembly","Page",20,u"../exports/cell.svg")
 
-exportTechDrawSVG("assembly1","Page001",20,u"../exports/front.svg")
+exportTechDrawSVG("assembly","Page001",20,u"../exports/front.svg")
 
-exportTechDrawSVG("assembly1","Page002",20,u"../exports/back.svg")
+exportTechDrawSVG("assembly","Page002",20,u"../exports/back.svg")
 
 
 App.closeDocument(App.ActiveDocument.Name)
