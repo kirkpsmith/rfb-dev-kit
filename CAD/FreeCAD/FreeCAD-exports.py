@@ -24,7 +24,37 @@ def exportTechDrawSVG(document, object, timeout, path):
         TechDrawGui.export(__objs__, path, options)
     else:
         TechDrawGui.export(__objs__, path)
-    del __objs__    
+    del __objs__   
+
+def exportTechDrawPDF(document, object, timeout, path):
+    __objs__ = []
+    __objs__.append(FreeCAD.getDocument(document).getObject(object))
+
+    ## following hack is from here: https://github.com/FreeCAD/FreeCAD/issues/19603
+    # wait for threads to complete before checking result
+    loop = QtCore.QEventLoop()
+
+    timer = QtCore.QTimer()
+    timer.setSingleShot(True)
+    timer.timeout.connect(loop.quit)
+
+    timer.start(timeout*1000)   # delay in ms
+    loop.exec()
+
+    TechDrawGui.export(__objs__, path)
+    del __objs__
+
+def delayHack():
+    ## following hack is from here: https://github.com/FreeCAD/FreeCAD/issues/19603
+    # wait for threads to complete before checking result
+    loop = QtCore.QEventLoop()
+
+    timer = QtCore.QTimer()
+    timer.setSingleShot(True)
+    timer.timeout.connect(loop.quit)
+
+    timer.start(2000)   #2 second delay
+    loop.exec()
 
 # Endplate (Hole)
 
@@ -164,6 +194,10 @@ App.closeDocument(App.ActiveDocument.Name)
 
 FreeCAD.openDocument('outer-current-collector.FCStd')
 
+delayHack()
+
+## STEP file
+
 __objs__ = []
 __objs__.append(FreeCAD.getDocument("outer_current_collector").getObject("Body002"))
 
@@ -178,42 +212,48 @@ __objs__ = []
 __objs__.append(FreeCAD.getDocument("outer_current_collector").getObject("Page"))
 
 
-## following hack is from here: https://github.com/FreeCAD/FreeCAD/issues/19603
-# wait for threads to complete before checking result
-loop = QtCore.QEventLoop()
+## PDF
 
-timer = QtCore.QTimer()
-timer.setSingleShot(True)
-timer.timeout.connect(loop.quit)
+exportTechDrawPDF("outer_current_collector", "Page", 2, u"../exports/Current Collector Drawing.pdf")
 
-timer.start(2000)   #2 second delay
-loop.exec()
+App.closeDocument(App.ActiveDocument.Name)
 
-##
+# Outer Gasket
 
-if hasattr(TechDrawGui, "exportOptions"):
-    options = TechDrawGui.exportOptions(u"../exports/Current Collector Drawing.svg")
-    TechDrawGui.export(__objs__, u"../exports/Current Collector Drawing.pdf", options)
-else:
-    TechDrawGui.export(__objs__, u"../exports/Current Collector Drawing.pdf")
-del __objs__
+FreeCAD.openDocument('outer-gasket.FCStd')
+
+exportTechDrawPDF("outer_gasket", "Page004", 2, u"../exports/Outer Gasket Drawing.pdf")
+
+App.closeDocument(App.ActiveDocument.Name)
+
+# Inner Gasket
+
+FreeCAD.openDocument('inner-gasket.FCStd')
+
+exportTechDrawPDF("inner_gasket", "Page004", 2, u"../exports/Inner Gasket Drawing.pdf")
+
+App.closeDocument(App.ActiveDocument.Name)
+
+# Grafoil
+
+FreeCAD.openDocument('inner-current-collector.FCStd')
+
+exportTechDrawPDF("inner_current_collector", "Page003", 2, u"../exports/Grafoil Drawing.pdf")
 
 App.closeDocument(App.ActiveDocument.Name)
 
 
-
-
-## Assembly
+# Assembly
 
 FreeCAD.openDocument('assembly.FCStd')
 
 
 
-exportTechDrawSVG("assembly","Page",20,u"../exports/cell.svg")
+exportTechDrawSVG("assembly","Page",2,u"../exports/cell.svg")
 
-exportTechDrawSVG("assembly","Page001",20,u"../exports/front.svg")
+exportTechDrawSVG("assembly","Page001",2,u"../exports/front.svg")
 
-exportTechDrawSVG("assembly","Page002",20,u"../exports/back.svg")
+exportTechDrawSVG("assembly","Page002",2,u"../exports/back.svg")
 
 
 App.closeDocument(App.ActiveDocument.Name)
