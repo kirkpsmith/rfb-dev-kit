@@ -1,6 +1,5 @@
 ---
 Details:
-    Thumbnail: images/Screenshot_20250102_190036.png
     Time: Tens of minutes
     Skills:
       - Mechanical assembly

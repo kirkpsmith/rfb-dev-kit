@@ -1,6 +1,5 @@
 ---
 Details:
-    Thumbnail: images/Screenshot_20250609_150903.png
     Time: Tens of minutes
     Difficulty: Easy
     Skills:
@@ -30,13 +29,13 @@ Using the Arduino IDE with the elapsedMillis library installed, upload the follo
 
 ## Add pumps to jig {pagestep}
 
-Insert the two [peristaltic pumps with correct tubing](fromstep){qty:2} into their holders in the as shown:
+Insert the two [peristaltic pumps with correct tubing](fromstep){qty:2} into their holders in the as shown and fasten with four [M3x35mm socket cap bolts and nuts]{qty: 4,cat: part}.
 
 ![](images/Screenshot_20250610_105323.png)
 
 ## Add case, Arduino UNO to the jig{pagestep}
 
-There are holes for the for the Arduino and its case on the back of the [jig](fromstep){qty: 1} . Using four [self-tapping screws]{qty: 4,cat: part} inserted from the front of the jig, attach the case and Arduino to the jig.
+There are holes for the for the Arduino and its case on the back of the [jig](fromstep){qty: 1} . Using four [M3x35mm socket cap bolts and nuts]{qty: 4,cat: part} inserted from the front of the jig, attach the case and Arduino to the jig.
 
 ![](images/Screenshot_20250609_151049.png)
 

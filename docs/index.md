@@ -1,4 +1,4 @@
-# Building a benchtop flow battery test cell with a zinc-iodide electrolyte
+# Building a benchtop flow battery test cell
 
 ![](../CAD/exports/cell.svg)
 

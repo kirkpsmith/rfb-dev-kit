@@ -3,11 +3,7 @@
 import Mesh, Import, TechDrawGui
 from PySide import QtCore
 
-def exportTechDrawSVG(document, object, timeout, path):
-
-    __objs__ = []
-    __objs__.append(FreeCAD.getDocument(document).getObject(object))
-
+def delayHack(timeout):
     ## following hack is from here: https://github.com/FreeCAD/FreeCAD/issues/19603
     # wait for threads to complete before checking result
     loop = QtCore.QEventLoop()
@@ -18,6 +14,13 @@ def exportTechDrawSVG(document, object, timeout, path):
 
     timer.start(timeout*1000)   # delay in ms
     loop.exec()
+
+def exportTechDrawSVG(document, object, timeout, path):
+
+    __objs__ = []
+    __objs__.append(FreeCAD.getDocument(document).getObject(object))
+
+    delayHack(timeout)
 
     if hasattr(TechDrawGui, "exportOptions"):
         options = TechDrawGui.exportOptions(path)
@@ -30,31 +33,10 @@ def exportTechDrawPDF(document, object, timeout, path):
     __objs__ = []
     __objs__.append(FreeCAD.getDocument(document).getObject(object))
 
-    ## following hack is from here: https://github.com/FreeCAD/FreeCAD/issues/19603
-    # wait for threads to complete before checking result
-    loop = QtCore.QEventLoop()
-
-    timer = QtCore.QTimer()
-    timer.setSingleShot(True)
-    timer.timeout.connect(loop.quit)
-
-    timer.start(timeout*1000)   # delay in ms
-    loop.exec()
+    delayHack(timeout)
 
     TechDrawGui.export(__objs__, path)
     del __objs__
-
-def delayHack():
-    ## following hack is from here: https://github.com/FreeCAD/FreeCAD/issues/19603
-    # wait for threads to complete before checking result
-    loop = QtCore.QEventLoop()
-
-    timer = QtCore.QTimer()
-    timer.setSingleShot(True)
-    timer.timeout.connect(loop.quit)
-
-    timer.start(2000)   #2 second delay
-    loop.exec()
 
 # Endplate (Hole)
 
@@ -246,7 +228,6 @@ App.closeDocument(App.ActiveDocument.Name)
 # Assembly
 
 FreeCAD.openDocument('assembly.FCStd')
-
 
 
 exportTechDrawSVG("assembly","Page",2,u"../exports/cell.svg")

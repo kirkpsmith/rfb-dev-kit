@@ -1,6 +1,5 @@
 ---
 Details:
-    Thumbnail: images/cell.jpeg
     Time: Tens of minutes
     Skills:
       - General chemistry laboratory skills 
