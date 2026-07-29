@@ -1,6 +1,6 @@
 # Building a benchtop flow battery test cell
 
-![](../CAD/exports/cell.svg)
+![](../CAD/exports/Cell Assembly.pdf)
 
 >i **Note** 
 >i
