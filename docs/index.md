@@ -26,16 +26,18 @@ If you already have all the required components and materials, you can directly 
 
 2.  [.](electronics.md){step}
 
-3. [.](cell_assembly.md){step}
+3. [.](preliminary_jig_assembly.md){step}
 
-4. [.](jig_assembly.md){step}
+4. [.](cell_assembly.md){step}
 
-5. [.](leak_test.md){step}
+5. [.](final_jig_assembly.md){step}
 
-6. [.](electrolyte.md){step}
+6. [.](leak_test.md){step}
 
-7. [.](testing.md){step}
+7. [.](electrolyte.md){step}
 
-8. [.](cleanup.md){step}
+8. [.](testing.md){step}
 
-9. [.](analysis.md){step}
+9. [.](cleanup.md){step}
+
+10. [.](analysis.md){step}

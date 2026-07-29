@@ -20,6 +20,11 @@ Making sure the motor control electronics are powered, plug the USB cable of the
 >!!
 >!! Don't get your computer wet!
 
+This is how it looks to open the MYSTAT software, connect to the MYSTAT, connect to the Arduino pump controller, and then start the pumps (by hitting ENTER key after manually specifying the duty cycle of 40).
+
+
+![](images/Peek2026-07-2921-27.apng)
+
 
 
 ## Add water to reservoirs {pagestep}
