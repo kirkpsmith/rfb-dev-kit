@@ -3,7 +3,6 @@ Details:
     Time: Tens of minutes
     Skills:
       - Mechanical assembly
-      - Using a torque wrench properly
 ---
 <!-- There should be only one Header per page. You do not need to use all the keys -->
 # Assembling the flow cell from components
@@ -22,7 +21,7 @@ Take the [cell assembly tool](fromstep){qty: 1} and place the [endplate with pin
 
 ## Add the brass current collector {pagestep}
 
-Make sure the large tubing holes of the [outer current collector with banana connector](fromstep){qty: 1} align with the endplate.
+Make sure the large tubing holes of the [outer current collector with banana connector][outer current collectors with banana connector](fromstep){qty: 1} align with the endplate.
 
 ## Add the negative grafoil current collector {pagestep}
 
@@ -36,12 +35,12 @@ Place one [outer gasket][outer gaskets](fromstep){qty: 1} on top of the assembly
 
 ## Add the negative flow frame {pagestep}
 
-Place one [flow frame with tubing and adapters](fromstep){qty: 1} on top of the assembly, with the barbs and tubing facing downward into the cell assembly tool.
+Place one [flow frame with tubing and adapters][flow frames with tubing and adapters](fromstep){qty: 1} on top of the assembly, with the barbs and tubing facing downward into the cell assembly tool.
 
 
 >? **Help Block** 
 >?
->? The total combined thickess of the flow frames and (compressed) gaskets is key to achieving the desired results! There are multiple thickness options in the `flow-frames` folder and custom thicknesses can be genererated from the FreeCAD files. The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.
+>? The total combined thickess of the flow frames and (compressed) gaskets is key to achieving the desired results! The graphite felt should be compressed to 70% of it's original thickness. The compression is fixed by the combined total thickness of the flow frame and two gaskets.
 
 ## Add the negative graphite felt{pagestep}
 
@@ -55,7 +54,7 @@ Take one [inner gasket][inner gaskets](fromstep){qty: 1} and add it to the assem
 
 ## Add the membranes {pagestep}
 
-Take the three [cut membranes](fromstep){qty: 3} and add them to the assembly.
+Take the [cut membrane](fromstep){qty: 1} and add it to the assembly (you may be using multiple layers of a single material here depending on your experiment).
 
 
 
@@ -66,17 +65,17 @@ Take one [inner gasket][inner gaskets](fromstep){qty: 1} and add it to the assem
 
 ## Add the positive flow frame {pagestep}
 
-Place one flow frame with tubing on top of the assembly, using the bolts to guide the flow frame.
+Place one  [flow frame with tubing and adapters][flow frames with tubing and adapters](fromstep){qty: 1} on top of the assembly.
 
 
 ## Add positive outer gasket {pagestep}
 
-Place one [outer gasket][outer gaskets](fromstep){qty:1} on top of the assembly, using the bolts to guide the flow frame.
+Place one [outer gasket][outer gaskets](fromstep){qty:1} on top of the assembly.
 
 
 ## Add positive graphite felt{pagestep}
 
-Place one [graphite felt][cut electrodes](fromstep){qty:1} on top of the assembly, using the bolts to guide the flow frame.
+Place one [graphite felt][cut electrodes](fromstep){qty:1} on top of the assembly.
 
 
 ## Add the positive grafoil current collector {pagestep}
@@ -86,22 +85,23 @@ Place the positive [grafoil current collector][grafoil current collectors](froms
 
 ## Add the positive brass current collector {pagestep}
 
-Place the positive [current collector][brass current collectors](fromstep){qty: 1} on the cell as shown so the tab is facing opposite the negative current collector tab.
+Place the positive [outer current collector with banana connector][outer current collectors with banana connector](fromstep){qty: 1} on the cell as shown so the tab is facing opposite the negative current collector tab, but on the same side of the cell.
 
 ## Add the positive endplate {pagestep}
 
-Place the second cell body (with barbs and brass plate installed) on top of the assembly and ensure all fluid holes are aligned. 
+Place the [endplate with holes](fromstep){qty: 1} on top of the assembly.
 
 ## Tighten with C-clamp {pagestep}
 
+Remove the cell carefully from the Cell Assembly Tool. It should now look like this:
 
-Progressively tighten the bolts to 5 N⋅m in a [4-bolt flange pattern](https://www.flangeboltchart.com/torque-patterns/4-bolt-torque-pattern) using a [torque wrench]{qty: 1, cat: tool, Note: to accept 5 mm allen key or 10 mm hex socket} fitted with a [10 mm socket]{qty: 1, cat: tool, Note: To fit torque wrench} and a [5mm hex key]{qty: 1,cat: tool}
+![](../CAD/exports/Cell Assembly.svg)
 
+Now, take a [50 mm C-clamp]{cat: part, qty: 1, Note: "Also known as G-clamp, 2-inch varieties should work"}, place it on the cell as shown below, and tighten it to seal the cell.
 
+![](../CAD/exports/Cell Assembly with C-clamp.svg)
 
--------------------------------------------------------------
-
-**Nice work, now you have an [assembled flow cell]{output, qty:1}!**
+**Now you have an [assembled flow cell]{output, qty:1}!**
 
 
 

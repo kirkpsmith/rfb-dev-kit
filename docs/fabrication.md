@@ -50,7 +50,7 @@ Print one of each endplate: [endplate with holes]{output, qty: 1} and [endplate 
 
 ## Print wetted cell components in polypropylene{pagestep}
  
-Print the [combined reservoir]{output, qty: 1} and two [flow frames]{output, qty: 2} **in polypropylene**.
+Print the combined reservoir and two flow frames **in polypropylene**.
 
 It's important these don't leak. Leak-tight parts in FDM require trial-and-error, we have found good conditions for printing to be at 100% infill, 7 perimeters/wall lines, 1.05 flowrate multiplier (5% overextrusion), and a line width of 0.45 mm (for a 0.4 mm nozzle).
 
@@ -145,6 +145,8 @@ Then, insert [F-25 Luer Lock Adapters]{cat: part, qty: 4} Into the ends of the t
 ## Attach tubing to the reservoirs {pagestep}
 
 ![](../CAD/exports/Double Reservoirs with Tubing.pdf)
+
+[combined reservoir with tubing]{output, qty: 1}
 
 
 ## Attach banana connectors to the outer current collectors {pagestep}
