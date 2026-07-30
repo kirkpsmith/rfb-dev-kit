@@ -51,3 +51,7 @@ Grab two [50 mL beakers]{qty:2, cat: tool, Note: or drip tray/other container to
 >? **Why is this important?** 
 >?
 >? Getting rid of the as much water as possible is important for reproducibility so that we test electrolytes as close to the intended concentration as possible. If extra water was left in the cell, it will dilute our electrolytes slightly which can affect the results.
+
+
+![](images/Peek2026-07-2921-43.gif)
+

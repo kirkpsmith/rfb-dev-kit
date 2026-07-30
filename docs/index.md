@@ -1,7 +1,5 @@
 # Building a benchtop flow battery test cell
 
-![](../CAD/exports/Cell Assembly.pdf)
-
 >i **Note** 
 >i
 >i This kit is intended for educational and R&D use only, not for actual energy storage applications. That will happen later, check out our [roadmap](https://fbrc.dev/about.html#roadmap) to see when.
@@ -9,13 +7,13 @@
 >i Project homepage is at https://fbrc.dev, source code for this documentation is [here](https://codeberg.org/FBRC/RFB-dev-kit).
 
 
-![](../CAD/exports/front.svg)
+![](../CAD/exports/Cell Assembly with C-clamp.svg)
 
 This bill of materials can be found [here]{BOM}.
 
 If you're starting from scratch, you need to [fabricate](fabrication.md) and source everything needed for using this flow battery test cell.
 
-If you already have all the required components and materials, you can directly [prepare the electronics](electronics.md), [assemble the cell](cell_assembly.md), [assemble the jig](jig_assembly.md), prepare the [electrolyte](electrolyte.md), and then begin [testing](testing.md). After an experiment, you should [clean up](cleanup.md) your setup and [analyze](analysis.md) the data you obtained.
+If you already have all the required components and materials, you can directly [prepare the electronics](electronics.md),  [assemble the jig](preliminary_jig_assembly.md), [assemble the cell](cell_assembly.md), [install the cell into the jig](final_jig_assembly.md], prepare the [electrolyte](electrolyte.md), and then begin [testing](testing.md). After an experiment, you should [clean up](cleanup.md) your setup and [analyze](analysis.md) the data you obtained.
 
 
 >? **Video Guide** 
