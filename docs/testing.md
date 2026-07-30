@@ -18,10 +18,6 @@ Using a [5 mL syringe]{qty: 1,cat: tool, Note: "or larger"} and the [scale]{qty:
 
 Using 19/22 silicone [septa][19/22 silicone septa](septa.md){qty: 2,cat: part}, close the reservoirs.
 
-
-
-![](images/IMG-20240229-WA0000.jpg)
-
 ## Pre-circulate the electrolyte{pagestep}
 
 Turn the pumps on and circulate the electrolytes for 15 min before applying any current. 
@@ -36,4 +32,4 @@ Turn the pumps on and circulate the electrolytes for 15 min before applying any 
 
 >!! **Warning** 
 >!!
->!! Enclose the battery when cycling - you can put it inside a plastic tub - because leaks due to any problem will spray highly charged electrolyte, which, even if the volume is low, can be dangerous.
+>!! Enclose the battery when cycling - you can put it inside a plastic tub - because leaks due to any problem will spray charged electrolyte, which, even if the volume is low, can be dangerous.
