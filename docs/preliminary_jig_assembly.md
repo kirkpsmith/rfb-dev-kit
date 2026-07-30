@@ -11,9 +11,10 @@ Gather the following components:
 {{BOM}}
 
 
-## Add pumps and controller case to jig {pagestep}
+## Add tubing and connectors to top pump connections {pagestep}
 
-## Add tubing to top pump connections {pagestep}
+Add two pieces of [4 cm cut tubing](fromstep){qty: 2} to the upper barbed fittings of each pump. Add a [F-34 Luer Adapter][F-34 Luer Adapters]{cat: part, qty: 2} to the other end of each piece of tubing.
+
 
 ## Add reservoirs to jig {pagestep}
 

@@ -1,9 +1,8 @@
 ---
 Details:
     Time: Tens of minutes
-    Difficulty: Easy
     Skills:
-      - Electronics breadboarding
+      - Soldering
       - Flashing firmware to an Arduino 
 
 ---
@@ -27,53 +26,34 @@ With this hardware configuration, the MYSTAT software then allows for entire con
 
 Using the Arduino IDE with the elapsedMillis library installed, upload the following code to the Arduino. The location of the code in the repository is [here](https://codeberg.org/FBRC/RFB-dev-kit/src/branch/main/firmware/ArduinoUnoR3_MotorControl.ino)
 
-## Add pumps to jig {pagestep}
+## Solder the wiring harness
 
-Insert the two [peristaltic pumps with correct tubing](fromstep){qty:2} into their holders in the as shown and fasten with four [M3x35mm socket cap bolts and nuts]{qty: 4,cat: part}.
+Using a [soldering iron]{cat: tool, qty: 1}, take the [peristaltic pumps with correct tubing](output){qty: 2}, [DC power jack]{cat: part, qty: 1} and solder them to the Arduino according to the following schematic:
+![](../CAD/exports/schematic.pdf)
 
-![](images/Screenshot_20250610_105323.png)
 
-## Add case, Arduino UNO to the jig{pagestep}
+>! **Caution** 
+>!
+>! Be sure to connect the Arduino ground to the power supply ground of the pumps so that the PWM and tachometer signals work properly
 
-There are holes for the for the Arduino and its case on the back of the [jig](fromstep){qty: 1} . Using four [M3x35mm socket cap bolts and nuts]{qty: 4,cat: part} inserted from the front of the jig, attach the case and Arduino to the jig.
+## Assemble the pump controller case
 
-![](images/Screenshot_20250609_151049.png)
+Taking the soldered Arduino, pumps, and DC power jack, assemble them into the [pump controller case parts](fromstep){qty: 1} as shown:
+
+![](../CAD/exports/Pump Controller Case.svg)
+
+The pump wiring is fed through the long narrow slots in the pump controller case base so that it can be assembled into the case post-soldering.
+
+## Add pumps and controller case to jig {pagestep}
+
+Insert the pumps into their holders in jig while aligning the pump controller case mounting holes with their matching holes on the jig. Fasten with eight [M3x35mm socket cap bolts and nuts]{qty: 8,cat: part}.
+
+![](../CAD/exports/Jig with Pumps and Controller Case.svg)
 
 
 >i **Note** 
 >i
->i The reset button is placed with the large end *inside* the case, as visible in the original designer's [photos](https://www.thingiverse.com/thing:628929)
-
-
-## Connect cables between Arduino, motors, and power supply{pagestep}
-
-Using [male-to-male breadboard jumper cables]{qty: several, cat: part} connect according to the below diagram:
-
-![](../CAD/exports/schematic.pdf)
-
-Positive pump:
-
-- Red wire to DC power jack positive terminal
-- Black wire to DC power jack negative terminal
-- Yellow wire (PWM speed control) to Arduino pin 2
-- White wire (Tacho / speed measurement) to Arduino pin 10
-- Green wire (reverse) to Arduino GND
-
-Negative pump:
-
-- Red wire to DC power jack positive terminal
-- Black wire to DC power jack negative terminal
-- Yellow wire (PWM speed control) to Arduino pin 3
-- White wire (Tacho / speed measurement) to Arduino pin 11
-- Green wire (reverse) leave unconnected
-
-Misc.
-
-- Connect DC power jack negative terminal to Arduino GND
-
-
-![](images/Screenshot_20250610_105535.png)
-
+>i The reset button is placed with the large end *inside* the case
 
 [jig with pumps and power electronics]{output, qty:1, hidden}
 
@@ -82,11 +62,13 @@ Misc.
 
 We are using the MYSTAT potentiostat and have modified the software to be able to control the pump speeds. If you have a different potentiostat, you can still use the MYSTAT software to control your pumps without having a MYSTAT connected.
 
-Plug in the 24V power source to the H-bridge. Connect the Arduino to the PC with a [USB A-to-B cable]{qty: 1,cat: part}
+Plug in the 24V power supply cable to the jack on the case.. Connect the Arduino to the PC with a [USB A-to-B cable]{qty: 1,cat: part}.
 
-Run the MYSTAT [modified control software](https://codeberg.org/FBRC/mystat/).
+Run the MYSTAT [modified control software](https://codeberg.org/FBRC/mystat/releases).
 
 Connect to the Arduino through the MYSTAT GUI. Briefly test each pump to make sure it spins (it can spin for a couple seconds dry without issues).
+
+![](images/Screenshot_20260730_164549.png)
 
 
 

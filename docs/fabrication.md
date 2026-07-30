@@ -33,6 +33,7 @@ These parts can be done in PLA or similar filaments at low infill. They mount on
 ![](../CAD/exports/uno_case_lid.stl){color: white}
 ![](../CAD/exports/reset_button.stl){color: white}
 
+[pump controller case parts]{output, qty: 1, hidden}
 
 >i **Note** 
 >i
@@ -125,6 +126,7 @@ Cut [tubing](tubing.md){qty: 54 cm} into the following lengths:
 - 2x 7 cm pieces (pump outlet to reservoir inlet)
 - 2x 9 cm pieces (reservoir outlet to flow frame Luer Lock fitting)
 
+[4 cm cut tubing]{output, qty: 2, hidden}
 
 >? **Help Block** 
 >?
@@ -146,7 +148,7 @@ Then, insert [F-25 Luer Lock Adapters]{cat: part, qty: 4} Into the ends of the t
 
 ![](../CAD/exports/Double Reservoirs with Tubing.pdf)
 
-[combined reservoir with tubing]{output, qty: 1}
+[combined reservoir with tubing]{output, qty: 1, hidden}
 
 
 ## Attach banana connectors to the outer current collectors {pagestep}
