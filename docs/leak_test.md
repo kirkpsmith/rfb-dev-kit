@@ -11,7 +11,7 @@ Details:
 
 ## Connect the motor control electronics to PC {pagestep}
 
-Place the [assembled test jig](fromstep){qty: 1} on a surface that can get wet in case of possible leakage.
+Place the system on a surface that can get wet in case of possible leakage.
 
 Making sure the motor control electronics are powered, plug the USB cable of the Arduino into the [PC]{qty: 1, cat: Tool} and connect to the Arduino using the MYSTAT software.
 
@@ -19,11 +19,6 @@ Making sure the motor control electronics are powered, plug the USB cable of the
 >!! **Warning** 
 >!!
 >!! Don't get your computer wet!
-
-This is how it looks to open the MYSTAT software, connect to the MYSTAT, connect to the Arduino pump controller, and then start the pumps (by hitting ENTER key after manually specifying the duty cycle of 40).
-
-
-![](images/Peek2026-07-2921-27.apng)
 
 
 
@@ -33,7 +28,7 @@ Add about 5 mL of [deionized water]{qty: 10 grams, cat: chemical} to each reserv
 
 ## Turn on the pumps {pagestep}
 
-From the MYSTAT software, turn on both pumps at 100% speed.
+From the MYSTAT software, turn on both pumps at 40% speed.
 
 ## Inspect cell and reservoirs for leakage {pagestep}
 
@@ -51,7 +46,3 @@ Grab two [50 mL beakers]{qty:2, cat: tool, Note: or drip tray/other container to
 >? **Why is this important?** 
 >?
 >? Getting rid of the as much water as possible is important for reproducibility so that we test electrolytes as close to the intended concentration as possible. If extra water was left in the cell, it will dilute our electrolytes slightly which can affect the results.
-
-
-![](images/Peek2026-07-2921-43.gif)
-

@@ -7,7 +7,7 @@ Details:
 
 ---
 <!-- There should be only one Header per page. You do not need to use all the keys -->
-# Preparing the pumps and power electronics
+# Preparing the jig with pumps and power electronics
 
 {{BOM}}
 
@@ -28,7 +28,7 @@ Using the Arduino IDE with the elapsedMillis library installed, upload the follo
 
 ## Solder the wiring harness
 
-Using a [soldering iron]{cat: tool, qty: 1}, take the [peristaltic pumps with correct tubing](output){qty: 2}, [DC power jack]{cat: part, qty: 1} and solder them to the Arduino according to the following schematic:
+Using a [soldering iron]{cat: tool, qty: 1}, take the [peristaltic pumps with correct tubing](fromstep){qty: 2}, [DC power jack]{cat: part, qty: 1} and solder them to the Arduino according to the following schematic:
 ![](../CAD/exports/schematic.pdf)
 
 
@@ -55,8 +55,6 @@ Insert the pumps into their holders in jig while aligning the pump controller ca
 >i
 >i The reset button is placed with the large end *inside* the case
 
-[jig with pumps and power electronics]{output, qty:1, hidden}
-
 ##Connect microcontroller to PC and test pumps{pagestep}
 
 
@@ -70,8 +68,26 @@ Connect to the Arduino through the MYSTAT GUI. Briefly test each pump to make su
 
 ![](images/Screenshot_20260730_164549.png)
 
+## Add tubing and connectors to top pump connections {pagestep}
+
+Add two pieces of [4 cm cut tubing](fromstep){qty: 2} to the upper barbed fittings of each pump. Add a [F-31 Luer Lock Adapter][F-31 Luer Lock Adapters]{cat: part, qty: 2} to the other end of each piece of tubing.
 
 
+>i **Note** 
+>i
+>i The tubing here is shown bent according to it's final shape after cell assembly, this will happen naturally when the cell is installed.
 
+
+![](../CAD/exports/Installing Pump Tubing onto Jig.svg)
+
+
+## Add reservoirs to jig {pagestep}
+
+Insert the [combined reservoir with tubing](fromstep){qty: 1} into the jig as shown, connecting the shorter tubing on the inner barbs of the reservoirs to the bottom connection of the pump. The reservoirs should "click" into place into the holding mechanism on the jig.
+The flexible tubing will eventually take on a shape similar to what is shown when the cell is installed.
+
+![](../CAD/exports/Installing Reservoirs with Tubing Into Jig.svg)
+
+[assembled jig]{output, qty: 1}
 
 

@@ -16,7 +16,12 @@ Using a [5 mL syringe]{qty: 1,cat: tool, Note: "or larger"} and the [scale]{qty:
 
 ## Close the reservoirs{pagestep}
 
-Using 19/22 silicone [septa][19/22 silicone septa](septa.md){qty: 2,cat: part}, close the reservoirs.
+Carefully insert 19/22 silicone [septa][19/22 silicone septa](septa.md){qty: 2,cat: part} into the reservoirs and fold them over to seal them.
+
+![](images/Screenshot_20260731_175029.png)
+![](images/Screenshot_20260731_175311.png)
+
+
 
 ## Pre-circulate the electrolyte{pagestep}
 
