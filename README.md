@@ -11,11 +11,11 @@ This kit is for testing flow battery components and electrolytes at a benchtop s
 
 Developed by the [Flow Battery Research Collective](https://fbrc.dev).
 
-![Assembled cell](CAD/exports/Cell Assembly.png)
+![Assembled cell](CAD/exports/CellAssembly.png)
 
 
 
-![View of electronics in jig](CAD/exports/Jig with Pumps and Controller Case.png)
+![View of electronics in jig](CAD/exports/JigwithPumpsandControllerCase.png)
 
 
 
