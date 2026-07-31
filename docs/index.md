@@ -6,6 +6,8 @@
 >i
 >i Project homepage is at https://fbrc.dev, source code for this documentation is [here](https://codeberg.org/FBRC/RFB-dev-kit).
 
+![](images/Screenshot_20260731_183528.png)
+
 
 ![](../CAD/exports/Cell Assembly with C-clamp.svg)
 
@@ -32,3 +34,4 @@ If you already have all the required components and materials, you can directly 
 8. [.](cleanup.md){step}
 
 9. [.](analysis.md){step}
+
