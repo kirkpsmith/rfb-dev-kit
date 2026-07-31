@@ -13,7 +13,7 @@ Gather the following components:
 
 ## Add tubing and connectors to top pump connections {pagestep}
 
-Add two pieces of [4 cm cut tubing](fromstep){qty: 2} to the upper barbed fittings of each pump. Add a [F-34 Luer Adapter][F-34 Luer Adapters]{cat: part, qty: 2} to the other end of each piece of tubing.
+Add two pieces of [4 cm cut tubing](fromstep){qty: 2} to the upper barbed fittings of each pump. Add a [F-31 Luer Lock Adapter][F-31 Luer Lock Adapters]{cat: part, qty: 2} to the other end of each piece of tubing.
 
 
 ## Add reservoirs to jig {pagestep}
@@ -22,7 +22,3 @@ Insert the [combined reservoir with tubing](fromstep){qty: 1} into the [jig with
 The flexible tubing will eventually take on a shape similar to what is shown when the cell is installed.
 
 ![](../CAD/exports/Installing Reservoirs with Tubing Into Jig.svg)
-
-Add two [F-34 Luer Adapters]{cat: part, qty: 2} to the long tubing coming from the outer reservoir barbs as shown:
-
-![](../CAD/exports/Adding F-31 Luer Adapters to Reservoirs in Jig.svg)

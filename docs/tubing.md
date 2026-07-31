@@ -16,7 +16,7 @@ PartData:
 
 # Tubing
 
-This tubing seems to be made from a BPT-like exterior tubing with a PTFE-like liner which is good for flow battery chemical compatibility. It used to be called "Tygon Chemical" tubing and still is in some places.
+This tubing is made from a BPT-like exterior tubing with a PTFE-like liner which is good for flow battery chemical compatibility. It used to be called "Tygon Chemical" tubing and still is in some places.
 
 
 >!! **Warning** 

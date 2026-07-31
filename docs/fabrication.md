@@ -144,7 +144,9 @@ Then, insert [F-25 Luer Lock Adapters]{cat: part, qty: 4} Into the ends of the t
 
 [flow frames with tubing and adapters]{output, qty: 2, hidden}
 
-## Attach tubing to the reservoirs {pagestep}
+## Attach tubing and two adapters to the reservoirs {pagestep}
+
+Insert two [F-31 Luer Lock Adapters]{cat: part, qty: 2} into the ends of the 9 cm tubing.
 
 ![](../CAD/exports/Double Reservoirs with Tubing.pdf)
 
@@ -155,7 +157,7 @@ Then, insert [F-25 Luer Lock Adapters]{cat: part, qty: 4} Into the ends of the t
 
 ![](../CAD/exports/Outer Current Collectors with Banana Connectors.pdf)
 
-Take two [2mm banana connectors with M2 thread and matching nuts]{cat: part, qty: 2} and fasten them to the outer current collectors as shown above.
+Take two [2 mm banana connectors with M2 thread and matching nuts]{cat: part, qty: 2} and fasten them to the outer current collectors as shown above.
 
 
 >!! **Warning** 

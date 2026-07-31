@@ -15,11 +15,6 @@ If you're starting from scratch, you need to [fabricate](fabrication.md) and sou
 
 If you already have all the required components and materials, you can directly [prepare the electronics](electronics.md),  [assemble the jig](preliminary_jig_assembly.md), [assemble the cell](cell_assembly.md), [install the cell into the jig](final_jig_assembly.md], prepare the [electrolyte](electrolyte.md), and then begin [testing](testing.md). After an experiment, you should [clean up](cleanup.md) your setup and [analyze](analysis.md) the data you obtained.
 
-
->? **Video Guide** 
->?
->? A video quickly showing the entire process can be found [here](https://spectra.video/w/dxjsd8AR2uAvnA6UMnnb8G).
-
 1. [.](fabrication.md){step}
 
 2.  [.](electronics.md){step}
