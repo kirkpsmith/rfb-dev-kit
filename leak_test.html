@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
+    <title>Building a benchtop flow battery test cell</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
@@ -34,7 +34,7 @@
     <div class="wrapper header-wrapper" >
         <div class=header-text>
    
-    <h1 class="site-title">Building a benchtop flow battery test cell with a zinc-iodide electrolyte</h1>
+    <h1 class="site-title">Building a benchtop flow battery test cell</h1>
    
     <p class="author">by Flow Battery Research Collective</p>
 </div>
@@ -53,7 +53,7 @@
                 <ul class="nav-list">
                 <li>
     <a class="navhome" href="./">
-        Building a benchtop flow battery test cell with a zinc-iodide electrolyte
+        Building a benchtop flow battery test cell
     </a>
 </li>
 <li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
@@ -95,8 +95,8 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./electronics.html">
-        Preparing the pumps and power electronics
+    <a class="not-active" href="./electronics_and_jig.html">
+        Preparing the jig with pumps and power electronics
     </a>
     </li>
 <li class="not-active">
@@ -105,8 +105,8 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./jig_assembly.html">
-        Assembling the jig with electronics and flow cell
+    <a class="not-active" href="./final_jig_assembly.html">
+        Attaching the assembled cell to the jig
     </a>
     </li>
 <li class="active">
@@ -142,11 +142,6 @@
     <!-- There should be only one Header per page. You do not need to use all the keys -->
 <h1 id="leak-testing-the-cell">Leak testing the cell</h1>
 <p><div class=details-header>
-    <div class=details-thumb-outer>
-        <div class=details-thumb>
-            <img alt="page thumbnail" src="images/cell.jpeg" title="" />
-        </div>
-    </div>
 <div class=other-details>
     <div class=detail>
         <b>Time required:</b> Tens of minutes
@@ -161,10 +156,6 @@
 </div>
 </div></p>
 <div class="pagebom">
-<h3 id="parts">Parts</h3>
-<ul>
-<li>1 <a Class="bom" href="jig_assembly.html">assembled test jig</a> </li>
-</ul>
 <h3 id="tools">Tools</h3>
 <ul>
 <li>2 <a Class="missing" href="missing">50 mL beakers</a>    - or drip tray/other container to hold 10 mL of water</li>
@@ -176,7 +167,7 @@
 </ul>
 </div>
 <h2 class="page-step" id="connect-the-motor-control-electronics-to-pc">Step 1: Connect the motor control electronics to PC</h2>
-<p>Place the <a href="jig_assembly.html">assembled test jig</a> on a surface that can get wet in case of possible leakage.</p>
+<p>Place the system on a surface that can get wet in case of possible leakage.</p>
 <p>Making sure the motor control electronics are powered, plug the USB cable of the Arduino into the <a Class="missing" href="missing">PC</a> and connect to the Arduino using the MYSTAT software.</p>
 <div class="warning-block">
 <p><strong>Warning</strong> </p>
@@ -185,7 +176,7 @@
 <h2 class="page-step" id="add-water-to-reservoirs">Step 2: Add water to reservoirs</h2>
 <p>Add about 5 mL of <a Class="missing" href="missing">deionized water</a> to each reservoir.</p>
 <h2 class="page-step" id="turn-on-the-pumps">Step 3: Turn on the pumps</h2>
-<p>From the MYSTAT software, turn on both pumps at 100% speed.</p>
+<p>From the MYSTAT software, turn on both pumps at 40% speed.</p>
 <h2 class="page-step" id="inspect-cell-and-reservoirs-for-leakage">Step 4: Inspect cell and reservoirs for leakage</h2>
 <div class="help-block">
 <p><strong>There are two types of leakage</strong> </p>
@@ -200,7 +191,7 @@
 </div>
 <!-- GitBuilding Nav -->
 <hr />
-<p><a href="jig_assembly.html">Previous page</a> | <a href="electrolyte.html">Next page</a></p>
+<p><a href="final_jig_assembly.html">Previous page</a> | <a href="electrolyte.html">Next page</a></p>
     </div>
 </div>
 <footer class="site-footer">
@@ -209,9 +200,9 @@
     <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
-    <p class="author">©2025 Flow Battery Research Collective</p>
+    <p class="author">©2026 Flow Battery Research Collective</p>
     <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
-    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+    <p class="license">Building a benchtop flow battery test cell is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
 </footer></body>

@@ -1,41 +1,34 @@
 Name in documentation	Category	Qty	Full Name	Notes	Supplier 1	Part No	Link	Supplier 2	Part No	Link	Supplier 3	Part No	Link
 1 mm brass sheet	part	a small plate of			Amazon	Use this link	https://www.amazon.com/dp/B0BRCXM73P						
-10 mm socket	tool	1		To fit torque wrench									
 19/22 silicone septa	part	2			Amazon	Use this link	https://www.amazon.fr/dp/B0BR3P56GR?ref=ppx_yo2ov_dt_b_fed_asin_title						
+2 mm banana connectors with M2 thread and matching nuts	part	2											
 24 V DC power source	part	1											
-5 mL syringe	tool	1											
-50 mL beaker	tool	1											
+2D metal cutting tool	tool	1		Mill, drill, router, laser cutter for sheet metal									
+5 mL syringe	tool	1		or larger									
 50 mL beakers	tool	2		or drip tray/other container to hold 10 mL of water									
-5mm hex key	tool	1											
-ammonium chloride	chemical	1.07 grams											
-Arduino UNO R3	part	1		or equivalent microcontroller that can output two independent 5V PWM signals and connect to PC over USB serial									
+50 mm C-clamp	part	1		Also known as G-clamp, 2-inch varieties should work									
+Arduino UNO R3	part	1		or equivalent microcontroller that can output two independent 5V PWM signals and connect to the computer over USB serial									
+assembled jig	part	2											
+computer	tool	1		Must be able to flash firmware to microcontroller and connect over USB serial to microcontroller and potentiostat									
 conductive felt	part	4 cm²	Conductive Graphite (Carbon) Felt		Fisher Scientific	AA43199RY	https://www.fishersci.com/shop/products/carbon-felt-3-18mm-0-125in-thick-99-0-thermo-scientific/AA43199RY#?keyword=043199	AliExpress	Link	https://www.aliexpress.com/item/1005008240523112.html			
-deionized water	chemical	18.5 grams											
+DC power jack	part	1											
+deionized water	chemical	10 grams											
+F-25 Luer Lock Adapters	part	4											
+F-31 Luer Lock Adapters	part	4											
 FDM printer	tool	1											
 gasket cutter machine	tool	1		Vinyl/laser cutter or hand tools									
 gasket sheet	part	160 cm²	Gasket material	Dimensions must be at least enough to cut out approx. four 6 cm x 8 cm rectangles, an A4 sheet is enough	Amazon (FR)	Link	https://www.amazon.fr/dp/B09HZ52B8H	AliExpress	Link	https://www.aliexpress.com/item/1005007892725572.html			
 grafoil	part	100 cm²			RS Components	268-6953 (1.0 mm, slightly thicker)	https://uk.rs-online.com/web/p/gasket-sheets/2686953	Amazon (NL)	Use this link	https://www.amazon.nl/-/en/NEZIH-flexible-graphite-sheet-conductive/dp/B0CF88BKNX	Amazon (US)	Use this link	https://www.amazon.com/dp/B09MSDYKNF
-M6 fasteners	part	4	M6 Fasteners										
-male-to-male breadboard jumper cables	part	several											
-pair of chemical safety goggles	tool	1											
-pair of nitrile gloves	tool	1											
-PC	tool	1		Must be able to flash firmware to microcontroller and connect over USB serial to microcontroller and potentiostat									
+M3x35mm socket cap bolts and nuts	part	8											
+PC	tool	1											
 peristaltic pumps	part	2	Peristaltic pumps		Alibaba	Use this link	https://www.alibaba.com/product-detail/Kamoer-KPK200-12V-24V-Brush-Brushless_1601189956284.html	AliExpress	Use this link	https://www.aliexpress.com/item/1005009259643053.html			
 polypropylene filament	part	some		This can be substituted if you only plan to run water through the cell for testing things other than the chemistry									
-polypropylene packing tape	part	several cm											
-potassium iodide	chemical	3.32 grams											
 potentiostat	tool	1	Potentiostat	preferably the MYSTAT	PCBWay	Use this link	https://www.pcbway.com/project/shareproject/MyStat_Potentiostat_9df57df2.html						
 scale	tool	1											
-self-tapping screws	part	4											
+secondary container	part	1		Gastronorm 1:3 150mm deep polypropylene works well									
 separator sheet	part	A4 sheet	Separator material		Amazon	Use this link	https://www.amazon.fr/gp/product/B07JYT7BN8/						
+soldering iron	tool	1											
 stiff filament	part	some		PLA works									
-stir bar	tool	1											
-stir plate	tool	1											
-torque wrench	tool	1		to accept 5 mm allen key or 10 mm hex socket									
-triethylene glycol	chemical	0.55 grams											
-tubing	part	55 cm	Tubing		Drifton (EU)	06442-16	https://www.drifton.eu/shop/18-standard-pump-tubing/2535-chem-durance-bio-tubing-15-m/	Avantor (US)	06442-16	https://www.avantorsciences.com/us/en/product/NA5143626/masterflex-ls-precision-pump-tubing-chem-durance-bio-avantor			
+tubing	part	54 cm	Tubing		Drifton (EU)	06442-16	https://www.drifton.eu/shop/18-standard-pump-tubing/2535-chem-durance-bio-tubing-15-m/	Avantor (US)	06442-16	https://www.avantorsciences.com/us/en/product/NA5143626/masterflex-ls-precision-pump-tubing-chem-durance-bio-avantor			
 USB A-to-B cable	part	1											
 utility knife	tool	1											
-vial	tool	1		min. 20 mL									
-weighing spatula	tool	1											
-zinc chloride	chemical	1.36 grams											

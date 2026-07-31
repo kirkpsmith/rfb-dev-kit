@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
+    <title>Building a benchtop flow battery test cell</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
@@ -34,7 +34,7 @@
     <div class="wrapper header-wrapper" >
         <div class=header-text>
    
-    <h1 class="site-title">Building a benchtop flow battery test cell with a zinc-iodide electrolyte</h1>
+    <h1 class="site-title">Building a benchtop flow battery test cell</h1>
    
     <p class="author">by Flow Battery Research Collective</p>
 </div>
@@ -53,7 +53,7 @@
                 <ul class="nav-list">
                 <li>
     <a class="navhome" href="./">
-        Building a benchtop flow battery test cell with a zinc-iodide electrolyte
+        Building a benchtop flow battery test cell
     </a>
 </li>
 <li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
@@ -95,8 +95,8 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./electronics.html">
-        Preparing the pumps and power electronics
+    <a class="not-active" href="./electronics_and_jig.html">
+        Preparing the jig with pumps and power electronics
     </a>
     </li>
 <li class="not-active">
@@ -105,8 +105,8 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./jig_assembly.html">
-        Assembling the jig with electronics and flow cell
+    <a class="not-active" href="./final_jig_assembly.html">
+        Attaching the assembled cell to the jig
     </a>
     </li>
 <li class="not-active">
@@ -141,11 +141,6 @@
         <div class="wrapper">
     <h1 id="preparing-the-electrolyte">Preparing the electrolyte</h1>
 <p><div class=details-header>
-    <div class=details-thumb-outer>
-        <div class=details-thumb>
-            <img alt="page thumbnail" src="images/IMG-20231019-WA0005.jpg" title="" />
-        </div>
-    </div>
 <div class=other-details>
     <div class=detail>
         <b>Time required:</b> Tens of minutes
@@ -160,48 +155,10 @@
 </div></p>
 <div class="caution-block">
 <p><strong>Caution</strong> </p>
-<p>From this point onwards, chemical safety risks are present. <strong>You</strong> are responsible for your own safety! Use proper PPE and do not perform anything you are not comfortable with. These instructions are presented as-is with no guarantee of your safety or assumed liability. Work in a well-ventilated area, with someone else nearby aware that you are working with chemicals and able to assist or call for help if needed</p>
+<p>From this point onwards, chemical safety risks are present. <strong>You</strong> are responsible for your own safety! Use proper PPE and do not perform anything you are not comfortable with. These instructions are presented as-is with no guarantee of your safety or assumed liability. Work in a well-ventilated area, with someone else nearby aware that you are working with chemicals and able to assist or call for help if needed.</p>
 </div>
-<div class="pagebom">
-<h3 id="tools">Tools</h3>
-<ul>
-<li>1 <a Class="missing" href="missing">50 mL beaker</a> </li>
-<li>1 <a Class="missing" href="missing">pair of chemical safety goggles</a> </li>
-<li>1 <a Class="missing" href="missing">pair of nitrile gloves</a> </li>
-<li>1 <a Class="missing" href="missing">scale</a> </li>
-<li>1 <a Class="missing" href="missing">stir bar</a> </li>
-<li>1 <a Class="missing" href="missing">stir plate</a> </li>
-<li>1 <a Class="missing" href="missing">vial</a>    - min. 20 mL</li>
-<li>1 <a Class="missing" href="missing">weighing spatula</a> </li>
-</ul>
-<h3 id="chemicals">Chemicals</h3>
-<ul>
-<li>1.07 grams of <a Class="missing" href="missing">ammonium chloride</a> </li>
-<li>8.5 grams of <a Class="missing" href="missing">deionized water</a> </li>
-<li>3.32 grams of <a Class="missing" href="missing">potassium iodide</a> </li>
-<li>0.55 grams of <a Class="missing" href="missing">triethylene glycol</a> </li>
-<li>1.36 grams of <a Class="missing" href="missing">zinc chloride</a> </li>
-</ul>
-</div>
-<h2 class="page-step" id="put-on-your-personal-protective-equipment-ppe">Step 1: Put on your personal protective equipment (PPE)</h2>
-<p>Put on a <a Class="missing" href="missing">pair of chemical safety goggles</a>, a <a Class="missing" href="missing">pair of nitrile gloves</a>, wear close-toed shoes, and wear long pants/trousers! A lab coat is recommended.</p>
-<h2 class="page-step" id="weigh-out-the-chemicals">Step 2: Weigh out the chemicals</h2>
-<p>In a <a Class="missing" href="missing">50 mL beaker</a>, using a <a Class="missing" href="missing">scale</a> and <a Class="missing" href="missing">weighing spatula</a>, weigh out the following chemicals according to their quantities listed above:</p>
-<ul>
-<li><a Class="missing" href="missing">zinc chloride</a></li>
-<li><a Class="missing" href="missing">potassium iodide</a></li>
-<li><a Class="missing" href="missing">ammonium chloride</a></li>
-<li><a Class="missing" href="missing">deionized water</a></li>
-<li><a Class="missing" href="missing">triethylene glycol</a></li>
-</ul>
-<h2 class="page-step" id="mix-the-electrolyte">Step 3: Mix the electrolyte</h2>
-<p>Add a <a Class="missing" href="missing">stir bar</a> to the beaker and place it on a <a Class="missing" href="missing">stir plate</a>. Mix at room temperature until all salts are dissolved.</p>
-<h2 class="page-step" id="store-the-electrolyte-in-an-air-tight-container">Step 4: Store the electrolyte in an air-tight container</h2>
-<div class="warning-block">
-<p><strong>Warning</strong> </p>
-<p>Aqueous iodide is oxidized in solution by dissolved oxygen, turning the solution yellow/brown.</p>
-</div>
-<p>Transfer and store prepared electrolytes in a sealed <a Class="missing" href="missing">vial</a> to minimize exposure to ambient air.</p>
+<p>There are many possible electrolytes that can be tested with this test cell depending on the membrane and reservoir configuration shown. This documentation is chemistry-agnostic; you are free to choose your own chemistry depending on what you'd like to study. Typically, the cell is loaded with 5 mL of electrolyte per side. <a name="output__prepared-electrolyte"></a>.</p>
+<p>For an example of some electrolytes that have been testing, check out the FBRC forum category for <a href="https://fbrc.nodebb.com/category/6/electrolyte-development" target="_blank" title="">electrolyte development</a>.</p>
 <!-- GitBuilding Nav -->
 <hr />
 <p><a href="leak_test.html">Previous page</a> | <a href="testing.html">Next page</a></p>
@@ -213,9 +170,9 @@
     <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
-    <p class="author">©2025 Flow Battery Research Collective</p>
+    <p class="author">©2026 Flow Battery Research Collective</p>
     <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
-    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+    <p class="license">Building a benchtop flow battery test cell is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
 </footer></body>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
+    <title>Building a benchtop flow battery test cell</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
@@ -34,7 +34,7 @@
     <div class="wrapper header-wrapper" >
         <div class=header-text>
    
-    <h1 class="site-title">Building a benchtop flow battery test cell with a zinc-iodide electrolyte</h1>
+    <h1 class="site-title">Building a benchtop flow battery test cell</h1>
    
     <p class="author">by Flow Battery Research Collective</p>
 </div>
@@ -53,7 +53,7 @@
                 <ul class="nav-list">
                 <li>
     <a class="navhome" href="./">
-        Building a benchtop flow battery test cell with a zinc-iodide electrolyte
+        Building a benchtop flow battery test cell
     </a>
 </li>
 <li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
@@ -95,8 +95,8 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./electronics.html">
-        Preparing the pumps and power electronics
+    <a class="not-active" href="./electronics_and_jig.html">
+        Preparing the jig with pumps and power electronics
     </a>
     </li>
 <li class="not-active">
@@ -105,8 +105,8 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./jig_assembly.html">
-        Assembling the jig with electronics and flow cell
+    <a class="not-active" href="./final_jig_assembly.html">
+        Attaching the assembled cell to the jig
     </a>
     </li>
 <li class="not-active">
@@ -143,11 +143,6 @@
 
 <h1 id="operating-and-testing-the-cell">Operating and testing the cell</h1>
 <p><div class=details-header>
-    <div class=details-thumb-outer>
-        <div class=details-thumb>
-            <img alt="page thumbnail" src="images/cell.jpeg" title="" />
-        </div>
-    </div>
 <div class=other-details>
     <div class=detail>
         <b>Time required:</b> Tens of minutes (preparation time), several days (experiment length)
@@ -167,15 +162,20 @@
 </ul>
 <h3 id="tools">Tools</h3>
 <ul>
-<li>1 <a Class="missing" href="missing">5 mL syringe</a> </li>
+<li>1 <a Class="missing" href="missing">5 mL syringe</a>    - or larger</li>
 <li>1 <a Class="missing" href="missing">scale</a> </li>
 </ul>
 </div>
 <h2 class="page-step" id="weigh-and-add-electrolyte-to-the-cell">Step 1: Weigh and add electrolyte to the cell</h2>
-<p>Using a <a Class="missing" href="missing">5 mL syringe</a> and the <a Class="missing" href="missing">scale</a>, add 5 mL of electrolyte to each reservoir, weighing the syringe before and after injection to record the actual mass added to each reservoir. </p>
+<p>Using a <a Class="missing" href="missing">5 mL syringe</a> and the <a Class="missing" href="missing">scale</a>, add 5 mL of <a href="electrolyte.html" title="">prepared electrolyte</a> to each reservoir, weighing the syringe before and after injection to record the actual mass added to each reservoir. </p>
 <h2 class="page-step" id="close-the-reservoirs">Step 2: Close the reservoirs</h2>
-<p>Using 19/22 silicone <a href="septa.html">septa</a>, close the reservoirs.</p>
-<p><img alt="" src="images/IMG-20240229-WA0000.jpg" title="" /></p>
+<p>Carefully insert 19/22 silicone <a href="septa.html">septa</a> into the reservoirs and fold them over to seal them.</p>
+<div class="gallery-thumb">
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20260731_175029.png" alt="" />
+    <img onmouseover="getElementById('gallery-show0').src=this.src" src="images/Screenshot_20260731_175311.png" alt="" />
+</div>
+<div class="gallery-show"><img id="gallery-show0" src="images/Screenshot_20260731_175029.png" alt=""/></div>
+
 <h2 class="page-step" id="pre-circulate-the-electrolyte">Step 3: Pre-circulate the electrolyte</h2>
 <p>Turn the pumps on and circulate the electrolytes for 15 min before applying any current. </p>
 <div class="info-block">
@@ -183,18 +183,9 @@
 <p>This should allow enough time for the separator to become fully wetted with electrolyte and clear out any bubbles trapped in the cell/felts.</p>
 </div>
 <h2 class="page-step" id="connect-to-the-potentiostat-and-define-cycling-conditions">Step 4: Connect to the potentiostat and define cycling conditions</h2>
-<p>As a first test, you can run a conservative initial cycle using the following conditions:</p>
-<p><img alt="" src="images/Screenshot_20250728_172836.png" title="" /></p>
-<p>If the cycle ends because the potential reaches the upper safety limit too quickly, reduce the currents to 10,000 µA and try again.</p>
-<div class="info-block">
-<p><strong>Note</strong> </p>
-<p>At first the cells can require some time cycling at low SOC at lower current, to build all the Zn nucleation sites. Do not cycle to a potential higher than 1.7V because you will start having undesirable side reactions at this point.</p>
-</div>
-<p>If this cycles successfully, you can then increase the currents to 30,000 µA and repeat, seeing that it goes well.</p>
-<p>After that, you can then start going to high SOC values at 40,000 µA. I would recommend first cycling to 100mAh (set "Upper bound" to 100,000 µAh).</p>
 <div class="warning-block">
 <p><strong>Warning</strong> </p>
-<p>Enclose the battery when cycling to higher SOC - you can put it inside a plastic tub - because leaks due to any problem will spray highly charged electrolyte, which, even if the volume is low, can be dangerous.</p>
+<p>Enclose the battery when cycling - you can put it inside a plastic tub - because leaks due to any problem will spray charged electrolyte, which, even if the volume is low, can be dangerous.</p>
 </div>
 <!-- GitBuilding Nav -->
 <hr />
@@ -207,9 +198,9 @@
     <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
-    <p class="author">©2025 Flow Battery Research Collective</p>
+    <p class="author">©2026 Flow Battery Research Collective</p>
     <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
-    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+    <p class="license">Building a benchtop flow battery test cell is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
 </footer></body>

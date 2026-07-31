@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Building a benchtop flow battery test cell with a zinc-iodide electrolyte</title>
+    <title>Building a benchtop flow battery test cell</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./static/Logo/favicon.ico" />
@@ -34,7 +34,7 @@
     <div class="wrapper header-wrapper" >
         <div class=header-text>
    
-    <h1 class="site-title">Building a benchtop flow battery test cell with a zinc-iodide electrolyte</h1>
+    <h1 class="site-title">Building a benchtop flow battery test cell</h1>
    
     <p class="author">by Flow Battery Research Collective</p>
 </div>
@@ -53,7 +53,7 @@
                 <ul class="nav-list">
                 <li>
     <a class="navhome" href="./">
-        Building a benchtop flow battery test cell with a zinc-iodide electrolyte
+        Building a benchtop flow battery test cell
     </a>
 </li>
 <li id="nav-search" :class="focused && searchTerm.length > 0 ? 'search-result-popout' : 'search'" v-scope v-on:vue:mounted="mounted('./')">
@@ -95,8 +95,8 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./electronics.html">
-        Preparing the pumps and power electronics
+    <a class="not-active" href="./electronics_and_jig.html">
+        Preparing the jig with pumps and power electronics
     </a>
     </li>
 <li class="not-active">
@@ -105,8 +105,8 @@
     </a>
     </li>
 <li class="not-active">
-    <a class="not-active" href="./jig_assembly.html">
-        Assembling the jig with electronics and flow cell
+    <a class="not-active" href="./final_jig_assembly.html">
+        Attaching the assembled cell to the jig
     </a>
     </li>
 <li class="not-active">
@@ -139,32 +139,27 @@
             </nav>
         </div>
         <div class="wrapper">
-    <p><img alt="" src="exports/cell.png" title="" /></p>
-<div class="info-block">
+    <div class="info-block">
 <p><strong>Note</strong> </p>
 <p>This kit is intended for educational and R&amp;D use only, not for actual energy storage applications. That will happen later, check out our <a href="https://fbrc.dev/about.html#roadmap" target="_blank" title="">roadmap</a> to see when.</p>
 <p>Project homepage is at https://fbrc.dev, source code for this documentation is <a href="https://codeberg.org/FBRC/RFB-dev-kit" target="_blank" title="">here</a>.</p>
 </div>
-<p><img alt="" src="exports/front.webp" title="" /></p>
+<p><img alt="" src="exports/Cell Assembly with C-clamp.svg" title="" /></p>
 <p>This bill of materials can be found <a href="index_BOM.html">here</a> (<a href="index_BOM.html"><img alt="HTML" class="smallicon" src="static/Icons/html.png" title="HTML Bill of Materials" /></a>, <a href="index_BOM.csv"><img alt="CSV" class="smallicon" src="static/Icons/csv.png" title="CSV Bill of Materials" /></a>).</p>
 <p>If you're starting from scratch, you need to <a href="fabrication.html" title="">fabricate</a> and source everything needed for using this flow battery test cell.</p>
-<p>If you already have all the required components and materials, you can directly <a href="electronics.html" title="">prepare the power electronics</a>, <a href="cell_assembly.html" title="">assemble the cell</a>, <a href="jig_assembly.html" title="">assemble the jig</a>, prepare the <a href="electrolyte.html" title="">electrolyte</a>, and then begin <a href="testing.html" title="">testing</a>. After an experiment, you should <a href="cleanup.html" title="">clean up</a> your setup and <a href="analysis.html" title="">analyze</a> the data you obtained.</p>
-<div class="help-block">
-<p><strong>Video Guide</strong> </p>
-<p>A video roughly showing steps 2-5 below is available <a href="https://spectra.video/w/nJ8XNYu1MXNPSDLKV3KVTh" target="_blank" title="">here</a>.</p>
-</div>
+<p>If you already have all the required components and materials, you can directly <a href="electronics_and_jig.html" title="">prepare the electronics and jig</a>, <a href="cell_assembly.html" title="">assemble the cell</a>, <a href="final_jig_assembly.md], prepare the [electrolyte](electrolyte.html" title="">install the cell into the jig</a>, <a href="leak_test.html" title="">leak test</a> and then begin <a href="testing.html" title="">testing</a>. After an experiment, you should <a href="cleanup.html" title="">clean up</a> your setup and <a href="analysis.html" title="">analyze</a> the data you obtained.</p>
 <ol>
 <li>
 <p><a href="fabrication.html" title="">Fabricating components</a></p>
 </li>
 <li>
-<p><a href="electronics.html" title="">Preparing the pumps and power electronics</a></p>
+<p><a href="electronics_and_jig.html" title="">Preparing the jig with pumps and power electronics</a></p>
 </li>
 <li>
 <p><a href="cell_assembly.html" title="">Assembling the flow cell from components</a></p>
 </li>
 <li>
-<p><a href="jig_assembly.html" title="">Assembling the jig with electronics and flow cell</a></p>
+<p><a href="final_jig_assembly.html" title="">Attaching the assembled cell to the jig</a></p>
 </li>
 <li>
 <p><a href="leak_test.html" title="">Leak testing the cell</a></p>
@@ -182,7 +177,6 @@
 <p><a href="analysis.html" title="">Analyzing and storing the experimental data</a></p>
 </li>
 </ol>
-<p><img alt="" src="exports/back.webp" title="" /></p>
 <!-- GitBuilding Nav -->
 <hr />
 <p><a href="index_BOM.html">Next page</a></p>
@@ -194,9 +188,9 @@
     <img class="icon" src="./static/Logo/GitBuilding500x.png" alt="GitBuilding logo">
     <span class="doc-info">Documentation powered by GitBuilding</span>
 </a>
-    <p class="author">©2025 Flow Battery Research Collective</p>
+    <p class="author">©2026 Flow Battery Research Collective</p>
     <p class="email">Contact: <a href="mailto:info@fbrc.dev">info@fbrc.dev</a></p>
-    <p class="license">Building a benchtop flow battery test cell with a zinc-iodide electrolyte is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
+    <p class="license">Building a benchtop flow battery test cell is released under <a href="license.html">CERN-OHL-S-2.0</a>.</p>
 
     </div>
 </footer></body>
